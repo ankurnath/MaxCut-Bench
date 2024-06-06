@@ -25,7 +25,8 @@ if __name__ == '__main__':
 
     network_folder=os.path.join(save_folder,'network')
     data_folder=os.path.join(save_folder,'data')
-
+    os.makedirs(data_folder,exist_ok=True)
+    os.makedirs(network_folder,exist_ok=True)
 
     dataset_path=os.path.join(os.getcwd(),f'data/testing/{args.distribution}')
 

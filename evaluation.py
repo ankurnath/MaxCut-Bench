@@ -28,6 +28,9 @@ if __name__ == '__main__':
 
          command=f'python solvers/{args.algorithm}/evaluate.py --distribution {args.distribution} --num_repeat {args.num_repeat} '
 
+    elif args.algorithm =='CAC' or args.algorithm =='AHC':
+        command=f'python solvers/{args.algorithm}/evaluate.py --distribution {args.distribution}'
+
     else:
         raise ValueError('')
     

@@ -9,7 +9,7 @@ import torch
 import glob
 from scipy.sparse import load_npz
 import random
-
+import os
 
 
 
@@ -75,15 +75,15 @@ if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument('--distribution', type=str,default="WattsStrogatz_200vertices_weighted",  help='Distribution of dataset')
     parser.add_argument("--device", type=int,default=None, help="cuda device")
-    parser.add_argument("--num_runs",type=int,default=100,help="Number of runs per instance")
+    parser.add_argument("--num_repeat",type=int,default=10,help="Number of runs per instance")
     parser.add_argument("--time_span",type=int,default=1200,help="Time span")
-    parser.add_argument("--num_parallel_runs",type=int,default=20,help="Number of parallel runs")
-    parser.add_argument("--model",type=str,default="CAC", help="model")
+    parser.add_argument("--num_parallel_runs",type=int,default=5,help="Number of parallel runs")
+    
 
     args = parser.parse_args()
 
     hyperparameters=maxcut_200_params()
-    hyperparameters['num_runs']=args.num_runs
+    hyperparameters['num_runs']=args.num_repeat
     hyperparameters['num_timesteps_per_run']=  args.time_span
     hyperparameters['num_parallel_runs']=  args.num_parallel_runs
 
@@ -97,16 +97,15 @@ if __name__ == '__main__':
     else:
         device='cpu'
 
-    if args.model=='CAC':
-        hyperparameters['use_CAC']=True
-    elif args.model=='AHC':
-        hyperparameters['use_CAC']=False
-    else:
-        raise ValueError("Unknown options")
+    hyperparameters['use_CAC']=False
+
     hyperparameters['chosen_device']=device
 
-        
-    dataset=GraphDataset(folder_path=f'../data/testing/{args.distribution}',ordered=True)
+    dataset_path=os.path.join(os.getcwd(),f'data/validation/{args.distribution}')
+
+    dataset=GraphDataset(dataset_path,ordered=True)
+
+
     print ('Number of test graphs:',len(dataset))
        
     cuts=[]
@@ -120,11 +119,16 @@ if __name__ == '__main__':
         spins.append(spin)
 
 
-    df={'cut':cuts,'Solution':spins}
+    df={'cut':cuts}
     df=pd.DataFrame(df)
-    print(df)
-    save_folder=f"pretrained agents/{args.distribution}_{args.model}/data"
+
+    save_folder=f'pretrained agents/{args.distribution}_AHC'
+    save_folder=os.path.join(os.getcwd(),'solvers/AHC',save_folder)
+    data_folder=os.path.join(save_folder,'data')
+
+    os.makedirs(data_folder,exist_ok=True)
     os.makedirs(save_folder,exist_ok=True)
-    
+
+    print(df)
     df.to_pickle(os.path.join(save_folder,'results'))
 
