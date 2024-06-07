@@ -111,7 +111,8 @@ def get_data_loaders(cfg,add_task=False):
     if add_task:
         folder=f'data_{cfg.task}'
     else:
-        folder='data'
+        # folder='data'
+        folder=os.path.join(os.getcwd(),'data')
     # data_path = Path(__file__).parent.parent.parent / "data"
     data_path = Path(__file__).parent.parent.parent / folder
     # data_path = data_path / pathlib.Path(cfg.input)  # string to pathlib.Path

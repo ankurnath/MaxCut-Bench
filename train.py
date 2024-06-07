@@ -35,6 +35,9 @@ if __name__ == '__main__':
     elif args.algorithm=='ANYCSP':
         command=f'python solvers/{args.algorithm}/train.py --distribution {args.distribution} '
 
+    elif args.algorithm=='Gflownet-CombOpt':
+        command=f'python solvers/{args.algorithm}/train.py --distribution {args.distribution} '
+
 
 
 

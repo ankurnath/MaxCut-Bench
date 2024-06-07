@@ -156,7 +156,8 @@ def main(cfg: DictConfig):
     print(f"Testset size: {testset_size}")
     # alg_save_path = os.path.abspath(f"{cfg.input}/alg.pt")
     # alg_save_path_best = os.path.abspath(f"{cfg.input}/alg_best.pt")
-    load_path=os.path.join('gflow/pretrained_agents',cfg.input)
+    load_path=os.path.join(f'Gflownet-CombOpt/pretrained agents/{cfg.input}','network')
+    load_path=os.path.join(os.getcwd(),'solvers',load_path)
     alg_load_path_best=os.path.join(load_path,"alg_best.pt")
     alg.load(alg_load_path_best)
     # cfg.sameg=True
@@ -252,7 +253,8 @@ def main(cfg: DictConfig):
         # print(result)
         result=pd.DataFrame(result)
         # print(result)
-        data_folder=f'gflow/pretrained_agents/{cfg.input}/data'
+        data_folder=f'Gflownet-CombOpt/pretrained agents/{cfg.input}/data'
+        data_folder=os.path.join(os.getcwd(),'solvers',data_folder)
         os.makedirs(data_folder,exist_ok=True)
         result.to_pickle(os.path.join(data_folder,'results'))
 

@@ -2,7 +2,6 @@ import sys, os
 import gzip, pickle
 from time import time, sleep
 from tqdm import tqdm
-import hydra
 from omegaconf import DictConfig, open_dict, OmegaConf
 
 import random
@@ -139,8 +138,7 @@ def rollout(gbatch, cfg, alg):
     return batch, env.batch_metric(state)
 
 
-# @hydra.main(config_path="configs", config_name="main") # for hydra-core==1.1.0
-# @hydra.main(version_base=None, config_path="configs", config_name="main") # for newer hydra
+
 def main(cfg: DictConfig):
     cfg = refine_cfg(cfg)
     # overwrite
@@ -156,7 +154,9 @@ def main(cfg: DictConfig):
     print(f"Trainset size: {trainset_size}")
     # alg_save_path = os.path.abspath(f"{cfg.input}/alg.pt")
     # alg_save_path_best = os.path.abspath(f"{cfg.input}/alg_best.pt")
-    save_path=os.path.join('pretrained_agents',cfg.input)
+    # save_path=os.path.join('pretrained_agents',cfg.input)
+
+    save_path=os.path.join(os.getcwd(),f'solvers/Gflownet-CombOpt/pretrained agents/{cfg.input}/network')
     alg_save_path_best=os.path.join(save_path,"alg_best.pt")
     os.makedirs(save_path,exist_ok = True)
     train_data_used = 0
