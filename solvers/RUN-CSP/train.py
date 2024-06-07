@@ -10,6 +10,7 @@ from csp_data import CSP_Data
 from argparse import ArgumentParser
 from tqdm import tqdm
 from glob import glob
+import os
 
 # from train import train
 
@@ -27,7 +28,7 @@ def train(model, opt, loader, device, args):
             opt.zero_grad()
             data.to(device)
 
-            assignment = model(data, args.network_steps)
+            assignment = model(data, args.num_steps)
             loss = csp_loss(data, assignment, discount=args.discount)
 
             loss.backward()
@@ -75,7 +76,7 @@ if __name__ == "__main__":
     parser.add_argument("--logging_steps", type=int, default=10, help="Training steps between logging")
     parser.add_argument("--discount", type=float, default=0.9, help="Discount factor")    
     parser.add_argument("--hidden_dim", type=int, default=128, help="Hidden Dimension of the network")
-    parser.add_argument("--network_steps", type=int, default=30, help="Number of network steps during training")
+    parser.add_argument("--num_steps", type=int, default=30, help="Number of network steps during training")
     args = parser.parse_args()
 
     torch.manual_seed(args.seed)
@@ -89,14 +90,6 @@ if __name__ == "__main__":
     train_graph_gen=GraphDataset(folder_path=f'../data/training/{args.distribution}')
     print(f'Number of graphs:{len(train_graph_gen)}')
     graphs = [nx.from_numpy_array(train_graph_gen.get()) for _ in range(len(train_graph_gen))]
-    # graphs = [nx.from_numpy_array(train_graph_gen.get()) for _ in range(20)]
-
-
-    # data = [CSP_Data.load_graph_maxcol(p, args.num_col) for p in tqdm(glob(args.data_path))]
-    # if args.weighted:
-    #     data = [CSP_Data.load_graph_weighted_maxcut(nx_graph)for nx_graph in graphs]
-    # else:
-    #     data = [CSP_Data.load_graph_unweighted_maxcut(nx_graph)for nx_graph in graphs]
     data = [CSP_Data.load_graph_weighted_maxcut(nx_graph)for nx_graph in graphs]
     const_lang = data[0].const_lang
 
@@ -108,7 +101,9 @@ if __name__ == "__main__":
         collate_fn=CSP_Data.collate
     )
 
-    model = RUNCSP(f'pretrained agents/{args.distribution}', args.hidden_dim, const_lang)
+    model_dir=os.path.join(os.getcwd(),f'solvers/RUN-CSP/pretrained agents/{args.distribution}')
+
+    model = RUNCSP(model_dir, args.hidden_dim, const_lang)
     model.to(device)
     model.train()
 

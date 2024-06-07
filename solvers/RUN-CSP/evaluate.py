@@ -28,67 +28,14 @@ def evaluate(model, loader, device, args):
 
     with torch.inference_mode():
         for data in loader:
-            start = timer()
-            path = data.path
-            # print(args.num_boost)
-            data = CSP_Data.collate([data for _ in range(args.num_boost)])
+            # start = timer()
+            # path = data.path
+            
+            data = CSP_Data.collate([data for _ in range(args.num_repeat)])
             data.to(device)
-
-            # all_assignments = model(data, args.network_steps,eval=False)
             assignment = model(data, args.num_steps)
             assignments.append(data.hard_assign(assignment.squeeze()).cpu().numpy())
-            # print(len(all_assignments))
-            # assert len(all_assignments)==args.network_steps
 
-            # assignment= assignment.reshape(args.num_boost,-1,args.network_steps)
-            # print(assignment.shape)
-
-            # best_unsat=1000000
-            # opt_step=-1
-
-            # for i in range(args.network_steps):
-
-            #     assignment=all_assignments[-1]
-            #     assignment = torch.cat([1.0-assignment, assignment], dim=2)
-
-            #     num_unsat = data.count_unsat(assignment)
-            #     min_unsat = num_unsat.min().cpu().numpy()
-
-            #     if min_unsat<best_unsat:
-            #         best_unsat=min_unsat
-            #         # min_unsat=best_unsat
-            #         opt_step=i
-            #         best_assignment=assignment
-            #     break
-
-
-            # assignments.append(data.hard_assign(best_assignment.squeeze()).cpu().numpy())
-            #     # assignment=data.hard_assign(all_assignments[i].squeeze()).cpu().numpy()
-
-            # # print(opt_step)
-            # opt_steps.append(opt_step)
-
-            # assignment=all_assignments[-1]
-            # # print(assignment.shape)
-            # # if assignment.out_dim==1:
-            # assignment = torch.cat([1.0-assignment, assignment], dim=2)
-
-            # num_unsat = data.count_unsat(assignment)
-            # min_unsat = num_unsat.min().cpu().numpy()
-            # solved = min_unsat == 0
-            # assignments.append(data.hard_assign(assignment.squeeze()).cpu().numpy())
-            # assignment.append(all_assignments)
-
-
-
-
-            # end = timer()
-            # time = end - start
-
-            # print(f'{path} -- Num Unsat: {min_unsat}')
-            # print(f'{"Solved" if solved else "Unsolved"} {time:.2f}s')
-
-    # return all_assignments
     return assignments
 
 
@@ -99,8 +46,7 @@ if __name__ == "__main__":
     parser.add_argument("--seed", type=int, default=0, help="the random seed for torch and numpy")
     parser.add_argument("--num_workers", type=int, default=0, help="Number of loader workers")
 
-    parser.add_argument("--num_reapats", type=int, default=50, help="Number of parallel runs")
-    # parser.add_argument("--network_steps", type=int, default=10000000, help="Number of network steps")
+    parser.add_argument("--num_repeat", type=int, default=50, help="Number of parallel runs")
     parser.add_argument("--num_steps", type=int,required=True, default=250, help="Number of network steps")
     args = parser.parse_args()
 
@@ -111,20 +57,16 @@ if __name__ == "__main__":
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 
-    try:
 
-        model = RUNCSP.load(f'RUNCSP/pretrained agents/{args.distribution}')
-    except:
-        model= RUNCSP.load(f'pretrained agents/{args.distribution}')
+    model=RUNCSP.load(os.path.join(os.getcwd(),f'solvers/RUN-CSP/pretrained agents/{args.distribution}/network'))
+
+
     model.to(device)
     model.eval()
 
-    # print(f'Loading Graphs from {args.data_path}...')
-    # data = [CSP_Data.load_graph_maxcol(p, model.const_lang.domain_size) for p in tqdm(glob(args.data_path))]
-    train_graph_gen=GraphDataset(folder_path=f'../data/testing/{args.distribution}',ordered=True)
+    train_graph_gen=GraphDataset(folder_path=os.path.join(os.getcwd(),f'data/testing/{args.distribution}'),ordered=True)
     print(f'Number of graphs:{len(train_graph_gen)}')
     graphs = [nx.from_numpy_array(train_graph_gen.get()) for _ in range(len(train_graph_gen))]
-    # graphs = [nx.from_numpy_array(train_graph_gen.get()) for _ in range(1)]
     data = [CSP_Data.load_graph_weighted_maxcut(nx_graph)for nx_graph in graphs]
     const_lang = data[0].const_lang
 
@@ -137,26 +79,22 @@ if __name__ == "__main__":
     )
 
     assignments=evaluate(model, loader, device, args)
-    # print(assignments[0])
+   
 
     df= defaultdict(list)
     for assignment,graph in zip(assignments,graphs):
-        assignment=assignment.reshape(args.num_boost,-1)
+        assignment=assignment.reshape(args.num_repeat,-1)
         numpy_graph=nx.to_numpy_array(graph)
         best_cut=0
-        for i in range(args.num_boost):
-            
+        for i in range(args.num_repeat):
             spins=2*assignment[i]-1
             cut= (1/4) * np.sum( np.multiply( numpy_graph, 1 - np.outer(spins, spins) ) )
-            # print(cut)
             best_cut=max(best_cut,cut)
         df['cut'].append(best_cut)
-        # print('Best cut',best_cut)
+        
 
-    save_folder=f'RUNCSP/pretrained agents/{args.distribution}/data'
-    # df['Opt Step']= opt_steps
-    # df['Steps'] = [args.network_steps]*len(opt_steps)
-    # mk_dir(save_folder)
+    save_folder= os.path.join(os.getcwd(),f'solvers/RUN-CSP/pretrained agents/{args.distribution}/data')  
+
     os.makedirs(save_folder,exist_ok=True)
     df=pd.DataFrame(df)
     file_name=os.path.join(save_folder,'results')

@@ -101,7 +101,7 @@ if __name__ == '__main__':
 
     hyperparameters['chosen_device']=device
 
-    dataset_path=os.path.join(os.getcwd(),f'data/validation/{args.distribution}')
+    dataset_path=os.path.join(os.getcwd(),f'data/testing/{args.distribution}')
 
     dataset=GraphDataset(dataset_path,ordered=True)
 

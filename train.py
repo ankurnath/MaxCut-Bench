@@ -28,6 +28,13 @@ if __name__ == '__main__':
 
         command=f'python solvers/{args.algorithm}/train.py --distribution {args.distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps} --low {args.low} --high {args.high} --step {args.step}'
 
+    elif args.algorithm=='RUN-CSP':
+
+        command=f'python solvers/{args.algorithm}/train.py --distribution {args.distribution} '
+
+    elif args.algorithm=='ANYCSP':
+        command=f'python solvers/{args.algorithm}/train.py --distribution {args.distribution} '
+
 
 
 

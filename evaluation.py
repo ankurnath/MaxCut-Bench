@@ -31,6 +31,15 @@ if __name__ == '__main__':
     elif args.algorithm =='CAC' or args.algorithm =='AHC':
         command=f'python solvers/{args.algorithm}/evaluate.py --distribution {args.distribution}'
 
+    elif args.algorithm =='RUN-CSP':
+        command=f'python solvers/{args.algorithm}/evaluate.py --distribution {args.distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps}'
+
+    elif args.algorithm == 'ANYCSP':
+        command=f'python solvers/{args.algorithm}/evaluate.py --distribution {args.distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps}'
+
+
+
+
     else:
         raise ValueError('')
     
