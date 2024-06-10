@@ -18,7 +18,7 @@ if __name__ == '__main__':
     parser.add_argument("--low", type=float, default=20, help="lower bound of parameter")
     parser.add_argument("--high", type=float, default=30, help="higher bound of parameter")
     parser.add_argument('--step',type=float, default=10, help="Step size of parameter")
-
+    parser.add_argument("--step_factor",type=int, default=2, help="Step Factor")
 
     args = parser.parse_args()
 
@@ -38,13 +38,18 @@ if __name__ == '__main__':
     elif args.algorithm=='Gflownet-CombOpt':
         command=f'python solvers/{args.algorithm}/train.py --distribution {args.distribution} '
 
+    elif args.algorithm =='S2V-DQN':
+        command=f'python solvers/{args.algorithm}/train.py --distribution {args.distribution} '
+    
+    elif args.algorithm =='ECO-DQN' or args.algorithm == 'LS-DQN' or args.algorithm =='SoftTabu':
+        command=f'python solvers/{args.algorithm}/train.py --distribution {args.distribution} --num_steps {args.num_steps} --step_factor {args.step_factor}'
 
 
 
     else:
         raise ValueError('')
     
-    subprocess.run(command,shell=True,check=True)
+    subprocess.run(command,shell=True)
 
 
 

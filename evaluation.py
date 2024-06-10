@@ -40,12 +40,18 @@ if __name__ == '__main__':
     elif args.algorithm == 'Gflownet-CombOpt':
         command=f'python solvers/{args.algorithm}/evaluate.py --distribution {args.distribution} --num_repeat {args.num_repeat}'
 
+    elif args.algorithm == 'S2V-DQN':
+        command=f'python solvers/{args.algorithm}/evaluate.py --distribution {args.distribution} '
+
+    elif args.algorithm == 'ECO-DQN' or args.algorithm == 'SoftTabu' or args.algorithm == 'LS-DQN':
+        command=f'python solvers/{args.algorithm}/evaluate.py --distribution {args.distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps} '
+
 
 
     else:
         raise ValueError('')
     
-    subprocess.run(command,shell=True,check=True)
+    subprocess.run(command,shell=True)
 
 
 
