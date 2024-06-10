@@ -20,7 +20,6 @@ interface. Currently, we support the following solvers:
 - Forward Greedy
 
 
-
 ## Repository Contents
 
 In `solvers`, you can find the wrappers for the currently supported solvers. In `data`, you have to three folders for training, testing and validation. You have to save graph your graph in .npz format.
@@ -162,4 +161,4 @@ To test
 
 ### Data and Models
 
-
+We cannot reupload publicly available datasets, as we do not have any permission to re-distribute them. Hence we only provide the synthetic datasets we generated with with best known solutions along with all pretrained models.
