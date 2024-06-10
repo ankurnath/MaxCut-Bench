@@ -19,6 +19,14 @@ interface. Currently, we support the following solvers:
 - Stochastic Greedy
 - Forward Greedy
 
+
+
+## Repository Contents
+
+In `solvers`, you can find the wrappers for the currently supported solvers. In `data`, you have to three folders for training, testing and validation. You have to save graph your graph in .npz format.
+
+For using this suite, `conda` is required. You can download it from here : https://www.anaconda.com/download
+
 ## Setup
 
 The included [``environment.yml``](environment.yml) file will produce a working environment called ``benchenv``.
@@ -27,12 +35,6 @@ The included [``environment.yml``](environment.yml) file will produce a working 
     >>> cd MaxCut-Bench
     >>> conda env create -f environment.yml 
     >>> conda active benchenv
-
-## Repository Contents
-
-In `solvers`, you can find the wrappers for the currently supported solvers. In `data`, you have to three folders for training, testing and validation. You have to save graph your graph in .npz format.
-
-For using this suite, `conda` is required. You can download it from here : https://www.anaconda.com/download
 
 
 
