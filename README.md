@@ -21,7 +21,7 @@ interface. Currently, we support the following solvers:
 
 ## Setup
 
-The included [``environment.yml``](environment.yml) file will produce a working environment called ``spin-solver``.
+The included [``environment.yml``](environment.yml) file will produce a working environment called ``benchenv``.
 
     >>> git clone https://github.com/ankurnath/MaxCut-Bench.git
     >>> cd MaxCut-Bench
