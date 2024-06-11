@@ -119,7 +119,7 @@ To evaluate
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm AHC--distribution BA_20 
+    >>> python evaluation.py --algorithm AHC --distribution BA_20 
 
 Hyperparameter tuning for each instance is done on the fly.
 
