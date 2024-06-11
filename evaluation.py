@@ -37,7 +37,7 @@ if __name__ == '__main__':
     elif args.algorithm == 'ANYCSP':
         command=f'python solvers/{args.algorithm}/evaluate.py --distribution {args.distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps}'
 
-    elif args.algorithm == 'Gflownet-CombOpt':
+    elif args.algorithm == 'Gflow-CombOpt':
         command=f'python solvers/{args.algorithm}/evaluate.py --distribution {args.distribution} --num_repeat {args.num_repeat}'
 
     elif args.algorithm == 'S2V-DQN':
