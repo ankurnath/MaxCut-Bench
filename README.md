@@ -22,7 +22,7 @@ interface. Currently, we support the following solvers:
 
 ## Repository Contents
 
-In `solvers`, you can find the wrappers for the currently supported solvers. In `data`, you have to three folders for training, testing and validation. You have to save graph your graph in .npz format.
+In `solvers`, you can find the wrappers for the currently supported solvers. In `data`, you have to three folders for training, testing and validation. You have to save your graph in .npz format.
 
 For using this suite, `conda` is required. You can download it from here : https://www.anaconda.com/download
 
