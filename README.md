@@ -24,7 +24,7 @@ interface. Currently, we support the following solvers:
 
 In `solvers`, you can find the wrappers for the currently supported solvers. In `data`, you have to three folders for training, testing and validation. You have to save your graph in .npz format.
 
-For using this suite, `conda` is required. You can download it from here : https://www.anaconda.com/download
+For using this suite, `conda` is required. You can download it from here : https://www.anaconda.com/download .
 
 ## Setup
 
@@ -37,7 +37,7 @@ The included [``environment.yml``](environment.yml) file will produce a working 
 
 
 
-## Details how to use the Solvers
+## Details on how to use the Solvers
 
 ### S2V-DQN
 

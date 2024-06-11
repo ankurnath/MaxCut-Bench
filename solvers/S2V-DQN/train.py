@@ -183,19 +183,19 @@ if __name__ == '__main__':
 
 
     args = parser.parse_args()
-    num_devices = torch.cuda.device_count()
-    for i in range(num_devices):
-        device_name = torch.cuda.get_device_name(i)
-        # print("CUDA Device {}: {}".format(i, device_name))
-    if True:
-        pass
+    # num_devices = torch.cuda.device_count()
+    # for i in range(num_devices):
+    #     device_name = torch.cuda.get_device_name(i)
+    #     # print("CUDA Device {}: {}".format(i, device_name))
+    # if True:
+    #     pass
 
-    if torch.cuda.is_available():
-        if args.device is None:
-            device = 'cuda:0' 
-        else:
-            # pass
-            device=f'cuda:{args.device}'
+    # if torch.cuda.is_available():
+    #     if args.device is None:
+    #         device = 'cuda:0' 
+    #     else:
+    #         # pass
+    #         device=f'cuda:{args.device}'
 
 
 
