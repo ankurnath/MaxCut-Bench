@@ -22,7 +22,7 @@ interface. Currently, we support the following solvers:
 
 ## Repository Contents
 
-In `solvers`, you can find the wrappers for the currently supported solvers. In `data`, you have to three folders for training, testing and validation. You have to save your graph in .npz format.
+In `solvers`, you can find wrappers for the currently supported solvers. In `data`, there are three folders for training, testing, and validation. You need to save your graph in .npz format. For demonstration purposes, we provide an example of a small dataset with a BA distribution.
 
 For using this suite, `conda` is required. You can download it from here : https://www.anaconda.com/download .
 
@@ -161,4 +161,6 @@ To test
 
 ### Data and Models
 
-We cannot reupload publicly available datasets, as we do not have any permission to re-distribute them. Hence we only provide the synthetic datasets we generated with with best known solutions along with all pretrained models.
+We cannot reupload publicly available datasets, as we do not have permission to redistribute them. Therefore, we only provide synthetic datasets generated with the best-known solutions, along with all the [pretrained models](https://drive.google.com/file/d/1gGoIQ1LhzomLS0hhzpAjnslVet4faZIo/view?usp=sharing). Additionally, we offer all the [data](https://drive.google.com/file/d/1LJ0kjavA9wIjnIpmkI38-wlf2C77p3dy/view?usp=sharing) needed for training and validation across all distributions.
+
+
