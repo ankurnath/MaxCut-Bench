@@ -65,18 +65,23 @@ if __name__ == '__main__':
                 spins= np.random.randint(2, size=graph.shape[0])
                 arguments.append((g,spins,tabu_tenure,args.num_steps))
             
-            with Pool(10) as pool:
+            with Pool() as pool:
                 best_cut=np.max(pool.starmap(tabu, arguments))
 
             best_cuts.append(best_cut)
 
         best_cuts=np.array(best_cuts)
+        # print(best_cuts.mean())
 
+        # print(best_mean<best_cuts.mean())
         if best_mean<best_cuts.mean():
+            # print(best_cuts.mean())
+
             best_mean=best_cuts.mean()
             best_tabu_tenure=tabu_tenure
+            # print(best_mean)
 
-    
+    # print(best_cuts)
     print('Best Tabu Tenure:',best_tabu_tenure)
 
     tabu_tenure_save_path=os.path.join(network_folder,'best_tabu_tenure')
