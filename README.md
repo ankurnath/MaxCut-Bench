@@ -33,7 +33,7 @@ The included [``environment.yml``](environment.yml) file will produce a working 
     >>> git clone https://github.com/ankurnath/MaxCut-Bench.git
     >>> cd MaxCut-Bench
     >>> conda env create -f environment.yml 
-    >>> conda active benchenv
+    >>> conda activate benchenv
 
 
 
