@@ -199,10 +199,10 @@ def main(cfg: DictConfig):
                 # print(action)
                 # print(state)
                 # print(env.batch_metric(state))
-                if torch.all(rewards<=env.get_log_reward()):
-                    rewards=env.get_log_reward()
-                else:
-                    raise ValueError ("No reward")
+                # if torch.all(rewards<=env.get_log_reward()):
+                #     rewards=env.get_log_reward()
+                # else:
+                #     raise ValueError ("No reward")
                 # print(env.get_log_reward())
                 # step+=1
             

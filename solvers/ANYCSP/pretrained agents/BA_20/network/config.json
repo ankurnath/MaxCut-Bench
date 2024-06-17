@@ -18,12 +18,12 @@
     "val_batch_size": 50,
     "train_data": {
         "FILES": {
-            "path": "/home/grads/a/anath/MaxCut Bench git/data/training/BA_20"
+            "path": "/home/grads/a/anath/MaxCut-Bench/data/training/BA_20"
         }
     },
     "val_data": {
         "FILES": {
-            "path": "/home/grads/a/anath/MaxCut Bench git/data/validation/BA_20"
+            "path": "/home/grads/a/anath/MaxCut-Bench/data/validation/BA_20"
         }
     }
 }

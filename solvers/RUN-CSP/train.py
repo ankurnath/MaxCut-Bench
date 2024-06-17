@@ -86,8 +86,8 @@ if __name__ == "__main__":
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
     # print(f'Loading Graphs from {args.data_path}...')
-
-    train_graph_gen=GraphDataset(folder_path=f'../data/training/{args.distribution}')
+    folder_path=os.path.join(os.getcwd(),f'data/training/{args.distribution}')
+    train_graph_gen=GraphDataset(folder_path=folder_path)
     print(f'Number of graphs:{len(train_graph_gen)}')
     graphs = [nx.from_numpy_array(train_graph_gen.get()) for _ in range(len(train_graph_gen))]
     data = [CSP_Data.load_graph_weighted_maxcut(nx_graph)for nx_graph in graphs]
