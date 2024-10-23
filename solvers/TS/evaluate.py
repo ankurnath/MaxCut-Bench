@@ -24,10 +24,12 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
+    
+    train_distribution = args.train_distribution
+    test_distribution = args.test_distribution
 
 
-
-    save_folder = f'pretrained agents/{args.train_distribution}'
+    save_folder = f'pretrained agents/{train_distribution}'
     save_folder=os.path.join(os.getcwd(),'solvers/TS',save_folder)
 
     os.makedirs(save_folder,exist_ok=True)
@@ -84,15 +86,15 @@ if __name__ == '__main__':
 
     df={'cut':best_cuts,'tabu_tenure':[best_tabu_tenure]*best_cuts.shape[0]}
     df['Instance'] = [os.path.basename(file) for file in dataset.file_paths]
-    df['Train Distribution'] = [args.train_distribution]*best_cuts.shape[0]
-    df['Test Distribution'] = [args.test_distribution]*best_cuts.shape[0]
+    df['Train Distribution'] = [train_distribution]*best_cuts.shape[0]
+    df['Test Distribution'] = [test_distribution]*best_cuts.shape[0]
     df['Time'] = elapsed_times
     df['Threads'] = [args.num_threads] * best_cuts.shape[0]
     df=pd.DataFrame(df)
 
     print(df)
 
-    df.to_pickle(os.path.join('results',args.test_distribution,'TS'))
+    df.to_pickle(os.path.join('results',test_distribution,'TS'))
 
 
 

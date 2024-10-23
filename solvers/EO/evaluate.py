@@ -12,7 +12,7 @@ if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument("--train_distribution",type=str,default=None,help='Train distribution (if train and test are not the same)')
 
-    parser.add_argument("--distribution", type=str,default='Physics',required=True, help="Distribution of test dataset")
+    parser.add_argument("--test_distribution", type=str,default='Physics',required=True, help="Distribution of test dataset")
 
     parser.add_argument("--num_repeat", type=int,default=50,required=True, help="Number of attempts")
 
@@ -24,26 +24,17 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    print(args.train_distribution)
-
-    #### loading the data
-    if args.train_distribution:
-
-        save_folder = f'pretrained agents/{args.train_distribution}'
-        print('Generelization Experiment')
-        train_distribution = args.train_distribution
-    else:
-        save_folder = f'pretrained agents/{args.distribution}'
-        train_distribution = args.distribution
+    train_distribution = args.train_distribution
 
 
+    save_folder = f'pretrained agents/{train_distribution}'
     save_folder = os.path.join(os.getcwd(),'solvers/EO',save_folder)
     os.makedirs(save_folder,exist_ok=True)
 
-    print('Distribution:',args.distribution)
+    print('Distribution:',args.test_distribution)
 
 
-    dataset_path=os.path.join(os.getcwd(),f'data/testing/{args.distribution}')
+    dataset_path=os.path.join(os.getcwd(),f'data/testing/{args.test_distribution}')
 
     dataset=GraphDataset(dataset_path,ordered=True)
 
@@ -99,7 +90,7 @@ if __name__ == '__main__':
     df={'cut':best_cuts,'tau':[best_tau]*best_cuts.shape[0]}
     df['Instance'] = [os.path.basename(file) for file in dataset.file_paths]
     df['Train Distribution'] = [train_distribution]*best_cuts.shape[0]
-    df['Test Distribution'] = [args.distribution]*best_cuts.shape[0]
+    df['Test Distribution'] = [args.test_distribution]*best_cuts.shape[0]
     df['Time'] = elapsed_times
     df['Threads'] = [args.num_threads] * best_cuts.shape[0]
     df=pd.DataFrame(df)
@@ -107,7 +98,7 @@ if __name__ == '__main__':
     print(df)
 
     # df.to_pickle(os.path.join(data_folder,'results'))
-    results_save_folder = os.path.join('results',args.distribution)
+    results_save_folder = os.path.join('results',args.test_distribution)
     os.makedirs(results_save_folder,exist_ok=True)
     df.to_pickle(os.path.join(results_save_folder,'EO'))
 

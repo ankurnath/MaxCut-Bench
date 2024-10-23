@@ -22,29 +22,29 @@ if __name__ == '__main__':
 
     if args.algorithm=='EO' or args.algorithm=='TS':
 
-        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps}'
+        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.test_distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps}'
     
     elif args.algorithm=='Greedy':
 
-         command=f'python solvers/{args.algorithm}/evaluate.py --distribution {args.distribution} --num_repeat {args.num_repeat} '
+         command=f'python solvers/{args.algorithm}/evaluate.py --test_distribution {args.test_distribution} --num_repeat {args.num_repeat} '
 
     elif args.algorithm =='CAC' or args.algorithm =='AHC':
-        command=f'python solvers/{args.algorithm}/evaluate.py --distribution {args.distribution}'
+        command=f'python solvers/{args.algorithm}/evaluate.py --test_distribution {args.test_distribution}'
 
     elif args.algorithm =='RUN-CSP':
-        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps}'
+        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.test_distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps}'
 
     elif args.algorithm == 'ANYCSP':
-        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps}'
+        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.test_distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps}'
 
     elif args.algorithm == 'Gflow-CombOpt':
-        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.distribution} --num_repeat {args.num_repeat}'
+        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.test_distribution} --num_repeat {args.num_repeat}'
 
     elif args.algorithm == 'S2V-DQN':
-        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.distribution} '
+        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.test_distribution} '
 
     elif args.algorithm == 'ECO-DQN' or args.algorithm == 'SoftTabu' or args.algorithm == 'LS-DQN':
-        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps} '
+        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.test_distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps} '
 
 
 

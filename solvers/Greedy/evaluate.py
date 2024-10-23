@@ -206,30 +206,30 @@ if __name__ == '__main__':
 
     parser = ArgumentParser()
 
-    parser.add_argument("--distribution", type=str, help="Distribution of dataset")
+    parser.add_argument("--test_distribution", type=str, help="Distribution of dataset")
     parser.add_argument("--num_repeat", type=int,default=50, help="Distribution of dataset")
 
 
 
     args = parser.parse_args()
 
-    distribution = args.distribution
+    test_distribution = args.test_distribution
     num_repeat = args.num_repeat
 
-    print('Distribution:',distribution)
+    print('Distribution:',test_distribution)
     print('Number of repeat for MCA:',num_repeat)
 
 
 
     print(os.getcwd())
 
-    save_folder = f'results/{distribution}'
+    save_folder = f'results/{test_distribution}'
 
     os.makedirs(save_folder,exist_ok=True)
 
 
     ####################
-    dataset_path=os.path.join(f'../data/testing/{args.distribution}')
+    dataset_path=os.path.join(f'data/testing/{test_distribution}')
 
    
     test_dataset=GraphDataset(dataset_path,ordered=True)

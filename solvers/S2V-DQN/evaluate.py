@@ -21,12 +21,10 @@ from src.envs.utils import (
 from collections import defaultdict
 
 
-def test_GNN(distribution,train_distribution):
+def test_GNN(test_distribution,train_distribution):
     
     current_directory=os.getcwd()
 
-    if not train_distribution:
-        train_distribution = distribution
 
 
     # print(type(train_distribution))
@@ -80,7 +78,7 @@ def test_GNN(distribution,train_distribution):
 
 
 
-    datapath = os.path.join(os.getcwd(),f'data/testing/{distribution}')
+    datapath = os.path.join(os.getcwd(),f'data/testing/{test_distribution}')
 
     graphs_test = GraphDataset(datapath, ordered=True)
     n_tests=len(graphs_test)
@@ -107,11 +105,11 @@ def test_GNN(distribution,train_distribution):
                                                 batched=batched, max_batch_size=max_batch_size,
                                                 )
     
-    save_folder = os.path.join('results',args.distribution)
+    save_folder = os.path.join('results',test_distribution)
     mk_dir(save_folder)
 
     results['Train Distribution'] = [train_distribution]* n_tests
-    results['Test Distribution'] = [distribution] * n_tests
+    results['Test Distribution'] = [test_distribution] * n_tests
     results.drop(columns=['sol'], inplace=True)
     results.to_pickle(os.path.join(save_folder,'S2V-DQN'))
     print(results)
@@ -130,12 +128,12 @@ def test_GNN(distribution,train_distribution):
 if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument("--train_distribution",default=None,help='Train distribution (if train and test are not the same)')
-    parser.add_argument("--distribution", type=str, help="Distribution of dataset")
+    parser.add_argument("--test_distribution", type=str, help="Distribution of dataset")
    
 
     args = parser.parse_args()
 
     # Accessing arguments using attribute notation, not dictionary notation
-    print(args.distribution)
-    print( args.train_distribution)
-    test_GNN(distribution=args.distribution,train_distribution = args.train_distribution)
+    # print(args.train_distribution)
+    # print( args.test_distribution)
+    test_GNN(train_distribution=args.train_distribution,test_distribution = args.test_distribution)
