@@ -69,8 +69,10 @@ def test_GNN(train_distribution,test_distribution,num_repeat,num_steps,step_fact
                              dim_embedding=64,
                             num_layers=3)
 
+    #### CHANGE
+    # graphs_test = GraphDataset(os.path.join(os.getcwd(),f'data/testing/{test_distribution}'), ordered=True)
 
-    graphs_test = GraphDataset(os.path.join(os.getcwd(),f'data/testing/{test_distribution}'), ordered=True)
+    graphs_test = GraphDataset(f'../data/testing/{test_distribution}', ordered=True)
     n_tests=len(graphs_test)
     print(f'The number of test graphs:{n_tests}')
 

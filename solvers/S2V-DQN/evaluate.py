@@ -19,6 +19,8 @@ from src.envs.utils import (
                             OptimisationTarget, SpinBasis,
                             DEFAULT_OBSERVABLES)
 from collections import defaultdict
+import pickle
+import pandas as pd
 
 
 def test_GNN(test_distribution,train_distribution):
@@ -31,7 +33,7 @@ def test_GNN(test_distribution,train_distribution):
     model_load_path=os.path.join(current_directory,"solvers/S2V-DQN/pretrained agents",f'{train_distribution}')
     
     
-    print(os.listdir(model_load_path))
+    # print(os.listdir(model_load_path))
     print('*'*60)
     
     step_factor=1
@@ -78,7 +80,8 @@ def test_GNN(test_distribution,train_distribution):
 
 
 
-    datapath = os.path.join(os.getcwd(),f'data/testing/{test_distribution}')
+    # datapath = os.path.join(os.getcwd(),f'data/testing/{test_distribution}')
+    datapath = os.path.join(f'../data/testing/{test_distribution}')
 
     graphs_test = GraphDataset(datapath, ordered=True)
     n_tests=len(graphs_test)
@@ -94,7 +97,7 @@ def test_GNN(test_distribution,train_distribution):
 
     network_save_path = os.path.join(model_load_path, 'network_best.pth')
     # print(os.listdir(network_folder))
-    network.load_state_dict(torch.load(network_save_path,map_location=device))
+    network.load_state_dict(torch.load(network_save_path,map_location=device,weights_only=False))
 
     for param in network.parameters():
         param.requires_grad = False
@@ -111,6 +114,17 @@ def test_GNN(test_distribution,train_distribution):
     results['Train Distribution'] = [train_distribution]* n_tests
     results['Test Distribution'] = [test_distribution] * n_tests
     results.drop(columns=['sol'], inplace=True)
+
+    try:
+        # OPT = pickle.load(open(f'../data/testing/{test_distribution}/optimal','rb'))['OPT']
+        OPT = pd.read_pickle(f'../data/testing/{test_distribution}/optimal')
+        
+        # print(type(OPT))
+        results['OPT'] = OPT['OPT'].tolist()
+
+        print('Mean',(results['cut']/results['OPT']).mean())
+    except:
+        raise ValueError('')
     results.to_pickle(os.path.join(save_folder,'S2V-DQN'))
     print(results)
 
