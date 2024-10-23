@@ -113,11 +113,7 @@ def test_GNN(test_distribution,train_distribution):
     results.drop(columns=['sol'], inplace=True)
     results.to_pickle(os.path.join(save_folder,'S2V-DQN'))
     print(results)
-    # for res, label in zip([results],
-    #                       ["results"]):
-    #     save_path = os.path.join(data_folder, label)
-    #     res.to_pickle(save_path)
-    #     print("{} saved to {}".format(label, save_path))
+
 
     print(results['cut'].tolist())
     
@@ -133,7 +129,4 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    # Accessing arguments using attribute notation, not dictionary notation
-    # print(args.train_distribution)
-    # print( args.test_distribution)
     test_GNN(train_distribution=args.train_distribution,test_distribution = args.test_distribution)
