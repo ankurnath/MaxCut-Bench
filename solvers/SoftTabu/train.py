@@ -76,12 +76,12 @@ def train_GNN(distribution,num_steps,step_factor):
         
         
     mk_dir(save_loc)
-    data_folder = os.path.join(save_loc,'data')
-    network_folder = os.path.join(save_loc, 'network')
+    # data_folder = os.path.join(save_loc,'data')
+    # network_folder = os.path.join(save_loc, 'network')
 
 
-    mk_dir(data_folder)
-    mk_dir(network_folder)
+    # mk_dir(data_folder)
+    # mk_dir(network_folder)
     
     train_env = ising_env.make("SpinSystem",
                                 train_graph_generator,
@@ -94,9 +94,9 @@ def train_GNN(distribution,num_steps,step_factor):
                                 step_factor,
                                 **env_args)
     
-    network_save_path = os.path.join(network_folder,'network.pth')
-    test_save_path = os.path.join(network_folder,'test_scores.pkl')
-    loss_save_path = os.path.join(network_folder, 'losses.pkl')
+    network_save_path = os.path.join(save_loc,'network.pth')
+    test_save_path = os.path.join(save_loc,'test_scores.pkl')
+    # loss_save_path = os.path.join(network_folder, 'losses.pkl')
     network_fn = lambda: LinearRegression(input_dim=len(observables)-1)
     
     

@@ -21,10 +21,11 @@ from src.envs.utils import (
 from collections import defaultdict
 
 
-def test_GNN(distribution,num_repeat,num_steps,step_factor):
+# def test_GNN(distribution,num_repeat,num_steps,step_factor):
+def test_GNN(train_distribution,test_distribution,num_repeat,num_steps,step_factor):
     
     current_directory=os.getcwd()
-    model_load_path=os.path.join(current_directory,"solvers/SoftTabu/pretrained agents",f'{distribution}')
+    model_load_path=os.path.join(current_directory,"solvers/SoftTabu/pretrained agents",f'{train_distribution}')
     
     
 
@@ -59,18 +60,18 @@ def test_GNN(distribution,num_repeat,num_steps,step_factor):
 
     batched=True
     max_batch_size=None
-    data_folder = os.path.join(model_load_path, 'data')
-    network_folder = os.path.join(model_load_path, 'network')
-    mk_dir(data_folder)
-    mk_dir(network_folder)
+    # data_folder = os.path.join(model_load_path, 'data')
+    # network_folder = os.path.join(model_load_path, 'network')
+    # mk_dir(data_folder)
+    # mk_dir(network_folder)
 
-    print("data folder:", data_folder)
-    print("network folder:", network_folder)
+    # print("data folder:", data_folder)
+    # print("network folder:", network_folder)
 
     network_fn = lambda: LinearRegression(input_dim=len(observables)-1)
 
 
-    graphs_test = GraphDataset(os.path.join(os.getcwd(),f'data/testing/{distribution}'), ordered=True)
+    graphs_test = GraphDataset(os.path.join(os.getcwd(),f'data/testing/{test_distribution}'), ordered=True)
     n_tests=len(graphs_test)
     print(f'The number of test graphs:{n_tests}')
 
@@ -82,7 +83,7 @@ def test_GNN(distribution,num_repeat,num_steps,step_factor):
 
     network = network_fn().to(device)
 
-    network_save_path = os.path.join(network_folder, 'network_best.pth')
+    network_save_path = os.path.join(model_load_path, 'network_best.pth')
     network.load_state_dict(torch.load(network_save_path,map_location=device))
 
     for param in network.parameters():
@@ -95,18 +96,25 @@ def test_GNN(distribution,num_repeat,num_steps,step_factor):
                                                 )
     
 
+    save_folder = os.path.join('results',test_distribution)
+    mk_dir(save_folder)
+    results['Train Distribution'] = [train_distribution]* n_tests
+    results['Test Distribution'] = [test_distribution] * n_tests
+    results.drop(columns=['sol'], inplace=True)
+    results.to_pickle(os.path.join(save_folder,'ECO-DQN'))
+    print(results)
     
-    
-    for res, label in zip([results],
-                                          ["results"]):
-        save_path = os.path.join(data_folder, label)
-        res.to_pickle(save_path)
-        print("{} saved to {}".format(label, save_path))
+    # for res, label in zip([results],
+    #                                       ["results"]):
+    #     save_path = os.path.join(data_folder, label)
+    #     res.to_pickle(save_path)
+    #     print("{} saved to {}".format(label, save_path))
     
 
 if __name__ == '__main__':
     parser = ArgumentParser()
-    parser.add_argument("--distribution", type=str, help="Distribution of dataset")
+    parser.add_argument("--train_distribution",default=None,help='Train distribution (if train and test are not the same)')
+    parser.add_argument("--test_distribution", type=str, help="Distribution of dataset")
     parser.add_argument("--num_repeat", type=int,default=50, help="Number of attempts")
     parser.add_argument("--num_steps",type=int, default=None, help="Number of steps in an episode")
     parser.add_argument("--step_factor",type=int, default=2, help="Step Factor")
@@ -114,7 +122,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Accessing arguments using attribute notation, not dictionary notation
-    test_GNN(distribution=args.distribution,
+    test_GNN(test_distribution=args.test_distribution,
+             train_distribution = args.train_distribution,
              num_repeat=args.num_repeat,
               num_steps=args.num_steps, 
               step_factor=args.step_factor)

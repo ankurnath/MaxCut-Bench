@@ -275,7 +275,7 @@ def __test_network_batched(network, env_args, graphs_test, device=None, step_fac
        
         
         results.append([best_cut, sol,
-                        mean_cut,
+                        mean_cut,t_total,
                         t_total/(n_attempts)])
 
         
@@ -295,9 +295,8 @@ def __test_network_batched(network, env_args, graphs_test, device=None, step_fac
 
     
     results = pd.DataFrame(data=results, columns=["cut", "sol",
-                                                "mean cut",
-                                                "time"])
-
+                                                "mean cut",'time',
+                                                "time per attempt"])
     results_raw = pd.DataFrame(data=results_raw, columns=["init spins",
                                                         "cuts", "sols"])
 

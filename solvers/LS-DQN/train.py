@@ -38,7 +38,7 @@ def train_GNN(distribution,num_steps,step_factor):
     # Define a dictionary of observables for different models
     observables=[Observable.SPIN_STATE]
 
-    reward_signal=RewardSignal.BLS
+    reward_signal=RewardSignal.DENSE
                  
     # Define a dictionary of whether spins are reversible for different models
     reversible_spin=True
@@ -74,12 +74,12 @@ def train_GNN(distribution,num_steps,step_factor):
         
         
     mk_dir(save_loc)
-    data_folder = os.path.join(save_loc,'data')
-    network_folder = os.path.join(save_loc, 'network')
+    # data_folder = os.path.join(save_loc,'data')
+    # network_folder = os.path.join(save_loc, 'network')
 
 
-    mk_dir(data_folder)
-    mk_dir(network_folder)
+    # mk_dir(data_folder)
+    # mk_dir(network_folder)
     
     train_env = ising_env.make("SpinSystem",
                                 train_graph_generator,
@@ -92,9 +92,9 @@ def train_GNN(distribution,num_steps,step_factor):
                                 step_factor,
                                 **env_args)
     
-    network_save_path = os.path.join(network_folder,'network.pth')
-    test_save_path = os.path.join(network_folder,'test_scores.pkl')
-    loss_save_path = os.path.join(network_folder, 'losses.pkl')
+    network_save_path = os.path.join(save_loc,'network.pth')
+    test_save_path = os.path.join(save_loc,'test_scores.pkl')
+    # loss_save_path = os.path.join(network_folder, 'losses.pkl')
     network_fn = lambda: MPNN(dim_in=1,
                                     dim_embedding=64,
                                     num_layers=3)
