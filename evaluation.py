@@ -7,7 +7,7 @@ if __name__ == '__main__':
 
     parser = ArgumentParser()
 
-    
+    parser.add_argument("--train_distribution",type=str,default=None,help='Train distribution (if train and test are not the same)')
     parser.add_argument("--algorithm", type=str,default='EO', help="Algorithms")
     parser.add_argument("--distribution", type=str,default='BA_20', help="Distribution of training dataset")
 
@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     if args.algorithm=='EO' or args.algorithm=='TS':
 
-        command=f'python solvers/{args.algorithm}/evaluate.py --distribution {args.distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps}'
+        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --distribution {args.distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps}'
     
     elif args.algorithm=='Greedy':
 

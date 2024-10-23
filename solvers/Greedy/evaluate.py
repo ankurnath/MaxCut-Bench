@@ -7,6 +7,8 @@ import random
 import pickle
 from multiprocessing.pool import Pool
 from scipy.sparse import load_npz
+from collections import defaultdict
+import time
 
 class GraphDataset(object):
 
@@ -72,7 +74,7 @@ def flatten_graph(graph):
 
 
 @njit
-def foward_greedy(graph):
+def forward_greedy(graph):
     adj_matrix, weight_matrix, start_list, end_list=graph
     
     n=len(start_list)
@@ -207,69 +209,94 @@ if __name__ == '__main__':
     parser.add_argument("--distribution", type=str, help="Distribution of dataset")
     parser.add_argument("--num_repeat", type=int,default=50, help="Distribution of dataset")
 
-    
+
+
     args = parser.parse_args()
 
-    save_folder=f'pretrained agents/{args.distribution}_TS'
-    save_folder=os.path.join(os.getcwd(),'solvers/Greedy',save_folder)
+    distribution = args.distribution
+    num_repeat = args.num_repeat
 
-    network_folder=os.path.join(save_folder,'network')
-    data_folder=os.path.join(save_folder,'data')
+    print('Distribution:',distribution)
+    print('Number of repeat for MCA:',num_repeat)
 
+
+
+    print(os.getcwd())
+
+    save_folder = f'results/{distribution}'
 
     os.makedirs(save_folder,exist_ok=True)
-    os.makedirs(data_folder,exist_ok=True)
+
+
+    ####################
+    dataset_path=os.path.join(f'../data/testing/{args.distribution}')
 
    
-
-
-    dataset_path=os.path.join(os.getcwd(),f'data/testing/{args.distribution}')
-
     test_dataset=GraphDataset(dataset_path,ordered=True)
     
 
-    fg_cuts=[]
-    mca_cuts=[]
-    sg_cuts=[]
-
-
+    fg_cuts = []
+    mca_cuts = []
+    sg_cuts = []
+    fg_times = []
+    mca_times = []
+    sg_times = []
 
     for i in range(len(test_dataset)):
-        graph=test_dataset.get()
-        g=flatten_graph(graph)
+        graph = test_dataset.get()
+        g = flatten_graph(graph)
 
-
-        
-        mca_arguments=[]
-        
+        # MCA
+        start = time.time()
+        mca_arguments = []
         for _ in range(args.num_repeat):
-            spins= np.random.randint(2, size=graph.shape[0])
-            mca_arguments.append((g,spins))
-            
-
+            spins = np.random.randint(2, size=graph.shape[0])
+            mca_arguments.append((g, spins))
 
         with Pool() as pool:
-            best_mca_cut=np.max(pool.starmap(mca, mca_arguments))
-
-
-        
-
-        sg_cut=standard_greedy(g)  
+            best_mca_cut = np.max(pool.starmap(mca, mca_arguments))
+        end = time.time()
+        elapsed_time_mca = end - start
         mca_cuts.append(best_mca_cut)
-        fg_cuts.append(foward_greedy(g))
+        mca_times.append(elapsed_time_mca)
+
+        # Standard Greedy
+        start = time.time()
+        sg_cut = standard_greedy(g)
+        end = time.time()
+        elapsed_time_sg = end - start
         sg_cuts.append(sg_cut)
+        sg_times.append(elapsed_time_sg)
+
+        # Forward Greedy
+        start = time.time()
+        fg_cut = forward_greedy(g)
+        end = time.time()
+        elapsed_time_fg = end - start
+        fg_cuts.append(fg_cut)
+        fg_times.append(elapsed_time_fg)
+
+    instances = [os.path.basename(file) for file in test_dataset.file_paths]
+
+    # Saving MCA results
+    mca_df = {'instances': instances, 'cut': mca_cuts, 'time': mca_times}
+    mca_df = pd.DataFrame(mca_df)
+    mca_df.to_pickle(os.path.join(save_folder, 'RG'))
+
+    # Saving Standard Greedy results
+    sg_df = {'instances': instances, 'cut': sg_cuts, 'time': sg_times}
+    sg_df = pd.DataFrame(sg_df)
+    sg_df.to_pickle(os.path.join(save_folder, 'Standard Greedy'))
+
+    # Saving Forward Greedy results
+    fg_df = {'instances': instances, 'cut': fg_cuts, 'time': fg_times}
+    fg_df = pd.DataFrame(fg_df)
+    fg_df.to_pickle(os.path.join(save_folder, 'Forward Greedy'))
 
 
-    mca_cuts=np.array(mca_cuts)
-    sg_cuts=np.array(sg_cuts)
-    fg_cuts=np.array(fg_cuts)
-
-
-    df={'FG':fg_cuts,'RG':mca_cuts,'SG':sg_cuts}
-    df['Instance'] = [os.path.basename(file) for file in test_dataset.file_paths]
-    df=pd.DataFrame(df)
-    print(df)
-    df.to_pickle(os.path.join(data_folder,'results'))
+    print(mca_df)
+    print(sg_df)
+    print(fg_df)
 
 
 

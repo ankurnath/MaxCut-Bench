@@ -28,16 +28,10 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
 
-    save_folder=f'pretrained agents/{args.distribution}_TS'
+    save_folder=f'pretrained agents/{args.distribution}'
     save_folder=os.path.join(os.getcwd(),'solvers/TS',save_folder)
-
-    network_folder=os.path.join(save_folder,'network')
-    data_folder=os.path.join(save_folder,'data')
-
-
     os.makedirs(save_folder,exist_ok=True)
-    os.makedirs(network_folder,exist_ok=True)
-    os.makedirs(data_folder,exist_ok=True)
+    
 
 
     
@@ -84,7 +78,7 @@ if __name__ == '__main__':
     # print(best_cuts)
     print('Best Tabu Tenure:',best_tabu_tenure)
 
-    tabu_tenure_save_path=os.path.join(network_folder,'best_tabu_tenure')
+    tabu_tenure_save_path=os.path.join(save_folder,'best_tabu_tenure')
 
     with open(tabu_tenure_save_path, "wb") as file:
         # Use pickle.dump() to save the integer to the file

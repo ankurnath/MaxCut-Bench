@@ -5,6 +5,8 @@ import numpy as np
 from EO import *
 import pickle
 
+from smartprint import smartprint as sprint
+
 
 
 if __name__ == '__main__':
@@ -27,17 +29,32 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
+    distribution =args.distribution
+    num_repeat = args.num_repeat
+    num_steps = args.num_steps
+    low = args.low
+    high = args.high
+    step = args.step
 
-    save_folder=f'pretrained agents/{args.distribution}_EO'
+    sprint(distribution)
+    sprint(num_repeat)
+    sprint(num_steps)
+    sprint(low)
+    sprint(high)
+    sprint(step)
+
+
+
+
+
+    save_folder=f'pretrained agents/{args.distribution}'
     save_folder=os.path.join(os.getcwd(),'solvers/EO',save_folder)
 
-    network_folder=os.path.join(save_folder,'network')
-    data_folder=os.path.join(save_folder,'data')
+    
 
 
     os.makedirs(save_folder,exist_ok=True)
-    os.makedirs(network_folder,exist_ok=True)
-    os.makedirs(data_folder,exist_ok=True)
+    
 
 
     
@@ -72,7 +89,7 @@ if __name__ == '__main__':
                 spins= np.random.randint(2, size=graph.shape[0])
                 arguments.append((g,spins,actions[i]))
             
-            with Pool(10) as pool:
+            with Pool() as pool:
                 best_cut=np.max(pool.starmap(EO, arguments))
 
             best_cuts.append(best_cut)
@@ -86,10 +103,9 @@ if __name__ == '__main__':
     
     print('Best Tau:',best_tau)
 
-    tau_save_path=os.path.join(network_folder,'best_tau')
+    tau_save_path=os.path.join(save_folder,'best_tau')
 
     with open(tau_save_path, "wb") as file:
-        # Use pickle.dump() to save the integer to the file
         pickle.dump(best_tau, file)
 
 

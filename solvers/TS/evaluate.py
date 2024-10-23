@@ -4,11 +4,13 @@ import numpy as np
 
 from TS import *
 import pickle
-
+import time
 
 if __name__ == '__main__':
 
     parser = ArgumentParser()
+
+    parser.add_argument("--train_distribution",type=str,default=None,help='Train distribution (if train and test are not the same)')
 
     parser.add_argument("--distribution", type=str,default='Physics',required=True, help="Distribution of test dataset")
 
@@ -16,17 +18,27 @@ if __name__ == '__main__':
 
     parser.add_argument("--num_steps", type=int, default=2,required=True, help="Number of steps")
 
+    parser.add_argument("--tabu_tenure", type=int, default=100, help="Tabu Tenure")
 
+    parser.add_argument("--num_threads",type=int,default=20,help="Number of threads")
 
     args = parser.parse_args()
 
-    save_folder=f'pretrained agents/{args.distribution}_TS'
+
+    #### loading the data
+    if args.train_distribution:
+
+        save_folder = f'pretrained agents/{args.train_distribution}'
+        print('Generelization Experiment')
+        train_distribution = args.train_distribution
+    else:
+        save_folder = f'pretrained agents/{args.distribution}'
+        train_distribution = args.distribution
+
+
     save_folder=os.path.join(os.getcwd(),'solvers/TS',save_folder)
 
-    network_folder=os.path.join(save_folder,'network')
-    data_folder=os.path.join(save_folder,'data')
-    os.makedirs(data_folder,exist_ok=True)
-    os.makedirs(network_folder,exist_ok=True)
+    os.makedirs(save_folder,exist_ok=True)
 
     dataset_path=os.path.join(os.getcwd(),f'data/testing/{args.distribution}')
 
@@ -35,15 +47,25 @@ if __name__ == '__main__':
     print("Number of graphs:",len(dataset))
 
 
-    best_tabu_tenure_path=os.path.join(network_folder,'best_tabu_tenure')
+    best_tabu_tenure_path=os.path.join(save_folder,'best_tabu_tenure')
 
     # Load the pickle file
-    with open(best_tabu_tenure_path, 'rb') as file:
-        best_tabu_tenure = pickle.load(file)
+    try:
+        with open(best_tabu_tenure_path, 'rb') as file:
+            best_tabu_tenure = pickle.load(file)
+        print('Loaded pretrained value:',best_tabu_tenure)
+    except:
+        best_tabu_tenure = args.tabu_tenure
+        print('Loaded default value:',best_tabu_tenure)
+
+
 
     best_cuts=[]
+    elapsed_times =[]
     for i in range(len(dataset)):
         graph=dataset.get()
+        start = time.time()
+
         g=flatten_graph(graph)
 
         n=graph.shape[0]
@@ -56,20 +78,29 @@ if __name__ == '__main__':
             spins= np.random.randint(2, size=graph.shape[0])
             arguments.append((g,spins,best_tabu_tenure,args.num_steps))
         
-        with Pool() as pool:
+        with Pool(args.num_threads) as pool:
             best_cut=np.max(pool.starmap(tabu, arguments))
 
         best_cuts.append(best_cut)
+        end = time.time()
+        elapsed_time = end-start
+        elapsed_times.append(elapsed_time)
+
 
     best_cuts=np.array(best_cuts)
+    elapsed_times = np.array(elapsed_times)
 
     df={'cut':best_cuts,'tabu_tenure':[best_tabu_tenure]*best_cuts.shape[0]}
     df['Instance'] = [os.path.basename(file) for file in dataset.file_paths]
+    df['Train Distribution'] = [train_distribution]*best_cuts.shape[0]
+    df['Test Distribution'] = [args.distribution]*best_cuts.shape[0]
+    df['Time'] = elapsed_times
+    df['Threads'] = [args.num_threads] * best_cuts.shape[0]
     df=pd.DataFrame(df)
 
     print(df)
 
-    df.to_pickle(os.path.join(data_folder,'results'))
+    df.to_pickle(os.path.join('results',args.distribution,'TS'))
 
 
 
