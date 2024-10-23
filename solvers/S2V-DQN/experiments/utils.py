@@ -17,7 +17,7 @@ import src.envs.core as ising_env
 from src.envs.utils import (SingleGraphGenerator, SpinBasis)
 from src.agents.solver import Network, Greedy
 from torch_geometric.data import Batch
-
+from tqdm import tqdm
 ####################################################
 # TESTING ON GRAPHS
 ####################################################
@@ -106,7 +106,7 @@ def __test_network_batched(network, env_args, graphs_test, device=None, step_fac
 
     n_attempts = n_attempts if env_args["reversible_spins"] else 1
 
-    for j, test_graph in enumerate(graphs_test):
+    for j, test_graph in tqdm(enumerate(graphs_test)):
 
         i_comp = 0
         i_batch = 0
@@ -276,6 +276,7 @@ def __test_network_batched(network, env_args, graphs_test, device=None, step_fac
         
         results.append([best_cut, sol,
                         mean_cut,
+                        t_total,
                         t_total/(n_attempts)])
 
         
@@ -295,8 +296,8 @@ def __test_network_batched(network, env_args, graphs_test, device=None, step_fac
 
     
     results = pd.DataFrame(data=results, columns=["cut", "sol",
-                                                "mean cut",
-                                                "time"])
+                                                "mean cut","time",
+                                                "time per attempt"])
 
     results_raw = pd.DataFrame(data=results_raw, columns=["init spins",
                                                         "cuts", "sols"])

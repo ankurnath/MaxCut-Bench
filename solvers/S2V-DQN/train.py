@@ -35,7 +35,7 @@ def train_GNN(distribution):
     clip_Q_target=True
     observables=[Observable.SPIN_STATE]
     
-    reward_signal=RewardSignal.DENSE,
+    reward_signal=RewardSignal.DENSE
     # Define a dictionary of whether spins are reversible for different models
     reversible_spin=False
     
@@ -69,12 +69,12 @@ def train_GNN(distribution):
         
         
     mk_dir(save_loc)
-    data_folder = os.path.join(save_loc,'data')
-    network_folder = os.path.join(save_loc, 'network')
+    # data_folder = os.path.join(save_loc,'data')
+    # network_folder = os.path.join(save_loc, 'network')
 
 
-    mk_dir(data_folder)
-    mk_dir(network_folder)
+    # mk_dir(data_folder)
+    # mk_dir(network_folder)
     
     train_env = ising_env.make("SpinSystem",
                                 train_graph_generator,
@@ -87,8 +87,8 @@ def train_GNN(distribution):
                                 step_factor,
                                 **env_args)
     
-    network_save_path = os.path.join(network_folder,'network.pth')
-    test_save_path = os.path.join(network_folder,'test_scores.pkl')
+    network_save_path = os.path.join(save_loc,'network.pth')
+    test_save_path = os.path.join(save_loc,'test_scores.pkl')
      
     network_fn = lambda: MPNN(dim_in=1,
                               dim_embedding=64,
@@ -178,6 +178,7 @@ def train_GNN(distribution):
     
 if __name__ == '__main__':
     parser = ArgumentParser()
+    
     parser.add_argument("--distribution", type=str, help="Distribution of dataset")
     
 

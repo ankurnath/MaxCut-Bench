@@ -47,7 +47,7 @@ To train
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm S2V-DQN --distribution BA_20
+    >>> python evaluation.py --algorithm S2V-DQN --train_distribution BA_20 --test_distribution BA_20
 
 
 ### ECO-DQN
@@ -58,7 +58,7 @@ To train
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm ECO-DQN --distribution BA_20 --num_repeat 50 --num_steps 40
+    >>> python evaluation.py --algorithm ECO-DQN --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50 --num_steps 40
 
 
 ### LS-DQN
@@ -69,7 +69,7 @@ To train
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm LS-DQN --distribution BA_20 --num_repeat 50 --num_steps 40
+    >>> python evaluation.py --algorithm LS-DQN --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50 --num_steps 40
 
 ### SoftTabu
 
@@ -79,7 +79,7 @@ To train
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm SoftTabu --distribution BA_20 --num_repeat 50 --num_steps 40
+    >>> python evaluation.py --algorithm SoftTabu --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50 --num_steps 40
 
 
 
@@ -91,7 +91,7 @@ To train
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm RUN-CSP --distribution BA_20 --num_repeat 50 --num_steps 40
+    >>> python evaluation.py --algorithm RUN-CSP --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50 --num_steps 40
 
 
 ### ANYCSP
@@ -102,7 +102,7 @@ To train
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm ANYCSP --distribution BA_20 --num_repeat 50 --num_steps 40
+    >>> python evaluation.py --algorithm ANYCSP --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50 --num_steps 40
 
 ### Gflow-CombOpt
 
@@ -112,14 +112,14 @@ To train
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm Gflow-CombOpt --distribution BA_20 --num_repeat 50 
+    >>> python evaluation.py --algorithm Gflow-CombOpt --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50 
 
 
 ### Amplitude Heterogeneity Correction
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm AHC --distribution BA_20 
+    >>> python evaluation.py --algorithm AHC --test_distribution BA_20 
 
 Hyperparameter tuning for each instance is done on the fly.
 
@@ -127,7 +127,7 @@ Hyperparameter tuning for each instance is done on the fly.
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm CAC --distribution BA_20 
+    >>> python evaluation.py --algorithm CAC --test_distribution BA_20 
 
 Hyperparameter tuning for each instance is done on the fly.
 
@@ -139,7 +139,7 @@ To train
 
 To test
 
-    >>> python evaluation.py --algorithm TS --distribution BA_20 --num_repeat 50  --num_steps 40
+    >>> python evaluation.py --algorithm TS --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50  --num_steps 40
 
 
 ### Extremal Optimization
@@ -150,13 +150,13 @@ To train
 
 To test
 
-    >>> python evaluation.py --algorithm EO --distribution BA_20 --num_repeat 50  --num_steps 40
+    >>> python evaluation.py --algorithm EO --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50  --num_steps 40
 
 ### Greedy
 
 To test
 
-    >>> python evaluation.py --algorithm Greedy --distribution BA_20 --num_repeat 50  
+    >>> python evaluation.py --algorithm Greedy --test_distribution BA_20 --num_repeat 50  
 
 
 ### Data and Models

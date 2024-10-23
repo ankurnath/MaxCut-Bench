@@ -21,10 +21,17 @@ from src.envs.utils import (
 from collections import defaultdict
 
 
-def test_GNN(distribution):
+def test_GNN(distribution,train_distribution):
     
     current_directory=os.getcwd()
-    model_load_path=os.path.join(current_directory,"solvers/S2V-DQN/pretrained agents",f'{distribution}')
+
+    if not train_distribution:
+        train_distribution = distribution
+
+
+    # print(type(train_distribution))
+    model_load_path=os.path.join(current_directory,"solvers/S2V-DQN/pretrained agents",f'{train_distribution}')
+    
     
     print(os.listdir(model_load_path))
     print('*'*60)
@@ -59,13 +66,13 @@ def test_GNN(distribution):
 
     batched=True
     max_batch_size=None
-    data_folder = os.path.join(model_load_path, 'data')
-    network_folder = os.path.join(model_load_path, 'network')
-    mk_dir(data_folder)
-    mk_dir(network_folder)
+    # data_folder = os.path.join(model_load_path, 'data')
+    # network_folder = os.path.join(model_load_path, 'network')
+    # mk_dir(data_folder)
+    # mk_dir(network_folder)
 
-    print("data folder:", data_folder)
-    print("network folder:", network_folder)
+    # print("data folder:", data_folder)
+    # print("network folder:", network_folder)
 
     network_fn = lambda: MPNN(dim_in=1,
                                     dim_embedding=64,
@@ -87,8 +94,8 @@ def test_GNN(distribution):
 
     network = network_fn().to(device)
 
-    network_save_path = os.path.join(network_folder, 'network_best.pth')
-    print(os.listdir(network_folder))
+    network_save_path = os.path.join(model_load_path, 'network_best.pth')
+    # print(os.listdir(network_folder))
     network.load_state_dict(torch.load(network_save_path,map_location=device))
 
     for param in network.parameters():
@@ -100,11 +107,19 @@ def test_GNN(distribution):
                                                 batched=batched, max_batch_size=max_batch_size,
                                                 )
     
-    for res, label in zip([results],
-                          ["results"]):
-        save_path = os.path.join(data_folder, label)
-        res.to_pickle(save_path)
-        print("{} saved to {}".format(label, save_path))
+    save_folder = os.path.join('results',args.distribution)
+    mk_dir(save_folder)
+
+    results['Train Distribution'] = [train_distribution]* n_tests
+    results['Test Distribution'] = [distribution] * n_tests
+    results.drop(columns=['sol'], inplace=True)
+    results.to_pickle(os.path.join(save_folder,'S2V-DQN'))
+    print(results)
+    # for res, label in zip([results],
+    #                       ["results"]):
+    #     save_path = os.path.join(data_folder, label)
+    #     res.to_pickle(save_path)
+    #     print("{} saved to {}".format(label, save_path))
 
     print(results['cut'].tolist())
     
@@ -114,10 +129,13 @@ def test_GNN(distribution):
 
 if __name__ == '__main__':
     parser = ArgumentParser()
+    parser.add_argument("--train_distribution",default=None,help='Train distribution (if train and test are not the same)')
     parser.add_argument("--distribution", type=str, help="Distribution of dataset")
    
 
     args = parser.parse_args()
 
     # Accessing arguments using attribute notation, not dictionary notation
-    test_GNN(distribution=args.distribution)
+    print(args.distribution)
+    print( args.train_distribution)
+    test_GNN(distribution=args.distribution,train_distribution = args.train_distribution)

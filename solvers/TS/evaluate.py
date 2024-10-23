@@ -10,9 +10,9 @@ if __name__ == '__main__':
 
     parser = ArgumentParser()
 
-    parser.add_argument("--train_distribution",type=str,default=None,help='Train distribution (if train and test are not the same)')
+    parser.add_argument("--train_distribution",type=str,help='Train distribution (if train and test are not the same)')
 
-    parser.add_argument("--distribution", type=str,default='Physics',required=True, help="Distribution of test dataset")
+    parser.add_argument("--test_distribution", type=str, help="Distribution of test dataset")
 
     parser.add_argument("--num_repeat", type=int,default=50,required=True, help="Number of attempts")
 
@@ -25,22 +25,14 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
 
-    #### loading the data
-    if args.train_distribution:
-
-        save_folder = f'pretrained agents/{args.train_distribution}'
-        print('Generelization Experiment')
-        train_distribution = args.train_distribution
-    else:
-        save_folder = f'pretrained agents/{args.distribution}'
-        train_distribution = args.distribution
 
 
+    save_folder = f'pretrained agents/{args.train_distribution}'
     save_folder=os.path.join(os.getcwd(),'solvers/TS',save_folder)
 
     os.makedirs(save_folder,exist_ok=True)
 
-    dataset_path=os.path.join(os.getcwd(),f'data/testing/{args.distribution}')
+    dataset_path=os.path.join(os.getcwd(),f'data/testing/{args.test_distribution}')
 
     dataset=GraphDataset(dataset_path,ordered=True)
 
@@ -92,15 +84,15 @@ if __name__ == '__main__':
 
     df={'cut':best_cuts,'tabu_tenure':[best_tabu_tenure]*best_cuts.shape[0]}
     df['Instance'] = [os.path.basename(file) for file in dataset.file_paths]
-    df['Train Distribution'] = [train_distribution]*best_cuts.shape[0]
-    df['Test Distribution'] = [args.distribution]*best_cuts.shape[0]
+    df['Train Distribution'] = [args.train_distribution]*best_cuts.shape[0]
+    df['Test Distribution'] = [args.test_distribution]*best_cuts.shape[0]
     df['Time'] = elapsed_times
     df['Threads'] = [args.num_threads] * best_cuts.shape[0]
     df=pd.DataFrame(df)
 
     print(df)
 
-    df.to_pickle(os.path.join('results',args.distribution,'TS'))
+    df.to_pickle(os.path.join('results',args.test_distribution,'TS'))
 
 
 
