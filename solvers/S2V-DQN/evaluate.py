@@ -116,15 +116,13 @@ def test_GNN(test_distribution,train_distribution):
     results.drop(columns=['sol'], inplace=True)
 
     try:
-        # OPT = pickle.load(open(f'../data/testing/{test_distribution}/optimal','rb'))['OPT']
         OPT = pd.read_pickle(f'../data/testing/{test_distribution}/optimal')
-        
-        # print(type(OPT))
         results['OPT'] = OPT['OPT'].tolist()
 
         print('Mean',(results['cut']/results['OPT']).mean())
     except:
-        raise ValueError('')
+        # raise ValueError('')
+        pass
     results.to_pickle(os.path.join(save_folder,'S2V-DQN'))
     print(results)
 

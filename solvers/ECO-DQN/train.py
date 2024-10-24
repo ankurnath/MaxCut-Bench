@@ -32,7 +32,7 @@ def train_GNN(distribution,num_steps,step_factor):
 
     
     
-    gamma=0.95
+    gamma = 0.95
     
     clip_Q_targets=False
     # Define a dictionary of observables for different models
@@ -123,7 +123,7 @@ def train_GNN(distribution,num_steps,step_factor):
 
                 replay_start_size=train_config["replay_start_size"][config_load],
                 replay_buffer_size=train_config["replay_buffer_size"][config_load],  # 20000
-                gamma=gamma,  # 1
+                gamma = gamma,  # 1
                 update_target_frequency=train_config["update_target_frequency"][config_load],  # 500
 
                 update_learning_rate=False,

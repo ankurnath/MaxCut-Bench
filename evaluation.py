@@ -45,7 +45,7 @@ if __name__ == '__main__':
         command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.test_distribution} '
 
     elif args.algorithm == 'ECO-DQN' or args.algorithm == 'SoftTabu' or args.algorithm == 'LS-DQN':
-        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.test_distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps} '
+        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.test_distribution} --num_repeat {args.num_repeat} --step_factor 2'
 
 
 

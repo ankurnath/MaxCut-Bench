@@ -19,6 +19,7 @@ from src.envs.utils import (
                             OptimisationTarget, SpinBasis,
                             DEFAULT_OBSERVABLES)
 from collections import defaultdict
+import pandas as pd
 
 
 def test_GNN(train_distribution,test_distribution,num_repeat,num_steps,step_factor):
@@ -65,7 +66,8 @@ def test_GNN(train_distribution,test_distribution,num_repeat,num_steps,step_fact
                                     num_layers=3)
 
 
-    graphs_test = GraphDataset(os.path.join(os.getcwd(),f'data/testing/{test_distribution}'), ordered=True)
+    # graphs_test = GraphDataset(os.path.join(os.getcwd(),f'data/testing/{test_distribution}'), ordered=True)
+    graphs_test = GraphDataset(f'../data/testing/{test_distribution}', ordered=True)
     n_tests=len(graphs_test)
     print(f'The number of test graphs:{n_tests}')
 
@@ -80,7 +82,7 @@ def test_GNN(train_distribution,test_distribution,num_repeat,num_steps,step_fact
     # print(network)
 
     network_save_path = os.path.join(model_load_path, 'network_best.pth')
-    network.load_state_dict(torch.load(network_save_path,map_location=device))
+    network.load_state_dict(torch.load(network_save_path,map_location=device,weights_only=False))
 
     for param in network.parameters():
         param.requires_grad = False
@@ -97,6 +99,17 @@ def test_GNN(train_distribution,test_distribution,num_repeat,num_steps,step_fact
     results['Test Distribution'] = [test_distribution] * n_tests
     results.drop(columns=['sol'], inplace=True)
     results.to_pickle(os.path.join(save_folder,'LS-DQN'))
+    
+
+    try:
+        OPT = pd.read_pickle(f'../data/testing/{test_distribution}/optimal')
+        results['OPT'] = OPT['OPT'].tolist()
+
+        print('Mean',(results['cut']/results['OPT']).mean())
+    except:
+        # raise ValueError('')
+        pass
+    
     print(results)
     
     

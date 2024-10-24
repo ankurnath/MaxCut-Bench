@@ -229,7 +229,7 @@ if __name__ == '__main__':
 
 
     ####################
-    dataset_path=os.path.join(f'data/testing/{test_distribution}')
+    dataset_path=os.path.join(f'../data/testing/{test_distribution}')
 
    
     test_dataset=GraphDataset(dataset_path,ordered=True)

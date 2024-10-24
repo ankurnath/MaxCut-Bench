@@ -28,7 +28,7 @@ def save_to_pickle(data, file_path):
     print(f'Data has been saved to {file_path}')
 
 
-def load_from_pickle(file_path,quiet = True):
+def load_from_pickle(file_path,quiet = False):
     """
     Load data from a pickle file.
 
@@ -38,8 +38,10 @@ def load_from_pickle(file_path,quiet = True):
     Returns:
     - loaded_data: The loaded data.
     """
-    with open(file_path, 'rb') as file:
-        loaded_data = pickle.load(file)
+
+    loaded_data = pd.read_pickle(file_path)
+    # with open(file_path, 'rb') as file:
+    #     loaded_data = pickle.load(file)
     if not quiet:
         print(f'Data has been loaded from {file_path}')
     return loaded_data
