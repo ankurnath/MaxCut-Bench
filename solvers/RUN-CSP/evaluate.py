@@ -19,16 +19,18 @@ from csp_data import CSP_Data
 from timeit import default_timer as timer
 from collections import defaultdict
 import pandas as pd
+import time 
 
 
 def evaluate(model, loader, device, args):
 
     assignments=[]
     opt_steps=[]
+    times = []
 
     with torch.inference_mode():
-        for data in loader:
-            # start = timer()
+        for data in tqdm(loader):
+            start = time.time()
             # path = data.path
             
             data = CSP_Data.collate([data for _ in range(args.num_repeat)])
@@ -36,15 +38,19 @@ def evaluate(model, loader, device, args):
             assignment = model(data, args.num_steps)
             assignments.append(data.hard_assign(assignment.squeeze()).cpu().numpy())
 
-    return assignments
+            end = time.time()
+            times.append(end-start)
+    return assignments,np.array(times)
 
 
 if __name__ == "__main__":
     parser = ArgumentParser()
     
-    parser.add_argument("--distribution", type=str, default='ER_20', help="Distribution")
+    # parser.add_argument("--distribution", type=str, default='ER_20', help="Distribution")
+    parser.add_argument("--train_distribution",default=None,help='Train distribution (if train and test are not the same)')
+    parser.add_argument("--test_distribution", type=str, help="Distribution of dataset")
     parser.add_argument("--seed", type=int, default=0, help="the random seed for torch and numpy")
-    parser.add_argument("--num_workers", type=int, default=0, help="Number of loader workers")
+    parser.add_argument("--num_workers", type=int, default=10, help="Number of loader workers")
 
     parser.add_argument("--num_repeat", type=int, default=50, help="Number of parallel runs")
     parser.add_argument("--num_steps", type=int,required=True, default=250, help="Number of network steps")
@@ -54,19 +60,24 @@ if __name__ == "__main__":
     np.random.seed(args.seed)
     dict_args = vars(args)
 
+    train_distribution = args.train_distribution
+    test_distribution = args.test_distribution
+
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 
 
-    model=RUNCSP.load(os.path.join(os.getcwd(),f'solvers/RUN-CSP/pretrained agents/{args.distribution}/network'))
+    model=RUNCSP.load(os.path.join(os.getcwd(),f'solvers/RUN-CSP/pretrained agents/{train_distribution}'))
 
 
     model.to(device)
     model.eval()
 
-    train_graph_gen=GraphDataset(folder_path=os.path.join(os.getcwd(),f'data/testing/{args.distribution}'),ordered=True)
-    print(f'Number of graphs:{len(train_graph_gen)}')
-    graphs = [nx.from_numpy_array(train_graph_gen.get()) for _ in range(len(train_graph_gen))]
+    # test_graph_gen=GraphDataset(folder_path=os.path.join(os.getcwd(),f'data/testing/{test_distribution}'),ordered=True)
+    test_graph_gen=GraphDataset(folder_path=os.path.join(f'../data/testing/{test_distribution}'),ordered=True)
+    print(f'Number of graphs:{len(test_graph_gen)}')
+    graphs = [nx.from_numpy_array(test_graph_gen.get()) for _ in range(len(test_graph_gen))]
+    n_tests = len(graphs)
     data = [CSP_Data.load_graph_weighted_maxcut(nx_graph)for nx_graph in graphs]
     const_lang = data[0].const_lang
 
@@ -78,7 +89,7 @@ if __name__ == "__main__":
         collate_fn=CSP_Data.collate
     )
 
-    assignments=evaluate(model, loader, device, args)
+    assignments,times=evaluate(model, loader, device, args)
    
 
     df= defaultdict(list)
@@ -92,14 +103,20 @@ if __name__ == "__main__":
             best_cut=max(best_cut,cut)
         df['cut'].append(best_cut)
         
-
-    save_folder= os.path.join(os.getcwd(),f'solvers/RUN-CSP/pretrained agents/{args.distribution}/data')  
-
-    os.makedirs(save_folder,exist_ok=True)
-    df=pd.DataFrame(df)
-    file_name=os.path.join(save_folder,'results')
-    print(df)
-    df.to_pickle(file_name)
+    df['time'] = times
+    df['Train Distribution'] = [train_distribution]* n_tests
+    df['Test Distribution'] = [test_distribution] * n_tests
     
+    df = pd.DataFrame(df)
+
+    save_folder = os.path.join('results',test_distribution)
+    mk_dir(save_folder)
+    file_path = os.path.join(save_folder,'RUN-CSP')
+    df.to_pickle(file_path)
+    
+    print(f'Data has been saved to {file_path}')
+    print(df)
+
+  
     
 

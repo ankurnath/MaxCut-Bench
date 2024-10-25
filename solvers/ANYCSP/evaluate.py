@@ -9,12 +9,14 @@ from src.data.dataset import File_Dataset
 from collections import defaultdict
 import pandas as pd
 import os
-
+from tqdm import tqdm
+import time
 
 if __name__ == '__main__':
     parser = ArgumentParser()
     # parser.add_argument("--model_dir", type=str, help="Model directory")
-    parser.add_argument("--distribution", type=str,help="Distribution of graphs")
+    parser.add_argument("--train_distribution",default=None,help='Train distribution (if train and test are not the same)')
+    parser.add_argument("--test_distribution", type=str, help="Distribution of dataset")
     # parser.add_argument("--data_path", type=str, help="Path to the data")
     parser.add_argument("--checkpoint_name", type=str, default='best', help="Checkpoint to be used")
     parser.add_argument("--seed", type=int, default=0, help="the random seed for torch and numpy")
@@ -30,8 +32,10 @@ if __name__ == '__main__':
     dict_args = vars(args)
 
 
+    train_distribution = args.train_distribution
+    test_distribution = args.test_distribution
 
-    model_dir= os.path.join(os.getcwd(),f'solvers/ANYCSP/pretrained agents/{args.distribution}/network') 
+    model_dir= os.path.join(os.getcwd(),f'solvers/ANYCSP/pretrained agents/{train_distribution}') 
 
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
@@ -42,7 +46,8 @@ if __name__ == '__main__':
     torch.manual_seed(args.seed)
     np.random.seed(args.seed)
 
-    datapath=os.path.join(os.getcwd(),f'data/testing/{args.distribution}')
+    # datapath=os.path.join(os.getcwd(),f'data/testing/{args.distribution}')
+    datapath=os.path.join(f'../data/testing/{test_distribution}')
 
     dataset = File_Dataset(datapath)
     # print(dataset.files)
@@ -53,8 +58,11 @@ if __name__ == '__main__':
     # print(num_total)
     df=defaultdict(list)
 
-    for data in dataset:
-        file = data.path
+    for data in tqdm(dataset):
+
+        start = time.time()
+        file = data.path 
+
         max_val = data.constraints['ext'].cst_neg_mask.int().sum().cpu().numpy()
         # print(file)
 
@@ -94,14 +102,29 @@ if __name__ == '__main__':
             f'Opt Time: {data.opt_time:.2f}s, '
             f'Opt Step: {data.opt_step}'
         )
+        end = time.time()
         df['cut'].append(best_cut_val)
         df['Opt Step'].append(data.opt_step)
+        df['time'].append(end-start)
         df['Opt Time'].append(data.opt_time)
 
         # break
-    df=pd.DataFrame(df)
-    data_folder=os.path.join(os.getcwd(),f'solvers/ANYCSP/pretrained agents/{args.distribution}','data')
-    os.makedirs(data_folder,exist_ok=True)
-    df.to_pickle(os.path.join(data_folder,'results'))
-    # print(f'Solved {100 * num_solved / num_total:.2f}%, Average Time: {total_time / num_total:.2f}s')
+    n_tests = len(dataset)
+    df['Train Distribution'] = [train_distribution]* n_tests
+    df['Test Distribution'] = [test_distribution] * n_tests
+    
+    df = pd.DataFrame(df)
+
+    save_folder = os.path.join('results',test_distribution)
+    os.makedirs(save_folder,exist_ok=True)
+    file_path = os.path.join(save_folder,'ANY-CSP')
+    df.to_pickle(file_path)
+    
+    print(f'Data has been saved to {file_path}')
     print(df)
+    # df=pd.DataFrame(df)
+    # data_folder=os.path.join(os.getcwd(),f'solvers/ANYCSP/pretrained agents/{args.distribution}','data')
+    # os.makedirs(data_folder,exist_ok=True)
+    # df.to_pickle(os.path.join(data_folder,'results'))
+    # # print(f'Solved {100 * num_solved / num_total:.2f}%, Average Time: {total_time / num_total:.2f}s')
+    # print(df)

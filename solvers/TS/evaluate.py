@@ -14,13 +14,15 @@ if __name__ == '__main__':
 
     parser.add_argument("--test_distribution", type=str, help="Distribution of test dataset")
 
-    parser.add_argument("--num_repeat", type=int,default=50,required=True, help="Number of attempts")
+    parser.add_argument("--num_repeat", type=int,default=50, help="Number of attempts")
 
-    parser.add_argument("--num_steps", type=int, default=2,required=True, help="Number of steps")
+    parser.add_argument("--num_steps", type=int, default=None, help="Number of steps")
 
     parser.add_argument("--tabu_tenure", type=int, default=100, help="Tabu Tenure")
 
-    parser.add_argument("--num_threads",type=int,default=20,help="Number of threads")
+    parser.add_argument("--num_threads",type=int,default=10,help="Number of threads")
+
+    parser.add_argument("--step_factor",type=float,default=2,help='Step factor')
 
     args = parser.parse_args()
 
@@ -34,7 +36,8 @@ if __name__ == '__main__':
 
     os.makedirs(save_folder,exist_ok=True)
 
-    dataset_path=os.path.join(os.getcwd(),f'data/testing/{args.test_distribution}')
+    # dataset_path=os.path.join(os.getcwd(),f'/data/testing/{args.test_distribution}')
+    dataset_path=f'../data/testing/{args.test_distribution}'
 
     dataset=GraphDataset(dataset_path,ordered=True)
 
@@ -50,12 +53,18 @@ if __name__ == '__main__':
         print('Loaded pretrained value:',best_tabu_tenure)
     except:
         best_tabu_tenure = args.tabu_tenure
+        train_distribution = 'Default Value'
         print('Loaded default value:',best_tabu_tenure)
 
 
 
     best_cuts=[]
     elapsed_times =[]
+
+    num_steps = args.num_steps
+
+  
+
     for i in range(len(dataset)):
         graph=dataset.get()
         start = time.time()
@@ -70,7 +79,13 @@ if __name__ == '__main__':
 
         for i in range(args.num_repeat):
             spins= np.random.randint(2, size=graph.shape[0])
-            arguments.append((g,spins,best_tabu_tenure,args.num_steps))
+
+            if num_steps is None:
+
+                arguments.append((g,spins,best_tabu_tenure,graph.shape[0]*args.step_factor))
+            else:
+                arguments.append((g,spins,best_tabu_tenure,num_steps))
+
         
         with Pool(args.num_threads) as pool:
             best_cut=np.max(pool.starmap(tabu, arguments))
@@ -94,7 +109,10 @@ if __name__ == '__main__':
 
     print(df)
 
-    df.to_pickle(os.path.join('results',test_distribution,'TS'))
+    results_save_folder = os.path.join('results',args.test_distribution)
+    os.makedirs(results_save_folder,exist_ok=True)
+
+    df.to_pickle(os.path.join(results_save_folder,'TS'))
 
 
 

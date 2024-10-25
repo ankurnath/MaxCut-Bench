@@ -73,10 +73,12 @@ class RUNCSP(Module):
             self.soft_assign = Sequential(Linear(hidden_dim, self.out_dim, bias=False), Softmax(dim=1))
 
     def save(self):
-        save_folder=os.path.join(self.model_dir,'network')
+        # save_folder=os.path.join(self.model_dir,'network')
 
-        os.makedirs(save_folder, exist_ok=True)
-        torch.save(self, os.path.join(save_folder, 'best.pkl'))
+        # os.makedirs(save_folder, exist_ok=True)
+        os.makedirs(self.model_dir,exist_ok=True)
+
+        torch.save(self, os.path.join(self.model_dir, 'best.pkl'))
 
     @staticmethod
     def load(model_dir):

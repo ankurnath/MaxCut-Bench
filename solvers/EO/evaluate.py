@@ -14,34 +14,39 @@ if __name__ == '__main__':
 
     parser.add_argument("--test_distribution", type=str,default='Physics',required=True, help="Distribution of test dataset")
 
-    parser.add_argument("--num_repeat", type=int,default=50,required=True, help="Number of attempts")
+    parser.add_argument("--num_repeat", type=int,default=50, help="Number of attempts")
 
-    parser.add_argument("--num_steps", type=int, default=2,required=True, help="Number of steps")
+    parser.add_argument("--num_steps", type=int, default=None, help="Number of steps")
 
     parser.add_argument("--tau", type=float, default=1.4, help="Default tau")
 
     parser.add_argument("--num_threads",type=int,default=20,help="Number of threads")
 
+    parser.add_argument("--step_factor",type=float,default=2,help='Step factor')
+
     args = parser.parse_args()
 
     train_distribution = args.train_distribution
+    test_distribution = args.test_distribution
 
 
-    save_folder = f'pretrained agents/{train_distribution}'
-    save_folder = os.path.join(os.getcwd(),'solvers/EO',save_folder)
-    os.makedirs(save_folder,exist_ok=True)
+    model_load_path = f'pretrained agents/{train_distribution}'
+    model_load_path = os.path.join(os.getcwd(),'solvers/EO',model_load_path)
+    # os.makedirs(save_folder,exist_ok=True)
 
-    print('Distribution:',args.test_distribution)
+    print('Distribution:',test_distribution)
 
 
-    dataset_path=os.path.join(os.getcwd(),f'data/testing/{args.test_distribution}')
+    # dataset_path=os.path.join(os.getcwd(),f'data/testing/{args.test_distribution}')
+
+    dataset_path = f'../data/testing/{args.test_distribution}'
 
     dataset=GraphDataset(dataset_path,ordered=True)
 
     print("Number of graphs:",len(dataset))
 
     
-    best_tau_path=os.path.join(save_folder,'best_tau')
+    best_tau_path=os.path.join(model_load_path,'best_tau')
 
     # Load the pickle file
     try:
@@ -66,10 +71,18 @@ if __name__ == '__main__':
         indices = np.arange(1, n + 1, dtype='float')
         pmf = 1 / (indices **best_tau)
         pmf /= pmf.sum()
-        num_samples = args.num_steps*args.num_repeat
-        actions = np.random.choice(indices-1, size=num_samples, p=pmf)
-        actions=actions.reshape(args.num_repeat,args.num_steps).astype(int)
 
+        # if args.num_steps is None:
+
+        #     num_samples = n*args.step_factor*args.num_repeat
+        # else:
+        # num_samples = args.num_steps*args.num_repeat
+        num_samples = n*args.step_factor*args.num_repeat
+        actions = np.random.choice(indices-1, size=num_samples, p=pmf)
+
+        
+        # actions=actions.reshape(args.num_repeat,args.num_steps).astype(int)
+        actions=actions.reshape(args.num_repeat,n*args.step_factor).astype(int)
         arguments=[]
 
         for i in range(args.num_repeat):

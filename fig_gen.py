@@ -29,12 +29,14 @@ for i,dist in enumerate([
 
             for algorithm in [
                         'ECO-DQN',
+                        # 'SoftTabu',
                         'S2V-DQN',
-                        # 'LS-DQN',
+                        'LS-DQN',
                         'Forward Greedy',
-                        # 'TS',
-                        # 'Standard Greedy',
-                        # 'Forward Greedy'
+                        'TS',
+                        'RG',
+                        'Forward Greedy',
+                        'EO'
                         ]:
                 
                 try:
@@ -62,7 +64,9 @@ for i,dist in enumerate([
         
 
         plt.figure(dpi=200)
-        markers = {'S2V-DQN': 'p','Standard Greedy':'D','ECO-DQN':'P','Forward Greedy':'s'}  # specify markers for each algorithm
+        markers = {'S2V-DQN': 'p','Standard Greedy':'D','ECO-DQN':'P',
+                   'Forward Greedy':'s','LS-DQN':'*','RG':'o',
+                   'SoftTabu':'.','TS':'s','EO':'H'}  # specify markers for each algorithm
         sns.lineplot(x='N', y='Ratio', hue='algorithm', style='algorithm', markers=markers, data=df, markersize=10)
         # sns.lineplot(x='N', y='Ratio', hue='algorithm', style='algorithm',data=df, markersize=20)
         
@@ -72,7 +76,7 @@ for i,dist in enumerate([
         plt.xticks(fontsize=fontsize)
         # plt.xticks([20,40,60,100,200,500],fontsize=fontsize)
         plt.yticks(fontsize=fontsize)
-        plt.title(distribution)
+        plt.title(dist+ ' '+ suffix)
 
         # plt.locator_params(nbins=6)
         # plt.xticks([20,40,60,100,200,500])

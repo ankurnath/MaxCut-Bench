@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     if args.algorithm=='EO' or args.algorithm=='TS':
 
-        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.test_distribution} --num_repeat {args.num_repeat} --num_steps {args.num_steps}'
+        command=f'python solvers/{args.algorithm}/evaluate.py --train_distribution {args.train_distribution} --test_distribution {args.test_distribution}'
     
     elif args.algorithm=='Greedy':
 

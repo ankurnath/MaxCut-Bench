@@ -4,22 +4,24 @@ import os
 
 
 for algorithm in  [
-                    'S2V-DQN',
+                    # 'S2V-DQN',
                     'ECO-DQN',
-                    'LS-DQN',
+                    # 'LS-DQN',
                     'SoftTabu',
-                    'Greedy'
+                    # 'Greedy',
+                    # 'TS',
+                    # 'EO',
                   ]:
     
     for dist in [
-                # 'ER',
-                # 'planar',
+                'ER',
+                'planar',
                 'torodial'
                 ]:
 
         for suffix in [
             'weighted',
-            # 'unweighted'
+            'unweighted'
             ]:
 
 
@@ -37,7 +39,10 @@ for algorithm in  [
                 if algorithm == 'Greedy':
                     command = f'python evaluation.py --algorithm {algorithm}  --test_distribution {test_dist_path}'
                     subprocess.run(command,shell=True)
-                    
+
+                elif algorithm == 'TS' or algorithm == 'EO':
+                    command = f'python evaluation.py --algorithm {algorithm} --train_distribution {train_model_path} --test_distribution {test_dist_path}'
+                    subprocess.run(command,shell=True)
 
                 elif os.path.exists(os.path.join('solvers',algorithm,'pretrained agents',train_model_path)):
                     

@@ -103,7 +103,7 @@ def test_GNN(train_distribution,test_distribution,num_repeat,num_steps,step_fact
     results['Train Distribution'] = [train_distribution]* n_tests
     results['Test Distribution'] = [test_distribution] * n_tests
     results.drop(columns=['sol'], inplace=True)
-    results.to_pickle(os.path.join(save_folder,'ECO-DQN'))
+    results.to_pickle(os.path.join(save_folder,'SoftTabu'))
 
     try:
         OPT = pd.read_pickle(f'../data/testing/{test_distribution}/optimal')
