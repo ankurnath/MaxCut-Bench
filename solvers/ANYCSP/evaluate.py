@@ -117,7 +117,7 @@ if __name__ == '__main__':
 
     save_folder = os.path.join('results',test_distribution)
     os.makedirs(save_folder,exist_ok=True)
-    file_path = os.path.join(save_folder,'ANY-CSP')
+    file_path = os.path.join(save_folder,'ANYCSP')
     df.to_pickle(file_path)
     
     print(f'Data has been saved to {file_path}')

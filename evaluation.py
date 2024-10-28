@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     ## TS & EO
     parser.add_argument("--num_repeat", type=int,default=50, help="Number of attempts") ## TS and EO
-    parser.add_argument("--num_steps", type=int, default=40, help="Number of steps")
+    parser.add_argument("--num_steps", type=int, default=1600, help="Number of steps")
     
 
     args = parser.parse_args()

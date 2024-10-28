@@ -29,14 +29,15 @@ for i,dist in enumerate([
 
             for algorithm in [
                         'ECO-DQN',
-                        # 'SoftTabu',
-                        'S2V-DQN',
-                        'LS-DQN',
-                        'Forward Greedy',
+                        'SoftTabu',
+                        # 'S2V-DQN',
+                        # 'LS-DQN',
+                        # 'Forward Greedy',
                         'TS',
-                        'RG',
-                        'Forward Greedy',
-                        'EO'
+                        # 'RG',
+                        # 'Forward Greedy',
+                        # 'EO',
+                        'ANYCSP'
                         ]:
                 
                 try:
@@ -66,8 +67,10 @@ for i,dist in enumerate([
         plt.figure(dpi=200)
         markers = {'S2V-DQN': 'p','Standard Greedy':'D','ECO-DQN':'P',
                    'Forward Greedy':'s','LS-DQN':'*','RG':'o',
-                   'SoftTabu':'.','TS':'s','EO':'H'}  # specify markers for each algorithm
-        sns.lineplot(x='N', y='Ratio', hue='algorithm', style='algorithm', markers=markers, data=df, markersize=10)
+                   'SoftTabu':'p','TS':'*','EO':'H','ANYCSP':'.'}  # specify markers for each algorithm
+        sns.lineplot(x='N', y='Ratio', hue='algorithm', style='algorithm', 
+                     markers=markers, data=df, markersize=20,
+                     legend=True)
         # sns.lineplot(x='N', y='Ratio', hue='algorithm', style='algorithm',data=df, markersize=20)
         
         plt.xlabel('Graph Size,|V|',fontsize=fontsize)
@@ -76,7 +79,9 @@ for i,dist in enumerate([
         plt.xticks(fontsize=fontsize)
         # plt.xticks([20,40,60,100,200,500],fontsize=fontsize)
         plt.yticks(fontsize=fontsize)
-        plt.title(dist+ ' '+ suffix)
+
+        title = dist+ ' '+ suffix 
+        # plt.title(dist+ ' '+ suffix)
 
         # plt.locator_params(nbins=6)
         # plt.xticks([20,40,60,100,200,500])
@@ -93,6 +98,20 @@ for i,dist in enumerate([
         
         plt.grid(True,linestyle='--', alpha=0.7)
 
+        plt.locator_params(nbins=6)
+        # if dist == 'torodial':
+        #     plt.legend(frameon=False,fontsize=fontsize,ncol=1,loc='lower left')
+        # else:
+        #     # Add a legend
+        #     legend = plt.legend()
+
+        #     # Remove the legend if needed
+        #     legend.remove()  # This will remove the legend
+
 
         sns.despine()
-        plt.show()
+
+        # plt.savefig(f'{title}.png') 
+        plt.savefig(f'{title}.png', bbox_inches='tight')
+        plt.savefig(f'{title}.pdf', bbox_inches='tight')
+        # plt.show()

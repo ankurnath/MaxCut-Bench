@@ -5,12 +5,14 @@ import os
 
 for algorithm in  [
                     # 'S2V-DQN',
-                    'ECO-DQN',
+                    # 'SoftTabu',
+                    # 'ECO-DQN',
                     # 'LS-DQN',
-                    'SoftTabu',
+                    
                     # 'Greedy',
                     # 'TS',
                     # 'EO',
+                    'ANYCSP'
                   ]:
     
     for dist in [
@@ -49,7 +51,7 @@ for algorithm in  [
                     if os.path.exists(f'../data/testing/{test_dist_path}'):
                         
                         
-                        command = f'python evaluation.py --algorithm {algorithm} --train_distribution {train_model_path} --test_distribution {test_dist_path}'
+                        command = f'python evaluation.py --algorithm {algorithm} --train_distribution {train_model_path} --test_distribution {test_dist_path} --num_steps {2*n}'
                         subprocess.run(command,shell=True)
 
                     else:
