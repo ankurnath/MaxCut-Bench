@@ -30,14 +30,14 @@ for i,dist in enumerate([
             for algorithm in [
                         'ECO-DQN',
                         'SoftTabu',
-                        # 'S2V-DQN',
-                        # 'LS-DQN',
+                        'S2V-DQN',
+                        'LS-DQN',
                         # 'Forward Greedy',
                         'TS',
                         # 'RG',
                         # 'Forward Greedy',
                         # 'EO',
-                        'ANYCSP'
+                        # 'ANYCSP'
                         ]:
                 
                 try:

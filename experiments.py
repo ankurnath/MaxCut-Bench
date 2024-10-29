@@ -12,7 +12,9 @@ for algorithm in  [
                     # 'Greedy',
                     # 'TS',
                     # 'EO',
-                    'ANYCSP'
+                    # 'ANYCSP',
+                    'RUN-CSP',
+                    # 'Gflow-CombOpt'
                   ]:
     
     for dist in [
@@ -50,9 +52,12 @@ for algorithm in  [
                     
                     if os.path.exists(f'../data/testing/{test_dist_path}'):
                         
-                        
-                        command = f'python evaluation.py --algorithm {algorithm} --train_distribution {train_model_path} --test_distribution {test_dist_path} --num_steps {2*n}'
-                        subprocess.run(command,shell=True)
+                        if algorithm == 'RUN-CSP':
+                            command = f'python evaluation.py --algorithm {algorithm} --train_distribution {train_model_path} --test_distribution {test_dist_path} --num_steps {1000}'
+                            subprocess.run(command,shell=True)
+                        else:
+                            command = f'python evaluation.py --algorithm {algorithm} --train_distribution {train_model_path} --test_distribution {test_dist_path} --num_steps {2*n}'
+                            subprocess.run(command,shell=True)
 
                     else:
                         print(f'Data not found for testing for {test_dist_path}')
