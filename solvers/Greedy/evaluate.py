@@ -286,17 +286,28 @@ if __name__ == '__main__':
     # Saving Standard Greedy results
     sg_df = {'instances': instances, 'cut': sg_cuts, 'time': sg_times}
     sg_df = pd.DataFrame(sg_df)
-    sg_df.to_pickle(os.path.join(save_folder, 'Standard Greedy'))
+    
 
+
+    
+    try:
+        OPT = pd.read_pickle(f'../data/testing/{test_distribution}/optimal')
+        sg_df['OPT'] = OPT['OPT'].tolist()
+
+        print('Mean',(sg_df['cut']/sg_df['OPT']).mean())
+    except:
+        # raise ValueError('')
+        pass
+    sg_df.to_pickle(os.path.join(save_folder, 'Standard Greedy'))
     # Saving Forward Greedy results
     fg_df = {'instances': instances, 'cut': fg_cuts, 'time': fg_times}
     fg_df = pd.DataFrame(fg_df)
     fg_df.to_pickle(os.path.join(save_folder, 'Forward Greedy'))
 
 
-    print(mca_df)
+    # print(mca_df)
     print(sg_df)
-    print(fg_df)
+    # print(fg_df)
 
 
 

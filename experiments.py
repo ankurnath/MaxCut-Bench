@@ -4,28 +4,28 @@ import os
 
 
 for algorithm in  [
-                    # 'S2V-DQN',
+                    'S2V-DQN',
                     # 'SoftTabu',
                     # 'ECO-DQN',
                     # 'LS-DQN',
                     
-                    # 'Greedy',
+                    'Greedy',
                     # 'TS',
                     # 'EO',
                     # 'ANYCSP',
-                    'RUN-CSP',
+                    # 'RUN-CSP',
                     # 'Gflow-CombOpt'
                   ]:
     
     for dist in [
-                'ER',
-                'planar',
+                # 'ER',
+                # 'planar',
                 'torodial'
                 ]:
 
         for suffix in [
             'weighted',
-            'unweighted'
+            # 'unweighted'
             ]:
 
 
