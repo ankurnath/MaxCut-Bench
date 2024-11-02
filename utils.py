@@ -28,7 +28,7 @@ def save_to_pickle(data, file_path):
     print(f'Data has been saved to {file_path}')
 
 
-def load_from_pickle(file_path,quiet = False):
+def load_from_pickle(file_path,quiet = True):
     """
     Load data from a pickle file.
 

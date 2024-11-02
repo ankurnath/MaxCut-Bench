@@ -31,7 +31,7 @@ for i,dist in enumerate([
                         # 'LS-DQN',
                         # 'Forward Greedy',
                         
-                        'RG',
+                        # 'RG',
                         'Forward Greedy',
                         'Standard Greedy',
                         'TS',
@@ -47,6 +47,7 @@ for i,dist in enumerate([
                         pass
                     else:
                         df ['Ratio'].append((df_['cut'].values/OPT['OPT'].values).mean())
+                        df ['Ratio (STD)'].append((df_['cut'].values/OPT['OPT'].values).std())
                         df['N'].append(n)
 
                         if algorithm == 'Forward Greedy':
@@ -76,10 +77,20 @@ for i,dist in enumerate([
         sns.lineplot(x='N', y='Ratio', hue='algorithm', style='algorithm', 
                      markers=markers, data=df, markersize=markersize,
                      legend=True)
+         # Add fill_between for error regions (mean ± std)
+        algorithms = df['algorithm'].unique()  # Get all the unique algorithms
+        for algorithm in algorithms:
+            subset = df[df['algorithm'] == algorithm]
+            plt.fill_between(
+                subset['N'], 
+                subset['Ratio'] - subset['Ratio (STD)'], 
+                subset['Ratio'] + subset['Ratio (STD)'], 
+                alpha=0.2  # Adjust transparency
+            )
         # sns.lineplot(x='N', y='Ratio', hue='algorithm', style='algorithm',data=df, markersize=20)
         
         plt.xlabel('Graph Size,|V|',fontsize=fontsize+10)
-        plt.ylabel('Approx. Ratio',fontsize=fontsize+10)
+        plt.ylabel('Mean Approx. Ratio',fontsize=fontsize+10)
 
         plt.xticks(fontsize=fontsize)
         # plt.xticks([20,40,60,100,200,500],fontsize=fontsize)
@@ -105,7 +116,7 @@ for i,dist in enumerate([
 
         plt.locator_params(nbins=6)
         if dist == 'torodial':
-            plt.legend(frameon=False,fontsize=fontsize+5,ncol=1,loc='best')
+            plt.legend(frameon=False,fontsize=fontsize,ncol=1,loc='best')
             # plt.legend(['Label 1', 'Label 2', 'Label 3'])
             # plt.legend(['S2V-DQN','S2V-Simplified','Greedy'],frameon=False,fontsize=fontsize,ncol=1,loc='best')
         else:

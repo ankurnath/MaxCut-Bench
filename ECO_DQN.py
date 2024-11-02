@@ -47,10 +47,13 @@ for i,dist in enumerate([
                         pass
                     else:
                         df ['Ratio'].append((df_['cut'].values/OPT['OPT'].values).mean())
+                        df ['Ratio (STD)'].append((df_['cut'].values/OPT['OPT'].values).std())
                         df['N'].append(n)
 
                         if algorithm == 'SoftTabu':
                             df['algorithm'].append('ECO+LR')
+                        elif algorithm == 'TS':
+                            df['algorithm'].append('ECO-Simplified (TS)')
 
                         elif algorithm == 'RG':
                             df['algorithm'].append('LS-Simplified')
@@ -72,14 +75,24 @@ for i,dist in enumerate([
         
         markers = {'S2V-DQN': '*','Greedy':'<','ECO-DQN':'P',
                    'S2V-Simplified':'p','LS-DQN':'*','LS-Simplified':'>',
-                   'ECO+LR':'<','TS':'.','EO':'H','ANYCSP':'.'}  # specify markers for each algorithm
+                   'ECO+LR':'<','ECO-Simplified (TS)':'.','EO':'H','ANYCSP':'.'}  # specify markers for each algorithm
         sns.lineplot(x='N', y='Ratio', hue='algorithm', style='algorithm', 
                      markers=markers, data=df, markersize=markersize,
                      legend=True)
+         # Add fill_between for error regions (mean ± std)
+        algorithms = df['algorithm'].unique()  # Get all the unique algorithms
+        for algorithm in algorithms:
+            subset = df[df['algorithm'] == algorithm]
+            plt.fill_between(
+                subset['N'], 
+                subset['Ratio'] - subset['Ratio (STD)'], 
+                subset['Ratio'] + subset['Ratio (STD)'], 
+                alpha=0.2  # Adjust transparency
+            )
         # sns.lineplot(x='N', y='Ratio', hue='algorithm', style='algorithm',data=df, markersize=20)
         
         plt.xlabel('Graph Size,|V|',fontsize=fontsize+10)
-        plt.ylabel('Approx. Ratio',fontsize=fontsize+10)
+        plt.ylabel('Mean Approx. Ratio',fontsize=fontsize+10)
 
         plt.xticks(fontsize=fontsize)
         # plt.xticks([20,40,60,100,200,500],fontsize=fontsize)
@@ -104,7 +117,7 @@ for i,dist in enumerate([
         plt.grid(True,linestyle='--', alpha=0.7)
 
         plt.locator_params(nbins=6)
-        if dist == 'torodial':
+        if dist == 'planar' and suffix =='unweighted':
             plt.legend(frameon=False,fontsize=fontsize+5,ncol=1,loc='best')
             # plt.legend(['Label 1', 'Label 2', 'Label 3'])
             # plt.legend(['S2V-DQN','S2V-Simplified','Greedy'],frameon=False,fontsize=fontsize,ncol=1,loc='best')

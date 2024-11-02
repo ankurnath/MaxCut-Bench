@@ -158,7 +158,8 @@ class SpinSystem(object):
 
 
         if self.max_local_reward_available==0:
-            self.reset(spins=spins,test=test)
+            # self.reset(spins=spins,test=test)
+            self.max_local_reward_available = 1e-4
 
         # self._reset_graph_observables()
         self.adj_list=self.adjacency_list_from_numpy_array()

@@ -2,7 +2,14 @@ from utils import *
 
 
 # for dist in ['BigMac','BQP']:
-for dist in ['BA_800vertices_unweighted']:
+for dist in [
+    'BA_800vertices_unweighted',
+    'HomleKim_800vertices_unweighted',
+    'WattsStrogatz_800vertices_unweighted',
+    'BA_800vertices_weighted',
+    'HomleKim_800vertices_weighted',
+    'WattsStrogatz_800vertices_weighted',
+    ]:
     root_folder = f'results/{dist}'
     files = os.listdir(root_folder)
     # files.sort()
@@ -11,11 +18,11 @@ for dist in ['BA_800vertices_unweighted']:
 
     # df = defaultdict(list)
     df ={}
-    try:
-        OPT = pd.read_pickle(f'../data/testing/{dist}/optimal')
-        df['OPT'] = OPT['OPT']
-    except:
-        pass
+    # try:
+    #     OPT = pd.read_pickle(f'../data/testing/{dist}/optimal')
+    #     df['OPT'] = OPT['OPT']
+    # except:
+    #     pass
 
     
 

@@ -8,9 +8,9 @@ if __name__ == '__main__':
 
     parser = ArgumentParser()
 
-    parser.add_argument("--train_distribution",type=str,default='BA_20',help='Train distribution (if train and test are not the same)')
+    parser.add_argument("--train_distribution",type=str,help='Train distribution (if train and test are not the same)')
     parser.add_argument("--algorithm", type=str,default='EO', help="Algorithms")
-    parser.add_argument("--test_distribution", type=str,default='BA_20', help="Distribution of training dataset")
+    parser.add_argument("--test_distribution", type=str,help="Distribution of training dataset")
 
     ## TS & EO
     parser.add_argument("--num_repeat", type=int,default=50, help="Number of attempts") ## TS and EO

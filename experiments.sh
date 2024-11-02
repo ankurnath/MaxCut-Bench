@@ -1,26 +1,15 @@
 
-# python evaluation.py --algorithm S2V-DQN --train_distribution planar_800vertices_unweighted --test_distribution planar_800vertices_unweighted
-# python evaluation.py --algorithm S2V-DQN --train_distribution ER_800vertices_weighted --test_distribution ER_800vertices_weighted
-# python evaluation.py --algorithm S2V-DQN --train_distribution planar_800vertices_weighted --test_distribution planar_800vertices_weighted
-python evaluation.py --algorithm SoftTabu --train_distribution toroidal_800vertices_weighted --test_distribution torodial_800vertices_weighted
 
-# python evaluation.py --algorithm ECO-DQN --train_distribution planar_800vertices_weighted --test_distribution planar_800vertices_weighted
-# python evaluation.py --algorithm S2V-DQN --train_distribution planar_800vertices_weighted --test_distribution planar_2000vertices_weighted
-# python evaluation.py --algorithm S2V-DQN --train_distribution planar_800vertices_weighted --test_distribution planar_5000vertices_weighted
-# python evaluation.py --algorithm S2V-DQN --train_distribution planar_800vertices_weighted --test_distribution planar_7000vertices_weighted
+# python evaluation.py --algorithm TS --test_distribution WattsStrogatz_800vertices_unweighted
+# python evaluation.py --algorithm TS --test_distribution WattsStrogatz_800vertices_weighted
+# python evaluation.py --algorithm TS --test_distribution HomleKim_800vertices_weighted
+# python evaluation.py --algorithm TS --test_distribution HomleKim_800vertices_unweighted
+# python evaluation.py --algorithm TS --test_distribution BA_800vertices_weighted
+# python evaluation.py --algorithm TS --test_distribution BA_800vertices_unweighted
 
-
-# python evaluation.py --algorithm S2V-DQN --train_distribution ER_800vertices_weighted --test_distribution ER_800vertices_weighted
-# python evaluation.py --algorithm S2V-DQN --train_distribution ER_800vertices_unweighted --test_distribution ER_2000vertices_unweighted
-# python evaluation.py --algorithm S2V-DQN --train_distribution ER_800vertices_unweighted --test_distribution ER_5000vertices_unweighted
-# python evaluation.py --algorithm S2V-DQN --train_distribution ER_800vertices_unweighted --test_distribution ER_7000vertices_unweighted
-
-
-
-
-# python evaluation.py --algorithm S2V-DQN --train_distribution ER_800vertices_unweighted --test_distribution ER_800vertices_unweighted
-# python evaluation.py --algorithm S2V-DQN --train_distribution ER_800vertices_unweighted --test_distribution ER_1000vertices_unweighted
-# python evaluation.py --algorithm S2V-DQN --train_distribution ER_800vertices_unweighted --test_distribution ER_2000vertices_unweighted
-# python evaluation.py --algorithm S2V-DQN --train_distribution ER_800vertices_unweighted --test_distribution ER_5000vertices_unweighted
-# python evaluation.py --algorithm S2V-DQN --train_distribution ER_800vertices_unweighted --test_distribution ER_7000vertices_unweighted
-# python evaluation.py --algorithm S2V-DQN --train_distribution ER_800vertices_unweighted --test_distribution ER_10000vertices_unweighted
+python evaluation.py --algorithm EO --test_distribution WattsStrogatz_800vertices_unweighted
+python evaluation.py --algorithm EO --test_distribution WattsStrogatz_800vertices_weighted
+python evaluation.py --algorithm EO --test_distribution HomleKim_800vertices_weighted
+python evaluation.py --algorithm EO --test_distribution HomleKim_800vertices_unweighted
+python evaluation.py --algorithm EO --test_distribution BA_800vertices_weighted
+python evaluation.py --algorithm EO --test_distribution BA_800vertices_unweighted
