@@ -1,5 +1,5 @@
 # conda env export > environment.yml
 git add .
-git commit -m 'TS,EO and Greedy Completed'
-git push origin original
+git commit -m 'Getting it ready for submit'
+git push origin submit
 
