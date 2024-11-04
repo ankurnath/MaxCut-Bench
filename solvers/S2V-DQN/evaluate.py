@@ -108,7 +108,7 @@ def test_GNN(test_distribution,train_distribution):
                                                 batched=batched, max_batch_size=max_batch_size,
                                                 )
     
-    save_folder = os.path.join('results',test_distribution)
+    save_folder = os.path.join('results',train_distribution+' '+test_distribution)
     mk_dir(save_folder)
 
     results['Train Distribution'] = [train_distribution]* n_tests

@@ -109,7 +109,8 @@ if __name__ == "__main__":
     
     df = pd.DataFrame(df)
 
-    save_folder = os.path.join('results',test_distribution)
+    # save_folder = os.path.join('results',test_distribution)
+    save_folder = os.path.join('results',train_distribution+' '+test_distribution)
     mk_dir(save_folder)
     file_path = os.path.join(save_folder,'RUN-CSP')
     df.to_pickle(file_path)

@@ -98,7 +98,8 @@ def test_GNN(train_distribution,test_distribution,num_repeat,num_steps,step_fact
                                                 )
     
 
-    save_folder = os.path.join('results',test_distribution)
+    # save_folder = os.path.join('results',test_distribution)
+    save_folder = os.path.join('results',train_distribution+' '+test_distribution)
     mk_dir(save_folder)
 
     

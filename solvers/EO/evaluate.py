@@ -111,7 +111,8 @@ if __name__ == '__main__':
     print(df)
 
     # df.to_pickle(os.path.join(data_folder,'results'))
-    results_save_folder = os.path.join('results',args.test_distribution)
+    # results_save_folder = os.path.join('results',args.test_distribution)
+    results_save_folder = os.path.join('results',train_distribution+' '+test_distribution)
     os.makedirs(results_save_folder,exist_ok=True)
     df.to_pickle(os.path.join(results_save_folder,'EO'))
 
