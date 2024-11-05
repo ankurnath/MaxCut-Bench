@@ -41,94 +41,97 @@ The included [``environment.yml``](environment.yml) file will produce a working 
 
 ### Gurobi
 
+To evaluate 
 
+    >>> python solvers/Gurobi/evaluate.py  --test_distribution BA_20 --time_limit 10 --threads 10
+
+### SDP
 
 To evaluate 
 
-    >>> python solvers/Gurobi/evaluate.py  --test_distribution BA_20
+    >>> python solvers/SDP/evaluate.py  --test_distribution BA_20  --threads 10
 
 
 ### S2V-DQN
 
 To train 
 
-    >>> python train.py --algorithm S2V-DQN --distribution BA_20
+    >>> python solvers/S2V-DQN/train.py  --distribution BA_20
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm S2V-DQN --train_distribution BA_20 --test_distribution BA_20
+    >>> python solvers/S2V-DQN/evaluate.py --train_distribution BA_20 --test_distribution BA_20
 
 
 ### ECO-DQN
 
 To train 
 
-    >>> python train.py --algorithm ECO-DQN --distribution BA_20 --num_steps 40
+    >>> python solvers/ECO-DQN/train.py --distribution BA_20
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm ECO-DQN --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50 --num_steps 40
+    >>> python solvers/ECO-DQN/evaluate.py --train_distribution BA_20 --test_distribution BA_20
 
 
 ### LS-DQN
 
 To train 
 
-    >>> python train.py --algorithm LS-DQN --distribution BA_20 --num_steps 40
+    >>> python solvers/LS-DQN/train.py --distribution BA_20
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm LS-DQN --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50 --num_steps 40
+    >>> python solvers/LS-DQN/evaluate.py --train_distribution BA_20 --test_distribution BA_20 
 
 ### SoftTabu
 
 To train 
 
-    >>> python train.py --algorithm SoftTabu --distribution BA_20 --num_steps 40
+    >>> python solvers/SoftTabu/train.py --distribution BA_20
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm SoftTabu --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50 --num_steps 40
-
+    >>> python solvers/SoftTabu/evaluate.py --train_distribution BA_20 --test_distribution BA_20
 
 
 ### RUN-CSP
 
 To train 
 
-    >>> python train.py --algorithm RUN-CSP --distribution BA_20 
+    >>> python solvers/RUN-CSP/train.py --distribution BA_20
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm RUN-CSP --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50 --num_steps 40
+    >>> python solvers/RUN-CSP/evaluate.py --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50 --num_steps 40
 
 
 ### ANYCSP
 
 To train 
 
-    >>> python train.py --algorithm ANYCSP --distribution BA_20 
+    >>> python solvers/ANYCSP/train.py --distribution BA_20 
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm ANYCSP --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50 --num_steps 40
+    >>> python solvers/ANYCSP/evaluate.py --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50 --num_steps 40
 
 ### Gflow-CombOpt
 
 To train 
 
-    >>> python train.py --algorithm Gflow-CombOpt --distribution BA_20 
+    >>> python solvers/Gflow-CombOpt/train.py --distribution BA_20
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm Gflow-CombOpt --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50 
+    >>> python solvers/Gflow-CombOpt/evaluate.py --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50 
 
 
 ### Amplitude Heterogeneity Correction
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm AHC --test_distribution BA_20 
+    >>> python solvers/AHC/evaluate.py  --test_distribution BA_20
 
 Hyperparameter tuning for each instance is done on the fly.
 
@@ -136,7 +139,7 @@ Hyperparameter tuning for each instance is done on the fly.
 
 To evaluate 
 
-    >>> python evaluation.py --algorithm CAC --test_distribution BA_20 
+    >>> python solvers/CAC/evaluate.py  --test_distribution BA_20
 
 Hyperparameter tuning for each instance is done on the fly.
 
@@ -144,32 +147,30 @@ Hyperparameter tuning for each instance is done on the fly.
 
 To train
 
-    >>> python train.py --algorithm TS --distribution BA_20 --num_repeat 50 --num_steps 40 --low 20 --high 150 --step 10
+    >>> python solvers/TS/train.py  --train_distribution BA_20
 
 To test
 
-    >>> python evaluation.py --algorithm TS --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50  --num_steps 40
+    >>> python solvers/TS/evaluate.py --train_distribution BA_20 --test_distribution BA_20
 
 
 ### Extremal Optimization
 
 To train
 
-    >>> python train.py --algorithm EO --distribution BA_20 --num_repeat 50 --num_steps 40 --low 1.1 --high 2 --step 0.1
+    >>> python solvers/EO/train.py  --train_distribution BA_20
 
 To test
 
-    >>> python evaluation.py --algorithm EO --train_distribution BA_20 --test_distribution BA_20 --num_repeat 50  --num_steps 40
+    >>> python solvers/EO/evaluate.py --train_distribution BA_20 --test_distribution BA_20
 
 ### Greedy
 
 To test
 
-    >>> python evaluation.py --algorithm Greedy --test_distribution BA_20 --num_repeat 50  
+    >>> python solvers/Greedy/evaluate.py --test_distribution BA_20  
 
 
-### Data and Models
 
-We cannot reupload publicly available datasets, as we do not have permission to redistribute them. Therefore, we only provide synthetic datasets generated with the best-known solutions, along with all the [pretrained models](https://drive.google.com/file/d/1gGoIQ1LhzomLS0hhzpAjnslVet4faZIo/view?usp=sharing). Additionally, we offer all the [data](https://drive.google.com/file/d/1LJ0kjavA9wIjnIpmkI38-wlf2C77p3dy/view?usp=sharing) needed for training and validation across all distributions.
 
 

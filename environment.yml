@@ -1,9 +1,11 @@
 name: benchenv
 channels:
   - pyg
+  - gurobi
   - pytorch
   - dglteam/label/th23_cu121
   - nvidia
+  - https://conda.anaconda.org/gurobi
   - defaults
 dependencies:
   - _libgcc_mutex=0.1=main
@@ -22,9 +24,9 @@ dependencies:
   - brotli-python=1.0.9=py311h6a678d5_8
   - bzip2=1.0.8=h5eee18b_6
   - c-ares=1.19.1=h5eee18b_0
-  - ca-certificates=2024.3.11=h06a4308_0
+  - ca-certificates=2024.9.24=h06a4308_0
   - cachetools=5.3.3=py311h06a4308_0
-  - certifi=2024.2.2=py311h06a4308_0
+  - certifi=2024.8.30=py311h06a4308_0
   - cffi=1.16.0=py311h5eee18b_1
   - charset-normalizer=2.0.4=pyhd3eb1b0_0
   - click=8.1.7=py311h06a4308_0
@@ -62,6 +64,7 @@ dependencies:
   - gst-plugins-base=1.14.1=h6a678d5_1
   - gstreamer=1.14.1=h5eee18b_1
   - gtest=1.14.0=hdb19cb5_1
+  - gurobi=11.0.3=py311_0
   - icu=73.1=h6a678d5_0
   - idna=3.7=py311h06a4308_0
   - intel-openmp=2023.1.0=hdb19cb5_46306
@@ -138,9 +141,8 @@ dependencies:
   - oauthlib=3.2.2=py311h06a4308_0
   - openh264=2.1.1=h4ff587b_0
   - openjpeg=2.4.0=h3ad879b_0
-  - openssl=3.0.13=h7f8727e_2
+  - openssl=3.0.15=h5eee18b_0
   - packaging=23.2=py311h06a4308_0
-  - pandas=2.2.1=py311ha02d727_0
   - pcre2=10.42=hebb0a14_1
   - pillow=10.3.0=py311h5eee18b_0
   - pip=24.0=py311h06a4308_0
@@ -173,7 +175,7 @@ dependencies:
   - requests=2.32.2=py311h06a4308_0
   - requests-oauthlib=1.3.0=py_0
   - rsa=4.7.2=pyhd3eb1b0_1
-  - seaborn=0.12.2=py311h06a4308_0
+  - seaborn=0.13.2=py311h06a4308_0
   - setuptools=69.5.1=py311h06a4308_0
   - sip=6.7.12=py311h6a678d5_0
   - six=1.16.0=pyhd3eb1b0_1
@@ -206,9 +208,13 @@ dependencies:
       - asttokens==2.4.1
       - bohb-hpo==0.5.2
       - cim-optimizer==1.0.4
+      - clarabel==0.9.0
       - cloudpickle==3.0.0
+      - commonmark==0.9.1
+      - cvxpy==1.5.3
       - dask==2024.5.1
       - decorator==5.1.1
+      - ecos==2.0.14
       - einops==0.8.0
       - executing==2.0.1
       - fsspec==2024.5.0
@@ -220,6 +226,8 @@ dependencies:
       - locket==1.0.0
       - matplotlib-inline==0.1.7
       - omegaconf==2.3.0
+      - osqp==0.6.7.post3
+      - pandas==2.2.3
       - parso==0.8.4
       - partd==1.4.2
       - patsy==0.5.6
@@ -230,8 +238,12 @@ dependencies:
       - pure-eval==0.2.2
       - pygments==2.18.0
       - pyparsing==3.1.2
+      - qdldl==0.1.7.post4
+      - rich==12.6.0
       - scikit-learn==1.5.0
       - scipy==1.13.1
+      - scs==3.2.7
+      - smartprint==1.0.5
       - stack-data==0.6.3
       - statsmodels==0.14.2
       - threadpoolctl==3.5.0

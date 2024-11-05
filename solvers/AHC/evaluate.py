@@ -73,7 +73,7 @@ from argparse import ArgumentParser
 
 if __name__ == '__main__':
     parser = ArgumentParser()
-    parser.add_argument('--distribution', type=str,default="WattsStrogatz_200vertices_weighted",  help='Distribution of dataset')
+    parser.add_argument('--test_distribution', type=str,default="WattsStrogatz_200vertices_weighted",  help='Distribution of dataset')
     parser.add_argument("--device", type=int,default=None, help="cuda device")
     parser.add_argument("--num_repeat",type=int,default=10,help="Number of runs per instance")
     parser.add_argument("--time_span",type=int,default=1200,help="Time span")
@@ -101,7 +101,7 @@ if __name__ == '__main__':
 
     hyperparameters['chosen_device']=device
 
-    dataset_path=os.path.join(os.getcwd(),f'data/testing/{args.distribution}')
+    dataset_path=os.path.join(os.getcwd(),f'data/testing/{args.test_distribution}')
 
     dataset=GraphDataset(dataset_path,ordered=True)
 

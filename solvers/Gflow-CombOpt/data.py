@@ -98,7 +98,7 @@ def collate_fn(graphs):
 
 def get_test_data_loader(cfg):
     data_path = Path(__file__).parent.parent.parent / "data"
-    test_data_path = data_path / "testing" / (cfg.input)
+    test_data_path = data_path / "testing" / (cfg.test_distribution)
     print(f"Loading data from {test_data_path}.")
     testset = GraphDataset(test_data_path)
     test_loader = DataLoader(testset, batch_size=cfg.test_batch_size,

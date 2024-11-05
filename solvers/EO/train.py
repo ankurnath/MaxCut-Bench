@@ -14,22 +14,22 @@ if __name__ == '__main__':
 
     parser = ArgumentParser()
 
-    parser.add_argument("--distribution", type=str,default='Physics',required=True, help="Distribution of training dataset")
+    parser.add_argument("--train_distribution", type=str,default='BA_20',required=True, help="Distribution of training dataset")
 
-    parser.add_argument("--num_repeat", type=int,default=50,required=True, help="Number of attempts")
+    parser.add_argument("--num_repeat", type=int,default=50, help="Number of attempts")
 
-    parser.add_argument("--num_steps", type=int, default=2,required=True, help="Number of steps")
+    parser.add_argument("--num_steps", type=int, default=2, help="Number of steps")
 
-    parser.add_argument("--low", type=float, default=1.1,required=True, help="lower bound of tau")
+    parser.add_argument("--low", type=float, default=1.2, help="lower bound of tau")
 
-    parser.add_argument("--high", type=float, default=1.3,required=True, help="higher bound of tau")
+    parser.add_argument("--high", type=float, default=1.4, help="higher bound of tau")
 
-    parser.add_argument('--step',type=float, default=0.1,required=True, help="Step size of tau")
+    parser.add_argument('--step',type=float, default=0.1, help="Step size of tau")
 
 
     args = parser.parse_args()
 
-    distribution =args.distribution
+    distribution =args.train_distribution
     num_repeat = args.num_repeat
     num_steps = args.num_steps
     low = args.low
@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
 
 
-    save_folder=f'pretrained agents/{args.distribution}'
+    save_folder=f'pretrained agents/{args.train_distribution}'
     save_folder=os.path.join(os.getcwd(),'solvers/EO',save_folder)
 
     
@@ -59,7 +59,7 @@ if __name__ == '__main__':
 
     
 
-    dataset_path=os.path.join(os.getcwd(),f'data/validation/{args.distribution}')
+    dataset_path=os.path.join(os.getcwd(),f'data/validation/{args.train_distribution}')
 
     dataset=GraphDataset(dataset_path,ordered=True)
 
@@ -99,14 +99,15 @@ if __name__ == '__main__':
         if best_mean<best_cuts.mean():
             best_mean=best_cuts.mean()
             best_tau=tau
+            tau_save_path=os.path.join(save_folder,'best_tau')
+
+            with open(tau_save_path, "wb") as file:
+                pickle.dump(best_tau, file)
 
     
     print('Best Tau:',best_tau)
 
-    tau_save_path=os.path.join(save_folder,'best_tau')
-
-    with open(tau_save_path, "wb") as file:
-        pickle.dump(best_tau, file)
+    
 
 
 

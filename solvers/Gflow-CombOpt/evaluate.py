@@ -157,7 +157,7 @@ def main(cfg: DictConfig):
     # alg_save_path = os.path.abspath(f"{cfg.input}/alg.pt")
     # alg_save_path_best = os.path.abspath(f"{cfg.input}/alg_best.pt")
     # load_path=os.path.join(f'Gflow-CombOpt/pretrained agents/{cfg.input}','network')
-    load_path=os.path.join(f'Gflow-CombOpt/pretrained agents/{cfg.input}')
+    load_path=os.path.join(f'Gflow-CombOpt/pretrained agents/{cfg.train_distribution}')
     load_path=os.path.join(os.getcwd(),'solvers',load_path)
     alg_load_path_best=os.path.join(load_path,"alg_best.pt")
     alg.load(alg_load_path_best)
@@ -192,72 +192,36 @@ def main(cfg: DictConfig):
             rewards=env.get_log_reward()
             while not all(env.done):
                 action = alg.sample(gbatch_rep, state, env.done, rand_prob=0.)
-                # print(type(action))
-                # print(action.shape)
-                # print(action)
-                state = env.step(action)
-                # action=action.reshape(-1,num_repeat)
-                # print(action)
-                # print(state)
-                # print(env.batch_metric(state))
-                # if torch.all(rewards<=env.get_log_reward()):
-                #     rewards=env.get_log_reward()
-                # else:
-                #     raise ValueError ("No reward")
-                # print(env.get_log_reward())
-                # step+=1
-            
-            # print (torch.sum(state)) 
-            # print('Step',step)
 
-            # logr_rep = logr_scaler(env.get_log_reward())
-            # logr_ls += logr_rep.tolist()
-            # print(state.mean())
+                state = env.step(action)
+                
             
             curr_mis_rep = torch.tensor(env.batch_metric(state))
-            # print(curr_mis_rep.shape)
+            
             curr_mis_rep = rearrange(curr_mis_rep, "(rep b) -> b rep", rep=num_repeat).float()
-            # print(curr_mis_rep.shape)
+            
             mis_ls += curr_mis_rep.mean(dim=1).tolist()
             mis_top50_ls += curr_mis_rep.max(dim=1)[0].tolist()
-            # best_runs= torch.argmax (curr_mis_rep,dim=1)
-            # state=state.reshape(125,-1,10)
-            # for i in range(10):
-            #     each_graph_state=state[:,i]
-
-            # print(state.shape)
-            # best_run=torch.argmax(curr_mis_rep,dim=1)
-            # print(best_run)
-
-        #     pbar.set_postfix({"Metric": f"{np.mean(mis_ls):.2f}+-{np.std(mis_ls):.2f}"})
+            
 
         print(
               f"Metric={np.mean(mis_ls):.2f}+-{np.std(mis_ls):.2f}, "
               f"top50={np.mean(mis_top50_ls):.2f}, "
               )
-        # print(state.shape)
-        # state=state.reshape(10,125).tolist()
 
-        # state=state.tolist()
-        # graph_no,num_repeat,num_spin
-        # state=state.reshape(10,50,125)
-        # for i in range()
 
         
 
         result["cut"] = mis_top50_ls
-        # for i in range(10):
-        #     result['state'].append(state[i])
 
-        # for j,best_run in enumerate(best_runs):
-        #     result['state'].append(state[j][best_run][:].tolist())
-        # print(result)
         result=pd.DataFrame(result)
         # print(result)
-        data_folder=f'Gflow-CombOpt/pretrained agents/{cfg.input}/data'
-        data_folder=os.path.join(os.getcwd(),'solvers',data_folder)
+        data_folder=f'results/{cfg.test_distribution}'
+        data_folder=os.path.join(os.getcwd(),data_folder)
         os.makedirs(data_folder,exist_ok=True)
-        result.to_pickle(os.path.join(data_folder,'results'))
+        result.to_pickle(os.path.join(data_folder,'Gflow'))
+
+        print(result)
 
         # pickle.dump(result, gzip.open("./result.json", 'wb'))
 
@@ -274,7 +238,8 @@ if __name__ == "__main__":
     parser.add_argument('--task', type=str, default='mcut', help='Task name')
 
     # Inputs
-    parser.add_argument('--distribution', type=str,required=True, help='Input graph')
+    parser.add_argument('--train_distribution', type=str,required=True, help='Input graph')
+    parser.add_argument('--test_distribution', type=str,required=True, help='Input graph')
 
     # WandB settings
     parser.add_argument('--wandb', type=int, default=0, help='Use Weights & Biases')
@@ -339,8 +304,8 @@ if __name__ == "__main__":
     cfg = parser.parse_args()
     
     cfg= vars(cfg)
-    cfg['input']=cfg['distribution']
-    cfg.pop('distribution')
+    cfg['input']=cfg['test_distribution']
+    # cfg.pop('distribution')
     cfg=OmegaConf.create(cfg)
 
 

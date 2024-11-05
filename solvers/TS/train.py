@@ -12,23 +12,23 @@ if __name__ == '__main__':
 
     parser = ArgumentParser()
 
-    parser.add_argument("--distribution", type=str,default='Physics',required=True, help="Distribution of training dataset")
+    parser.add_argument("--train_distribution", type=str,default='BA_20',required=True, help="Distribution of training dataset")
 
-    parser.add_argument("--num_repeat", type=int,default=50,required=True, help="Number of attempts")
+    parser.add_argument("--num_repeat", type=int,default=50, help="Number of attempts")
 
-    parser.add_argument("--num_steps", type=int, default=2,required=True, help="Number of steps")
+    parser.add_argument("--num_steps", type=int, default=40, help="Number of steps")
 
-    parser.add_argument("--low", type=float, default=20,required=True, help="lower bound of tabu tenure")
+    parser.add_argument("--low", type=float, default=20, help="lower bound of tabu tenure")
 
-    parser.add_argument("--high", type=float, default=150,required=True, help="higher bound of tabu tenure")
+    parser.add_argument("--high", type=float, default=150, help="higher bound of tabu tenure")
 
-    parser.add_argument('--step',type=float, default=10,required=True, help="Step size of tabu tenure")
+    parser.add_argument('--step',type=float, default=10, help="Step size of tabu tenure")
 
 
     args = parser.parse_args()
 
 
-    save_folder=f'pretrained agents/{args.distribution}'
+    save_folder=f'pretrained agents/{args.train_distribution}'
     save_folder=os.path.join(os.getcwd(),'solvers/TS',save_folder)
     os.makedirs(save_folder,exist_ok=True)
     
@@ -36,7 +36,7 @@ if __name__ == '__main__':
 
     
 
-    dataset_path=os.path.join(os.getcwd(),f'data/validation/{args.distribution}')
+    dataset_path=os.path.join(os.getcwd(),f'data/validation/{args.train_distribution}')
 
     dataset=GraphDataset(dataset_path,ordered=True)
 
@@ -73,16 +73,18 @@ if __name__ == '__main__':
 
             best_mean=best_cuts.mean()
             best_tabu_tenure=tabu_tenure
+
+            tabu_tenure_save_path=os.path.join(save_folder,'best_tabu_tenure')
+
+            with open(tabu_tenure_save_path, "wb") as file:
+                # Use pickle.dump() to save the integer to the file
+                pickle.dump(tabu_tenure, file)
             # print(best_mean)
 
     # print(best_cuts)
     print('Best Tabu Tenure:',best_tabu_tenure)
 
-    tabu_tenure_save_path=os.path.join(save_folder,'best_tabu_tenure')
-
-    with open(tabu_tenure_save_path, "wb") as file:
-        # Use pickle.dump() to save the integer to the file
-        pickle.dump(tabu_tenure, file)
+    
 
 
 

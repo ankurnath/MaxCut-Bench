@@ -1,5 +1,5 @@
-# conda env export > environment.yml
+conda env export > environment.yml
 git add .
-git commit -m 'Getting it ready for submit'
+git commit -m 'SDP and Gurobi added'
 git push origin submission
 
