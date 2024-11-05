@@ -65,10 +65,10 @@ def train_GNN(distribution,num_steps,step_factor):
                             'reversible_spins':reversible_spin,
                             'num_steps':num_steps}
     
-    train_graph_generator=GraphDataset(f'../data/training/{distribution}', ordered=False)
-    test_graph_generator=GraphDataset(f'../data/validation/{distribution}', ordered=True)
-    # train_graph_generator=GraphDataset(os.path.join(os.getcwd(),f'data/training/{distribution}'), ordered=False)
-    # test_graph_generator=GraphDataset(os.path.join(os.getcwd(),f'data/validation/{distribution}'), ordered=True)
+    # train_graph_generator=GraphDataset(f'../data/training/{distribution}', ordered=False)
+    # test_graph_generator=GraphDataset(f'../data/validation/{distribution}', ordered=True)
+    train_graph_generator=GraphDataset(os.path.join(os.getcwd(),f'data/training/{distribution}'), ordered=False)
+    test_graph_generator=GraphDataset(os.path.join(os.getcwd(),f'data/validation/{distribution}'), ordered=True)
     n_tests = len(test_graph_generator)
     
     save_loc= os.path.join(model_save_directory,f'{distribution}')

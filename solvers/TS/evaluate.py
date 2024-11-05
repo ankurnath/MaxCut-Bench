@@ -36,8 +36,8 @@ if __name__ == '__main__':
 
     os.makedirs(save_folder,exist_ok=True)
 
-    # dataset_path=os.path.join(os.getcwd(),f'/data/testing/{args.test_distribution}')
-    dataset_path=f'../data/testing/{args.test_distribution}'
+    dataset_path=os.path.join(os.getcwd(),f'/data/testing/{args.test_distribution}')
+    # dataset_path=f'../data/testing/{args.test_distribution}'
 
     dataset=GraphDataset(dataset_path,ordered=True)
 

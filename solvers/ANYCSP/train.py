@@ -177,10 +177,10 @@ if __name__ == '__main__':
 
 
     # model_dir=f'pretrained agents/{args.distribution}'
-    model_dir=os.path.join(os.getcwd(),f'solvers/ANYCSP/pretrained agents/{args.distribution}/network')
+    model_dir=os.path.join(os.getcwd(),f'solvers/ANYCSP/pretrained agents/{args.distribution}')
     os.makedirs(model_dir,exist_ok=True)
     args.model_dir=model_dir
-    # os.mkdir(model_dir)
+    
 
     if args.pretrained_dir is None:
         model = ANYCSP(args.model_dir, config)

@@ -73,8 +73,8 @@ if __name__ == "__main__":
     model.to(device)
     model.eval()
 
-    # test_graph_gen=GraphDataset(folder_path=os.path.join(os.getcwd(),f'data/testing/{test_distribution}'),ordered=True)
-    test_graph_gen=GraphDataset(folder_path=os.path.join(f'../data/testing/{test_distribution}'),ordered=True)
+    test_graph_gen=GraphDataset(folder_path=os.path.join(os.getcwd(),f'data/testing/{test_distribution}'),ordered=True)
+    # test_graph_gen=GraphDataset(folder_path=os.path.join(f'../data/testing/{test_distribution}'),ordered=True)
     print(f'Number of graphs:{len(test_graph_gen)}')
     graphs = [nx.from_numpy_array(test_graph_gen.get()) for _ in range(len(test_graph_gen))]
     n_tests = len(graphs)

@@ -156,7 +156,7 @@ def main(cfg: DictConfig):
     # alg_save_path_best = os.path.abspath(f"{cfg.input}/alg_best.pt")
     # save_path=os.path.join('pretrained_agents',cfg.input)
 
-    save_path=os.path.join(os.getcwd(),f'solvers/Gflow-CombOpt/pretrained agents/{cfg.input}/network')
+    save_path=os.path.join(os.getcwd(),f'solvers/Gflow-CombOpt/pretrained agents/{cfg.input}')
     alg_save_path_best=os.path.join(save_path,"alg_best.pt")
     os.makedirs(save_path,exist_ok = True)
     train_data_used = 0

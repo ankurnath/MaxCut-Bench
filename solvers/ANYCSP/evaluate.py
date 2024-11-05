@@ -46,8 +46,8 @@ if __name__ == '__main__':
     torch.manual_seed(args.seed)
     np.random.seed(args.seed)
 
-    # datapath=os.path.join(os.getcwd(),f'data/testing/{args.distribution}')
-    datapath=os.path.join(f'../data/testing/{test_distribution}')
+    datapath=os.path.join(os.getcwd(),f'data/testing/{args.distribution}')
+    # datapath=os.path.join(f'../data/testing/{test_distribution}')
 
     dataset = File_Dataset(datapath)
     # print(dataset.files)

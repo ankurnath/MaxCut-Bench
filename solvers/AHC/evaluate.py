@@ -122,13 +122,10 @@ if __name__ == '__main__':
     df={'cut':cuts}
     df=pd.DataFrame(df)
 
-    save_folder=f'pretrained agents/{args.distribution}_AHC'
-    save_folder=os.path.join(os.getcwd(),'solvers/AHC',save_folder)
-    data_folder=os.path.join(save_folder,'data')
-
-    os.makedirs(data_folder,exist_ok=True)
+    test_distribution = args.distribution
+    save_folder = os.path.join('results',test_distribution)
     os.makedirs(save_folder,exist_ok=True)
+    file_path = os.path.join(save_folder,'AHC')
+    df.to_pickle(file_path)
 
-    print(df)
-    df.to_pickle(os.path.join(save_folder,'results'))
-
+    

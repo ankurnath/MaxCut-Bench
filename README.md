@@ -39,6 +39,15 @@ The included [``environment.yml``](environment.yml) file will produce a working 
 
 ## Details on how to use the Solvers
 
+### Gurobi
+
+
+
+To evaluate 
+
+    >>> python solvers/Gurobi/evaluate.py  --test_distribution BA_20
+
+
 ### S2V-DQN
 
 To train 

@@ -80,8 +80,8 @@ def test_GNN(test_distribution,train_distribution):
 
 
 
-    # datapath = os.path.join(os.getcwd(),f'data/testing/{test_distribution}')
-    datapath = os.path.join(f'../data/testing/{test_distribution}')
+    datapath = os.path.join(os.getcwd(),f'data/testing/{test_distribution}')
+    # datapath = os.path.join(f'../data/testing/{test_distribution}')
 
     graphs_test = GraphDataset(datapath, ordered=True)
     n_tests=len(graphs_test)

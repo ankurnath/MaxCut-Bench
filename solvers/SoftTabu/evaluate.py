@@ -72,8 +72,8 @@ def test_GNN(train_distribution,test_distribution,num_repeat,num_steps,step_fact
     network_fn = lambda: LinearRegression(input_dim=len(observables)-1)
 
 
-    # graphs_test = GraphDataset(os.path.join(os.getcwd(),f'data/testing/{test_distribution}'), ordered=True)
-    graphs_test = GraphDataset(f'../data/testing/{test_distribution}', ordered=True)
+    graphs_test = GraphDataset(os.path.join(os.getcwd(),f'data/testing/{test_distribution}'), ordered=True)
+    # graphs_test = GraphDataset(f'../data/testing/{test_distribution}', ordered=True)
     n_tests=len(graphs_test)
     print(f'The number of test graphs:{n_tests}')
 
