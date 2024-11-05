@@ -45,6 +45,12 @@ To evaluate
 
     >>> python solvers/Gurobi/evaluate.py  --test_distribution BA_20 --time_limit 10 --threads 10
 
+### Cplex
+
+To evaluate 
+
+    >>> python solvers/Cplex/evaluate.py  --test_distribution BA_20 --time_limit 10 --threads 10
+
 ### SDP
 
 To evaluate 

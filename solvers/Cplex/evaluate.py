@@ -24,13 +24,13 @@ def cplex_solver(graph,max_time,max_threads):
 if __name__ == '__main__':
 
     parser = ArgumentParser()
-    parser.add_argument( "--distribution", type=str, default='ER_200vertices_weighted', help="Name of the dataset to be used (default: 'Facebook')" )
+    parser.add_argument( "--test_distribution", type=str, default='ER_200vertices_weighted', help="Name of the dataset to be used (default: 'Facebook')" )
     parser.add_argument( "--time_limit", type=float, default= 600, help="Maximum Time Limit" )
     parser.add_argument( "--threads", type=int, default= 1, help="Maximum number of threads" )
   
     args = parser.parse_args()
 
-    distribution = args.distribution
+    distribution = args.test_distribution
     time_limit = args.time_limit
     threads = args.threads
 
@@ -42,12 +42,12 @@ if __name__ == '__main__':
 
     
 
-    test_dataset = GraphDataset(f'../data/testing/{distribution}',ordered=True)
+    test_dataset = GraphDataset(f'data/testing/{distribution}',ordered=True)
 
     df = defaultdict(list)
 
-    # for _ in range(len(test_dataset)):
-    for _ in range(1):
+    for _ in range(len(test_dataset)):
+   
 
         graph = test_dataset.get()
         graph = nx.from_numpy_array(graph)
@@ -60,15 +60,15 @@ if __name__ == '__main__':
 
     
 
-    folder_name = f'data/Cplex/{distribution}'
+    folder_name = f'results/{distribution}'
 
     os.makedirs(folder_name,exist_ok=True)
 
-    file_path = os.path.join(folder_name,'results') 
+    file_path = os.path.join(folder_name,'Cplex') 
 
     df = pd.DataFrame(df)
     try:
-        OPT = load_from_pickle(f'../data/testing/{distribution}/optimal')
+        OPT = load_from_pickle(f'data/testing/{distribution}/optimal')
         df['OPT'] = OPT['OPT']
         df['Ratio'] = df['cut']/df['OPT']
         print(df['Ratio'].mean())

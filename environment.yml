@@ -3,6 +3,7 @@ channels:
   - pyg
   - gurobi
   - pytorch
+  - ibmdecisionoptimization
   - dglteam/label/th23_cu121
   - nvidia
   - https://conda.anaconda.org/gurobi
@@ -45,6 +46,7 @@ dependencies:
   - cython=3.0.10=py311h5eee18b_0
   - dbus=1.13.18=hb2f20db_0
   - dgl=2.2.1.th23.cu121=py311_0
+  - docplex=2.27.239=py311_0
   - expat=2.6.2=h6a678d5_0
   - ffmpeg=4.3=hf484d3e_0
   - filelock=3.13.1=py311h06a4308_0
@@ -211,6 +213,7 @@ dependencies:
       - clarabel==0.9.0
       - cloudpickle==3.0.0
       - commonmark==0.9.1
+      - cplex==22.1.1.2
       - cvxpy==1.5.3
       - dask==2024.5.1
       - decorator==5.1.1
