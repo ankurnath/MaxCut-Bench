@@ -7,7 +7,7 @@ interface. Currently, we support the following solvers:
 - S2V-DQN
 - ECO-DQN
 - LS-DQN
-- SoftTabu
+- SoftTabu (ECO+LR)
 - RUN-CSP
 - ANYCSP
 - Gflow-CombOpt
@@ -15,9 +15,11 @@ interface. Currently, we support the following solvers:
 - Chaotic Amplitude Control (CAC)
 - Tabu Search
 - Extremal Optimization
-- Standard Greedy 
-- Stochastic Greedy
-- Forward Greedy
+- Greedy
+- Semidefinite Programming
+- Gurobi
+- Cplex
+
 
 
 ## Repository Contents
