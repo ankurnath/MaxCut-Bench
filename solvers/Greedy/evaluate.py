@@ -210,7 +210,7 @@ if __name__ == '__main__':
     parser.add_argument("--num_repeat", type=int,default=50, help="Distribution of dataset")
 
 
-
+    print('***********Running Standard Greedy, S2V-Simplified and LS-Simplified***********')
     args = parser.parse_args()
 
     test_distribution = args.test_distribution
@@ -282,7 +282,7 @@ if __name__ == '__main__':
     # Saving MCA results
     mca_df = {'instances': instances, 'cut': mca_cuts, 'time': mca_times}
     mca_df = pd.DataFrame(mca_df)
-    mca_df.to_pickle(os.path.join(save_folder, 'RG'))
+    
 
     # Saving Standard Greedy results
     sg_df = {'instances': instances, 'cut': sg_cuts, 'time': sg_times}
@@ -290,26 +290,22 @@ if __name__ == '__main__':
     
 
 
+    opt_file_path = 'data/testing/{test_distribution}/optimal'
     
-    try:
-        OPT = pd.read_pickle(f'../data/testing/{test_distribution}/optimal')
-        sg_df['OPT'] = OPT['OPT'].tolist()
-
-        print('Mean',(sg_df['cut']/sg_df['OPT']).mean())
-    except:
-        # raise ValueError('')
-        pass
-    sg_df.to_pickle(os.path.join(save_folder, 'Standard Greedy'))
     # Saving Forward Greedy results
     fg_df = {'instances': instances, 'cut': fg_cuts, 'time': fg_times}
     fg_df = pd.DataFrame(fg_df)
-    fg_df.to_pickle(os.path.join(save_folder, 'Forward Greedy'))
+    
 
+    
+    
 
-    # print(mca_df)
-    print(sg_df)
-    # print(fg_df)
+    mca_df.to_pickle(os.path.join(save_folder, 'LS_Simplified'))
+    sg_df.to_pickle(os.path.join(save_folder, 'Standard Greedy'))
+    fg_df.to_pickle(os.path.join(save_folder, 'S2V_Simplified'))
 
+    print('***********Compeleted***********')
+    
 
 
 
