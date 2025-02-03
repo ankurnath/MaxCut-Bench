@@ -12400,3 +12400,3250 @@ dir already exists:  results/Physics
 [10 rows x 6 columns]
 usage: train.py [-h] [--distribution DISTRIBUTION]
 train.py: error: unrecognized arguments: --train_distribution Physics --test_distribution Physics
+The number of test graphs:5
+Set torch default device to cuda.
+Preparing batch of 50 environments for graph 0....done.
+Finished agent testing batch 1.
+Graph 0, best(mean) cut: 11514.0(11459.86).  (50 attempts in 55.95s)			
+Preparing batch of 50 environments for graph 1....done.
+Finished agent testing batch 1.
+Graph 1, best(mean) cut: 11528.0(11463.82).  (50 attempts in 65.6s)			
+Preparing batch of 50 environments for graph 2....done.
+Finished agent testing batch 1.
+Graph 2, best(mean) cut: 11530.0(11468.68).  (50 attempts in 56.46s)			
+Preparing batch of 50 environments for graph 3....done.
+Finished agent testing batch 1.
+Graph 3, best(mean) cut: 11540.0(11474.34).  (50 attempts in 56.62s)			
+Preparing batch of 50 environments for graph 4....done.
+Finished agent testing batch 1.
+Graph 4, best(mean) cut: 11545.0(11472.56).  (50 attempts in 56.48s)			
+dir already exists:  results/ER_800vertices_unweighted
+       cut  mean cut  ...         Train Distribution          Test Distribution
+0  11514.0  11459.86  ...  ER_800vertices_unweighted  ER_800vertices_unweighted
+1  11528.0  11463.82  ...  ER_800vertices_unweighted  ER_800vertices_unweighted
+2  11530.0  11468.68  ...  ER_800vertices_unweighted  ER_800vertices_unweighted
+3  11540.0  11474.34  ...  ER_800vertices_unweighted  ER_800vertices_unweighted
+4  11545.0  11472.56  ...  ER_800vertices_unweighted  ER_800vertices_unweighted
+
+[5 rows x 6 columns]
+The number of test graphs:4
+Set torch default device to cuda.
+Preparing batch of 50 environments for graph 0....done.
+Finished agent testing batch 1.
+Graph 0, best(mean) cut: 3019.0(2996.5).  (50 attempts in 21.88s)			
+Preparing batch of 50 environments for graph 1....done.
+Finished agent testing batch 1.
+Graph 1, best(mean) cut: 3003.0(2977.78).  (50 attempts in 25.44s)			
+Preparing batch of 50 environments for graph 2....done.
+Finished agent testing batch 1.
+Graph 2, best(mean) cut: 3014.0(2979.52).  (50 attempts in 25.53s)			
+Preparing batch of 50 environments for graph 3....done.
+Finished agent testing batch 1.
+Graph 3, best(mean) cut: 2992.0(2974.16).  (50 attempts in 21.84s)			
+dir already exists:  results/planar_800vertices_unweighted
+      cut  ...              Test Distribution
+0  3019.0  ...  planar_800vertices_unweighted
+1  3003.0  ...  planar_800vertices_unweighted
+2  3014.0  ...  planar_800vertices_unweighted
+3  2992.0  ...  planar_800vertices_unweighted
+
+[4 rows x 6 columns]
+The number of test graphs:100
+Set torch default device to cuda.
+Preparing batch of 50 environments for graph 0....done.
+Finished agent testing batch 1.
+Graph 0, best(mean) cut: 2343.0(2249.52).  (50 attempts in 18.65s)			
+Preparing batch of 50 environments for graph 1....done.
+Finished agent testing batch 1.
+Graph 1, best(mean) cut: 2332.0(2287.9).  (50 attempts in 20.79s)			
+Preparing batch of 50 environments for graph 2....done.
+Finished agent testing batch 1.
+Graph 2, best(mean) cut: 2330.0(2258.96).  (50 attempts in 17.98s)			
+Preparing batch of 50 environments for graph 3....done.
+Finished agent testing batch 1.
+Graph 3, best(mean) cut: 2342.0(2292.42).  (50 attempts in 18.03s)			
+Preparing batch of 50 environments for graph 4....done.
+Finished agent testing batch 1.
+Graph 4, best(mean) cut: 2338.0(2311.66).  (50 attempts in 17.79s)			
+Preparing batch of 50 environments for graph 5....done.
+Finished agent testing batch 1.
+Graph 5, best(mean) cut: 2351.0(2305.56).  (50 attempts in 17.98s)			
+Preparing batch of 50 environments for graph 6....done.
+Finished agent testing batch 1.
+Graph 6, best(mean) cut: 2348.0(2289.42).  (50 attempts in 20.5s)			
+Preparing batch of 50 environments for graph 7....done.
+Finished agent testing batch 1.
+Graph 7, best(mean) cut: 2336.0(2304.4).  (50 attempts in 17.96s)			
+Preparing batch of 50 environments for graph 8....done.
+Finished agent testing batch 1.
+Graph 8, best(mean) cut: 2343.0(2303.78).  (50 attempts in 18.12s)			
+Preparing batch of 50 environments for graph 9....done.
+Finished agent testing batch 1.
+Graph 9, best(mean) cut: 2338.0(2258.22).  (50 attempts in 18.23s)			
+Preparing batch of 50 environments for graph 10....done.
+Finished agent testing batch 1.
+Graph 10, best(mean) cut: 2345.0(2294.44).  (50 attempts in 18.1s)			
+Preparing batch of 50 environments for graph 11....done.
+Finished agent testing batch 1.
+Graph 11, best(mean) cut: 2346.0(2218.64).  (50 attempts in 18.71s)			
+Preparing batch of 50 environments for graph 12....done.
+Finished agent testing batch 1.
+Graph 12, best(mean) cut: 2340.0(2301.56).  (50 attempts in 17.91s)			
+Preparing batch of 50 environments for graph 13....done.
+Finished agent testing batch 1.
+Graph 13, best(mean) cut: 2345.0(2261.62).  (50 attempts in 21.05s)			
+Preparing batch of 50 environments for graph 14....done.
+Finished agent testing batch 1.
+Graph 14, best(mean) cut: 2341.0(2310.08).  (50 attempts in 17.96s)			
+Preparing batch of 50 environments for graph 15....done.
+Finished agent testing batch 1.
+Graph 15, best(mean) cut: 2338.0(2051.24).  (50 attempts in 19.44s)			
+Preparing batch of 50 environments for graph 16....done.
+Finished agent testing batch 1.
+Graph 16, best(mean) cut: 2338.0(2298.66).  (50 attempts in 18.0s)			
+Preparing batch of 50 environments for graph 17....done.
+Finished agent testing batch 1.
+Graph 17, best(mean) cut: 2337.0(2265.64).  (50 attempts in 19.18s)			
+Preparing batch of 50 environments for graph 18....done.
+Finished agent testing batch 1.
+Graph 18, best(mean) cut: 2340.0(2243.68).  (50 attempts in 18.52s)			
+Preparing batch of 50 environments for graph 19....done.
+Finished agent testing batch 1.
+Graph 19, best(mean) cut: 2347.0(2271.3).  (50 attempts in 18.39s)			
+Preparing batch of 50 environments for graph 20....done.
+Finished agent testing batch 1.
+Graph 20, best(mean) cut: 2347.0(2285.06).  (50 attempts in 18.29s)			
+Preparing batch of 50 environments for graph 21....done.
+Finished agent testing batch 1.
+Graph 21, best(mean) cut: 2327.0(2230.46).  (50 attempts in 18.5s)			
+Preparing batch of 50 environments for graph 22....done.
+Finished agent testing batch 1.
+Graph 22, best(mean) cut: 2344.0(2154.8).  (50 attempts in 19.17s)			
+Preparing batch of 50 environments for graph 23....done.
+Finished agent testing batch 1.
+Graph 23, best(mean) cut: 2333.0(2198.1).  (50 attempts in 18.88s)			
+Preparing batch of 50 environments for graph 24....done.
+Finished agent testing batch 1.
+Graph 24, best(mean) cut: 2337.0(2292.78).  (50 attempts in 18.03s)			
+Preparing batch of 50 environments for graph 25....done.
+Finished agent testing batch 1.
+Graph 25, best(mean) cut: 2345.0(2008.38).  (50 attempts in 19.64s)			
+Preparing batch of 50 environments for graph 26....done.
+Finished agent testing batch 1.
+Graph 26, best(mean) cut: 2341.0(2292.32).  (50 attempts in 18.39s)			
+Preparing batch of 50 environments for graph 27....done.
+Finished agent testing batch 1.
+Graph 27, best(mean) cut: 2337.0(2287.2).  (50 attempts in 18.12s)			
+Preparing batch of 50 environments for graph 28....done.
+Finished agent testing batch 1.
+Graph 28, best(mean) cut: 2337.0(2311.42).  (50 attempts in 20.27s)			
+Preparing batch of 50 environments for graph 29....done.
+Finished agent testing batch 1.
+Graph 29, best(mean) cut: 2344.0(2299.84).  (50 attempts in 18.06s)			
+Preparing batch of 50 environments for graph 30....done.
+Finished agent testing batch 1.
+Graph 30, best(mean) cut: 2354.0(2276.14).  (50 attempts in 18.43s)			
+Preparing batch of 50 environments for graph 31....done.
+Finished agent testing batch 1.
+Graph 31, best(mean) cut: 2317.0(2004.42).  (50 attempts in 20.4s)			
+Preparing batch of 50 environments for graph 32....done.
+Finished agent testing batch 1.
+Graph 32, best(mean) cut: 2341.0(2296.0).  (50 attempts in 18.44s)			
+Preparing batch of 50 environments for graph 33....done.
+Finished agent testing batch 1.
+Graph 33, best(mean) cut: 2343.0(2173.76).  (50 attempts in 19.33s)			
+Preparing batch of 50 environments for graph 34....done.
+Finished agent testing batch 1.
+Graph 34, best(mean) cut: 2331.0(2045.36).  (50 attempts in 19.95s)			
+Preparing batch of 50 environments for graph 35....done.
+Finished agent testing batch 1.
+Graph 35, best(mean) cut: 2341.0(2250.9).  (50 attempts in 18.74s)			
+Preparing batch of 50 environments for graph 36....done.
+Finished agent testing batch 1.
+Graph 36, best(mean) cut: 2341.0(2301.24).  (50 attempts in 20.88s)			
+Preparing batch of 50 environments for graph 37....done.
+Finished agent testing batch 1.
+Graph 37, best(mean) cut: 2334.0(2274.06).  (50 attempts in 18.5s)			
+Preparing batch of 50 environments for graph 38....done.
+Finished agent testing batch 1.
+Graph 38, best(mean) cut: 2359.0(2297.14).  (50 attempts in 18.63s)			
+Preparing batch of 50 environments for graph 39....done.
+Finished agent testing batch 1.
+Graph 39, best(mean) cut: 2336.0(2171.42).  (50 attempts in 19.44s)			
+Preparing batch of 50 environments for graph 40....done.
+Finished agent testing batch 1.
+Graph 40, best(mean) cut: 2352.0(2279.94).  (50 attempts in 18.49s)			
+Preparing batch of 50 environments for graph 41....done.
+Finished agent testing batch 1.
+Graph 41, best(mean) cut: 2339.0(1924.98).  (50 attempts in 21.37s)			
+Preparing batch of 50 environments for graph 42....done.
+Finished agent testing batch 1.
+Graph 42, best(mean) cut: 2333.0(1887.54).  (50 attempts in 21.05s)			
+Preparing batch of 50 environments for graph 43....done.
+Finished agent testing batch 1.
+Graph 43, best(mean) cut: 2333.0(2164.4).  (50 attempts in 22.01s)			
+Preparing batch of 50 environments for graph 44....done.
+Finished agent testing batch 1.
+Graph 44, best(mean) cut: 2345.0(2297.74).  (50 attempts in 18.26s)			
+Preparing batch of 50 environments for graph 45....done.
+Finished agent testing batch 1.
+Graph 45, best(mean) cut: 2355.0(2299.92).  (50 attempts in 18.41s)			
+Preparing batch of 50 environments for graph 46....done.
+Finished agent testing batch 1.
+Graph 46, best(mean) cut: 2339.0(2136.34).  (50 attempts in 19.15s)			
+Preparing batch of 50 environments for graph 47....done.
+Finished agent testing batch 1.
+Graph 47, best(mean) cut: 2342.0(2244.28).  (50 attempts in 18.85s)			
+Preparing batch of 50 environments for graph 48....done.
+Finished agent testing batch 1.
+Graph 48, best(mean) cut: 2350.0(2299.7).  (50 attempts in 18.27s)			
+Preparing batch of 50 environments for graph 49....done.
+Finished agent testing batch 1.
+Graph 49, best(mean) cut: 2340.0(2295.32).  (50 attempts in 18.3s)			
+Preparing batch of 50 environments for graph 50....done.
+Finished agent testing batch 1.
+Graph 50, best(mean) cut: 2351.0(2299.18).  (50 attempts in 20.77s)			
+Preparing batch of 50 environments for graph 51....done.
+Finished agent testing batch 1.
+Graph 51, best(mean) cut: 2349.0(2303.94).  (50 attempts in 17.72s)			
+Preparing batch of 50 environments for graph 52....done.
+Finished agent testing batch 1.
+Graph 52, best(mean) cut: 2336.0(2307.52).  (50 attempts in 17.98s)			
+Preparing batch of 50 environments for graph 53....done.
+Finished agent testing batch 1.
+Graph 53, best(mean) cut: 2346.0(2290.44).  (50 attempts in 18.18s)			
+Preparing batch of 50 environments for graph 54....done.
+Finished agent testing batch 1.
+Graph 54, best(mean) cut: 2336.0(2192.8).  (50 attempts in 18.94s)			
+Preparing batch of 50 environments for graph 55....done.
+Finished agent testing batch 1.
+Graph 55, best(mean) cut: 2336.0(2252.58).  (50 attempts in 18.55s)			
+Preparing batch of 50 environments for graph 56....done.
+Finished agent testing batch 1.
+Graph 56, best(mean) cut: 2345.0(2290.72).  (50 attempts in 18.42s)			
+Preparing batch of 50 environments for graph 57....done.
+Finished agent testing batch 1.
+Graph 57, best(mean) cut: 2335.0(2311.68).  (50 attempts in 21.11s)			
+Preparing batch of 50 environments for graph 58....done.
+Finished agent testing batch 1.
+Graph 58, best(mean) cut: 2341.0(2112.62).  (50 attempts in 19.22s)			
+Preparing batch of 50 environments for graph 59....done.
+Finished agent testing batch 1.
+Graph 59, best(mean) cut: 2340.0(2294.78).  (50 attempts in 18.48s)			
+Preparing batch of 50 environments for graph 60....done.
+Finished agent testing batch 1.
+Graph 60, best(mean) cut: 2328.0(2262.36).  (50 attempts in 18.67s)			
+Preparing batch of 50 environments for graph 61....done.
+Finished agent testing batch 1.
+Graph 61, best(mean) cut: 2334.0(2292.1).  (50 attempts in 18.25s)			
+Preparing batch of 50 environments for graph 62....done.
+Finished agent testing batch 1.
+Graph 62, best(mean) cut: 2340.0(2220.54).  (50 attempts in 19.04s)			
+Preparing batch of 50 environments for graph 63....done.
+Finished agent testing batch 1.
+Graph 63, best(mean) cut: 2346.0(2291.36).  (50 attempts in 18.32s)			
+Preparing batch of 50 environments for graph 64....done.
+Finished agent testing batch 1.
+Graph 64, best(mean) cut: 2340.0(2261.9).  (50 attempts in 21.13s)			
+Preparing batch of 50 environments for graph 65....done.
+Finished agent testing batch 1.
+Graph 65, best(mean) cut: 2329.0(2298.9).  (50 attempts in 18.38s)			
+Preparing batch of 50 environments for graph 66....done.
+Finished agent testing batch 1.
+Graph 66, best(mean) cut: 2368.0(2114.88).  (50 attempts in 19.59s)			
+Preparing batch of 50 environments for graph 67....done.
+Finished agent testing batch 1.
+Graph 67, best(mean) cut: 2343.0(2285.96).  (50 attempts in 18.66s)			
+Preparing batch of 50 environments for graph 68....done.
+Finished agent testing batch 1.
+Graph 68, best(mean) cut: 2341.0(2296.62).  (50 attempts in 18.4s)			
+Preparing batch of 50 environments for graph 69....done.
+Finished agent testing batch 1.
+Graph 69, best(mean) cut: 2326.0(2037.2).  (50 attempts in 20.05s)			
+Preparing batch of 50 environments for graph 70....done.
+Finished agent testing batch 1.
+Graph 70, best(mean) cut: 2326.0(2100.56).  (50 attempts in 19.73s)			
+Preparing batch of 50 environments for graph 71....done.
+Finished agent testing batch 1.
+Graph 71, best(mean) cut: 2338.0(2292.68).  (50 attempts in 21.12s)			
+Preparing batch of 50 environments for graph 72....done.
+Finished agent testing batch 1.
+Graph 72, best(mean) cut: 2329.0(2065.96).  (50 attempts in 19.63s)			
+Preparing batch of 50 environments for graph 73....done.
+Finished agent testing batch 1.
+Graph 73, best(mean) cut: 2333.0(2171.92).  (50 attempts in 19.25s)			
+Preparing batch of 50 environments for graph 74....done.
+Finished agent testing batch 1.
+Graph 74, best(mean) cut: 2340.0(2117.24).  (50 attempts in 19.54s)			
+Preparing batch of 50 environments for graph 75....done.
+Finished agent testing batch 1.
+Graph 75, best(mean) cut: 2344.0(2306.12).  (50 attempts in 18.21s)			
+Preparing batch of 50 environments for graph 76....done.
+Finished agent testing batch 1.
+Graph 76, best(mean) cut: 2342.0(2292.36).  (50 attempts in 18.41s)			
+Preparing batch of 50 environments for graph 77....done.
+Finished agent testing batch 1.
+Graph 77, best(mean) cut: 2342.0(2297.62).  (50 attempts in 18.45s)			
+Preparing batch of 50 environments for graph 78....done.
+Finished agent testing batch 1.
+Graph 78, best(mean) cut: 2334.0(2277.82).  (50 attempts in 21.15s)			
+Preparing batch of 50 environments for graph 79....done.
+Finished agent testing batch 1.
+Graph 79, best(mean) cut: 2340.0(2108.96).  (50 attempts in 19.42s)			
+Preparing batch of 50 environments for graph 80....done.
+Finished agent testing batch 1.
+Graph 80, best(mean) cut: 2316.0(2055.5).  (50 attempts in 19.66s)			
+Preparing batch of 50 environments for graph 81....done.
+Finished agent testing batch 1.
+Graph 81, best(mean) cut: 2339.0(2308.32).  (50 attempts in 18.11s)			
+Preparing batch of 50 environments for graph 82....done.
+Finished agent testing batch 1.
+Graph 82, best(mean) cut: 2343.0(2265.96).  (50 attempts in 18.61s)			
+Preparing batch of 50 environments for graph 83....done.
+Finished agent testing batch 1.
+Graph 83, best(mean) cut: 2350.0(2294.52).  (50 attempts in 18.38s)			
+Preparing batch of 50 environments for graph 84....done.
+Finished agent testing batch 1.
+Graph 84, best(mean) cut: 2348.0(2292.08).  (50 attempts in 18.47s)			
+Preparing batch of 50 environments for graph 85....done.
+Finished agent testing batch 1.
+Graph 85, best(mean) cut: 2352.0(2305.82).  (50 attempts in 20.83s)			
+Preparing batch of 50 environments for graph 86....done.
+Finished agent testing batch 1.
+Graph 86, best(mean) cut: 2346.0(2056.22).  (50 attempts in 19.47s)			
+Preparing batch of 50 environments for graph 87....done.
+Finished agent testing batch 1.
+Graph 87, best(mean) cut: 2339.0(2300.32).  (50 attempts in 18.0s)			
+Preparing batch of 50 environments for graph 88....done.
+Finished agent testing batch 1.
+Graph 88, best(mean) cut: 2340.0(2171.32).  (50 attempts in 18.68s)			
+Preparing batch of 50 environments for graph 89....done.
+Finished agent testing batch 1.
+Graph 89, best(mean) cut: 2345.0(2293.74).  (50 attempts in 18.04s)			
+Preparing batch of 50 environments for graph 90....done.
+Finished agent testing batch 1.
+Graph 90, best(mean) cut: 2344.0(2304.98).  (50 attempts in 17.94s)			
+Preparing batch of 50 environments for graph 91....done.
+Finished agent testing batch 1.
+Graph 91, best(mean) cut: 2334.0(2040.98).  (50 attempts in 19.86s)			
+Preparing batch of 50 environments for graph 92....done.
+Finished agent testing batch 1.
+Graph 92, best(mean) cut: 2346.0(2295.9).  (50 attempts in 20.65s)			
+Preparing batch of 50 environments for graph 93....done.
+Finished agent testing batch 1.
+Graph 93, best(mean) cut: 2341.0(2307.18).  (50 attempts in 17.93s)			
+Preparing batch of 50 environments for graph 94....done.
+Finished agent testing batch 1.
+Graph 94, best(mean) cut: 2334.0(2285.56).  (50 attempts in 18.09s)			
+Preparing batch of 50 environments for graph 95....done.
+Finished agent testing batch 1.
+Graph 95, best(mean) cut: 2346.0(2189.6).  (50 attempts in 18.76s)			
+Preparing batch of 50 environments for graph 96....done.
+Finished agent testing batch 1.
+Graph 96, best(mean) cut: 2345.0(2062.08).  (50 attempts in 19.48s)			
+Preparing batch of 50 environments for graph 97....done.
+Finished agent testing batch 1.
+Graph 97, best(mean) cut: 2334.0(2145.44).  (50 attempts in 18.97s)			
+Preparing batch of 50 environments for graph 98....done.
+Finished agent testing batch 1.
+Graph 98, best(mean) cut: 2341.0(2306.52).  (50 attempts in 18.05s)			
+Preparing batch of 50 environments for graph 99....done.
+Finished agent testing batch 1.
+Graph 99, best(mean) cut: 2339.0(2289.04).  (50 attempts in 20.84s)			
+dir already exists:  results/BA_800vertices_unweighted
+       cut  mean cut  ...         Train Distribution          Test Distribution
+0   2343.0   2249.52  ...  BA_800vertices_unweighted  BA_800vertices_unweighted
+1   2332.0   2287.90  ...  BA_800vertices_unweighted  BA_800vertices_unweighted
+2   2330.0   2258.96  ...  BA_800vertices_unweighted  BA_800vertices_unweighted
+3   2342.0   2292.42  ...  BA_800vertices_unweighted  BA_800vertices_unweighted
+4   2338.0   2311.66  ...  BA_800vertices_unweighted  BA_800vertices_unweighted
+..     ...       ...  ...                        ...                        ...
+95  2346.0   2189.60  ...  BA_800vertices_unweighted  BA_800vertices_unweighted
+96  2345.0   2062.08  ...  BA_800vertices_unweighted  BA_800vertices_unweighted
+97  2334.0   2145.44  ...  BA_800vertices_unweighted  BA_800vertices_unweighted
+98  2341.0   2306.52  ...  BA_800vertices_unweighted  BA_800vertices_unweighted
+99  2339.0   2289.04  ...  BA_800vertices_unweighted  BA_800vertices_unweighted
+
+[100 rows x 6 columns]
+The number of test graphs:100
+Set torch default device to cuda.
+Preparing batch of 50 environments for graph 0....done.
+Finished agent testing batch 1.
+Graph 0, best(mean) cut: 1238.0(1223.5).  (50 attempts in 13.94s)			
+Preparing batch of 50 environments for graph 1....done.
+Finished agent testing batch 1.
+Graph 1, best(mean) cut: 1251.0(1233.92).  (50 attempts in 13.95s)			
+Preparing batch of 50 environments for graph 2....done.
+Finished agent testing batch 1.
+Graph 2, best(mean) cut: 1253.0(1234.3).  (50 attempts in 13.87s)			
+Preparing batch of 50 environments for graph 3....done.
+Finished agent testing batch 1.
+Graph 3, best(mean) cut: 1241.0(1225.32).  (50 attempts in 13.88s)			
+Preparing batch of 50 environments for graph 4....done.
+Finished agent testing batch 1.
+Graph 4, best(mean) cut: 1245.0(1228.46).  (50 attempts in 13.84s)			
+Preparing batch of 50 environments for graph 5....done.
+Finished agent testing batch 1.
+Graph 5, best(mean) cut: 1251.0(1233.26).  (50 attempts in 13.88s)			
+Preparing batch of 50 environments for graph 6....done.
+Finished agent testing batch 1.
+Graph 6, best(mean) cut: 1242.0(1228.04).  (50 attempts in 13.87s)			
+Preparing batch of 50 environments for graph 7....done.
+Finished agent testing batch 1.
+Graph 7, best(mean) cut: 1241.0(1229.48).  (50 attempts in 13.9s)			
+Preparing batch of 50 environments for graph 8....done.
+Finished agent testing batch 1.
+Graph 8, best(mean) cut: 1239.0(1221.68).  (50 attempts in 13.86s)			
+Preparing batch of 50 environments for graph 9....done.
+Finished agent testing batch 1.
+Graph 9, best(mean) cut: 1238.0(1223.44).  (50 attempts in 13.86s)			
+Preparing batch of 50 environments for graph 10....done.
+Finished agent testing batch 1.
+Graph 10, best(mean) cut: 1240.0(1221.62).  (50 attempts in 13.85s)			
+Preparing batch of 50 environments for graph 11....done.
+Finished agent testing batch 1.
+Graph 11, best(mean) cut: 1240.0(1225.16).  (50 attempts in 13.87s)			
+Preparing batch of 50 environments for graph 12....done.
+Finished agent testing batch 1.
+Graph 12, best(mean) cut: 1258.0(1241.92).  (50 attempts in 13.87s)			
+Preparing batch of 50 environments for graph 13....done.
+Finished agent testing batch 1.
+Graph 13, best(mean) cut: 1230.0(1217.94).  (50 attempts in 13.84s)			
+Preparing batch of 50 environments for graph 14....done.
+Finished agent testing batch 1.
+Graph 14, best(mean) cut: 1253.0(1234.94).  (50 attempts in 13.87s)			
+Preparing batch of 50 environments for graph 15....done.
+Finished agent testing batch 1.
+Graph 15, best(mean) cut: 1251.0(1228.28).  (50 attempts in 13.86s)			
+Preparing batch of 50 environments for graph 16....done.
+Finished agent testing batch 1.
+Graph 16, best(mean) cut: 1245.0(1225.86).  (50 attempts in 13.86s)			
+Preparing batch of 50 environments for graph 17....done.
+Finished agent testing batch 1.
+Graph 17, best(mean) cut: 1234.0(1221.54).  (50 attempts in 14.01s)			
+Preparing batch of 50 environments for graph 18....done.
+Finished agent testing batch 1.
+Graph 18, best(mean) cut: 1238.0(1223.56).  (50 attempts in 13.84s)			
+Preparing batch of 50 environments for graph 19....done.
+Finished agent testing batch 1.
+Graph 19, best(mean) cut: 1244.0(1230.22).  (50 attempts in 13.87s)			
+Preparing batch of 50 environments for graph 20....done.
+Finished agent testing batch 1.
+Graph 20, best(mean) cut: 1241.0(1226.84).  (50 attempts in 13.99s)			
+Preparing batch of 50 environments for graph 21....done.
+Finished agent testing batch 1.
+Graph 21, best(mean) cut: 1236.0(1218.38).  (50 attempts in 14.0s)			
+Preparing batch of 50 environments for graph 22....done.
+Finished agent testing batch 1.
+Graph 22, best(mean) cut: 1243.0(1228.36).  (50 attempts in 13.86s)			
+Preparing batch of 50 environments for graph 23....done.
+Finished agent testing batch 1.
+Graph 23, best(mean) cut: 1254.0(1236.98).  (50 attempts in 13.9s)			
+Preparing batch of 50 environments for graph 24....done.
+Finished agent testing batch 1.
+Graph 24, best(mean) cut: 1240.0(1225.6).  (50 attempts in 13.86s)			
+Preparing batch of 50 environments for graph 25....done.
+Finished agent testing batch 1.
+Graph 25, best(mean) cut: 1243.0(1227.86).  (50 attempts in 13.84s)			
+Preparing batch of 50 environments for graph 26....done.
+Finished agent testing batch 1.
+Graph 26, best(mean) cut: 1251.0(1233.68).  (50 attempts in 13.93s)			
+Preparing batch of 50 environments for graph 27....done.
+Finished agent testing batch 1.
+Graph 27, best(mean) cut: 1246.0(1230.7).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 28....done.
+Finished agent testing batch 1.
+Graph 28, best(mean) cut: 1239.0(1228.34).  (50 attempts in 13.71s)			
+Preparing batch of 50 environments for graph 29....done.
+Finished agent testing batch 1.
+Graph 29, best(mean) cut: 1243.0(1223.3).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 30....done.
+Finished agent testing batch 1.
+Graph 30, best(mean) cut: 1251.0(1232.36).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 31....done.
+Finished agent testing batch 1.
+Graph 31, best(mean) cut: 1232.0(1221.56).  (50 attempts in 13.84s)			
+Preparing batch of 50 environments for graph 32....done.
+Finished agent testing batch 1.
+Graph 32, best(mean) cut: 1240.0(1223.14).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 33....done.
+Finished agent testing batch 1.
+Graph 33, best(mean) cut: 1234.0(1221.58).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 34....done.
+Finished agent testing batch 1.
+Graph 34, best(mean) cut: 1251.0(1232.32).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 35....done.
+Finished agent testing batch 1.
+Graph 35, best(mean) cut: 1247.0(1230.42).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 36....done.
+Finished agent testing batch 1.
+Graph 36, best(mean) cut: 1241.0(1228.36).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 37....done.
+Finished agent testing batch 1.
+Graph 37, best(mean) cut: 1237.0(1226.54).  (50 attempts in 13.69s)			
+Preparing batch of 50 environments for graph 38....done.
+Finished agent testing batch 1.
+Graph 38, best(mean) cut: 1244.0(1225.62).  (50 attempts in 13.65s)			
+Preparing batch of 50 environments for graph 39....done.
+Finished agent testing batch 1.
+Graph 39, best(mean) cut: 1244.0(1230.56).  (50 attempts in 13.89s)			
+Preparing batch of 50 environments for graph 40....done.
+Finished agent testing batch 1.
+Graph 40, best(mean) cut: 1245.0(1227.46).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 41....done.
+Finished agent testing batch 1.
+Graph 41, best(mean) cut: 1241.0(1224.36).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 42....done.
+Finished agent testing batch 1.
+Graph 42, best(mean) cut: 1243.0(1225.76).  (50 attempts in 13.65s)			
+Preparing batch of 50 environments for graph 43....done.
+Finished agent testing batch 1.
+Graph 43, best(mean) cut: 1244.0(1224.64).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 44....done.
+Finished agent testing batch 1.
+Graph 44, best(mean) cut: 1247.0(1229.88).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 45....done.
+Finished agent testing batch 1.
+Graph 45, best(mean) cut: 1246.0(1228.08).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 46....done.
+Finished agent testing batch 1.
+Graph 46, best(mean) cut: 1251.0(1232.54).  (50 attempts in 13.64s)			
+Preparing batch of 50 environments for graph 47....done.
+Finished agent testing batch 1.
+Graph 47, best(mean) cut: 1236.0(1221.18).  (50 attempts in 13.65s)			
+Preparing batch of 50 environments for graph 48....done.
+Finished agent testing batch 1.
+Graph 48, best(mean) cut: 1239.0(1220.16).  (50 attempts in 13.65s)			
+Preparing batch of 50 environments for graph 49....done.
+Finished agent testing batch 1.
+Graph 49, best(mean) cut: 1232.0(1221.32).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 50....done.
+Finished agent testing batch 1.
+Graph 50, best(mean) cut: 1238.0(1226.18).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 51....done.
+Finished agent testing batch 1.
+Graph 51, best(mean) cut: 1243.0(1231.1).  (50 attempts in 13.7s)			
+Preparing batch of 50 environments for graph 52....done.
+Finished agent testing batch 1.
+Graph 52, best(mean) cut: 1251.0(1231.54).  (50 attempts in 13.65s)			
+Preparing batch of 50 environments for graph 53....done.
+Finished agent testing batch 1.
+Graph 53, best(mean) cut: 1246.0(1229.66).  (50 attempts in 13.69s)			
+Preparing batch of 50 environments for graph 54....done.
+Finished agent testing batch 1.
+Graph 54, best(mean) cut: 1249.0(1232.34).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 55....done.
+Finished agent testing batch 1.
+Graph 55, best(mean) cut: 1253.0(1236.22).  (50 attempts in 13.65s)			
+Preparing batch of 50 environments for graph 56....done.
+Finished agent testing batch 1.
+Graph 56, best(mean) cut: 1236.0(1225.62).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 57....done.
+Finished agent testing batch 1.
+Graph 57, best(mean) cut: 1246.0(1228.84).  (50 attempts in 13.94s)			
+Preparing batch of 50 environments for graph 58....done.
+Finished agent testing batch 1.
+Graph 58, best(mean) cut: 1238.0(1226.04).  (50 attempts in 13.72s)			
+Preparing batch of 50 environments for graph 59....done.
+Finished agent testing batch 1.
+Graph 59, best(mean) cut: 1242.0(1222.68).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 60....done.
+Finished agent testing batch 1.
+Graph 60, best(mean) cut: 1237.0(1225.94).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 61....done.
+Finished agent testing batch 1.
+Graph 61, best(mean) cut: 1242.0(1224.2).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 62....done.
+Finished agent testing batch 1.
+Graph 62, best(mean) cut: 1231.0(1217.66).  (50 attempts in 13.7s)			
+Preparing batch of 50 environments for graph 63....done.
+Finished agent testing batch 1.
+Graph 63, best(mean) cut: 1234.0(1220.38).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 64....done.
+Finished agent testing batch 1.
+Graph 64, best(mean) cut: 1244.0(1223.0).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 65....done.
+Finished agent testing batch 1.
+Graph 65, best(mean) cut: 1247.0(1232.56).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 66....done.
+Finished agent testing batch 1.
+Graph 66, best(mean) cut: 1236.0(1222.0).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 67....done.
+Finished agent testing batch 1.
+Graph 67, best(mean) cut: 1239.0(1221.22).  (50 attempts in 13.98s)			
+Preparing batch of 50 environments for graph 68....done.
+Finished agent testing batch 1.
+Graph 68, best(mean) cut: 1251.0(1232.96).  (50 attempts in 13.7s)			
+Preparing batch of 50 environments for graph 69....done.
+Finished agent testing batch 1.
+Graph 69, best(mean) cut: 1244.0(1228.86).  (50 attempts in 13.74s)			
+Preparing batch of 50 environments for graph 70....done.
+Finished agent testing batch 1.
+Graph 70, best(mean) cut: 1246.0(1231.66).  (50 attempts in 13.74s)			
+Preparing batch of 50 environments for graph 71....done.
+Finished agent testing batch 1.
+Graph 71, best(mean) cut: 1255.0(1237.84).  (50 attempts in 13.72s)			
+Preparing batch of 50 environments for graph 72....done.
+Finished agent testing batch 1.
+Graph 72, best(mean) cut: 1247.0(1228.68).  (50 attempts in 13.7s)			
+Preparing batch of 50 environments for graph 73....done.
+Finished agent testing batch 1.
+Graph 73, best(mean) cut: 1234.0(1219.62).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 74....done.
+Finished agent testing batch 1.
+Graph 74, best(mean) cut: 1243.0(1227.04).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 75....done.
+Finished agent testing batch 1.
+Graph 75, best(mean) cut: 1237.0(1227.02).  (50 attempts in 13.7s)			
+Preparing batch of 50 environments for graph 76....done.
+Finished agent testing batch 1.
+Graph 76, best(mean) cut: 1241.0(1225.8).  (50 attempts in 13.64s)			
+Preparing batch of 50 environments for graph 77....done.
+Finished agent testing batch 1.
+Graph 77, best(mean) cut: 1245.0(1229.54).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 78....done.
+Finished agent testing batch 1.
+Graph 78, best(mean) cut: 1245.0(1231.12).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 79....done.
+Finished agent testing batch 1.
+Graph 79, best(mean) cut: 1243.0(1232.54).  (50 attempts in 13.69s)			
+Preparing batch of 50 environments for graph 80....done.
+Finished agent testing batch 1.
+Graph 80, best(mean) cut: 1243.0(1224.3).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 81....done.
+Finished agent testing batch 1.
+Graph 81, best(mean) cut: 1240.0(1223.28).  (50 attempts in 13.85s)			
+Preparing batch of 50 environments for graph 82....done.
+Finished agent testing batch 1.
+Graph 82, best(mean) cut: 1247.0(1231.92).  (50 attempts in 13.87s)			
+Preparing batch of 50 environments for graph 83....done.
+Finished agent testing batch 1.
+Graph 83, best(mean) cut: 1239.0(1225.5).  (50 attempts in 13.72s)			
+Preparing batch of 50 environments for graph 84....done.
+Finished agent testing batch 1.
+Graph 84, best(mean) cut: 1252.0(1232.72).  (50 attempts in 13.69s)			
+Preparing batch of 50 environments for graph 85....done.
+Finished agent testing batch 1.
+Graph 85, best(mean) cut: 1232.0(1220.02).  (50 attempts in 13.69s)			
+Preparing batch of 50 environments for graph 86....done.
+Finished agent testing batch 1.
+Graph 86, best(mean) cut: 1244.0(1227.46).  (50 attempts in 13.69s)			
+Preparing batch of 50 environments for graph 87....done.
+Finished agent testing batch 1.
+Graph 87, best(mean) cut: 1246.0(1229.9).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 88....done.
+Finished agent testing batch 1.
+Graph 88, best(mean) cut: 1243.0(1229.46).  (50 attempts in 13.7s)			
+Preparing batch of 50 environments for graph 89....done.
+Finished agent testing batch 1.
+Graph 89, best(mean) cut: 1235.0(1222.96).  (50 attempts in 13.72s)			
+Preparing batch of 50 environments for graph 90....done.
+Finished agent testing batch 1.
+Graph 90, best(mean) cut: 1244.0(1227.82).  (50 attempts in 13.77s)			
+Preparing batch of 50 environments for graph 91....done.
+Finished agent testing batch 1.
+Graph 91, best(mean) cut: 1238.0(1227.64).  (50 attempts in 13.73s)			
+Preparing batch of 50 environments for graph 92....done.
+Finished agent testing batch 1.
+Graph 92, best(mean) cut: 1251.0(1231.64).  (50 attempts in 13.73s)			
+Preparing batch of 50 environments for graph 93....done.
+Finished agent testing batch 1.
+Graph 93, best(mean) cut: 1242.0(1227.94).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 94....done.
+Finished agent testing batch 1.
+Graph 94, best(mean) cut: 1245.0(1229.2).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 95....done.
+Finished agent testing batch 1.
+Graph 95, best(mean) cut: 1246.0(1224.88).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 96....done.
+Finished agent testing batch 1.
+Graph 96, best(mean) cut: 1236.0(1222.04).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 97....done.
+Finished agent testing batch 1.
+Graph 97, best(mean) cut: 1246.0(1230.14).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 98....done.
+Finished agent testing batch 1.
+Graph 98, best(mean) cut: 1241.0(1230.74).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 99....done.
+Finished agent testing batch 1.
+Graph 99, best(mean) cut: 1244.0(1228.14).  (50 attempts in 13.67s)			
+dir already exists:  results/WattsStrogatz_800vertices_unweighted
+       cut  ...                     Test Distribution
+0   1238.0  ...  WattsStrogatz_800vertices_unweighted
+1   1251.0  ...  WattsStrogatz_800vertices_unweighted
+2   1253.0  ...  WattsStrogatz_800vertices_unweighted
+3   1241.0  ...  WattsStrogatz_800vertices_unweighted
+4   1245.0  ...  WattsStrogatz_800vertices_unweighted
+..     ...  ...                                   ...
+95  1246.0  ...  WattsStrogatz_800vertices_unweighted
+96  1236.0  ...  WattsStrogatz_800vertices_unweighted
+97  1246.0  ...  WattsStrogatz_800vertices_unweighted
+98  1241.0  ...  WattsStrogatz_800vertices_unweighted
+99  1244.0  ...  WattsStrogatz_800vertices_unweighted
+
+[100 rows x 6 columns]
+The number of test graphs:100
+Set torch default device to cuda.
+Preparing batch of 50 environments for graph 0....done.
+Finished agent testing batch 1.
+Graph 0, best(mean) cut: 2306.0(2073.9).  (50 attempts in 19.31s)			
+Preparing batch of 50 environments for graph 1....done.
+Finished agent testing batch 1.
+Graph 1, best(mean) cut: 2326.0(2291.82).  (50 attempts in 20.14s)			
+Preparing batch of 50 environments for graph 2....done.
+Finished agent testing batch 1.
+Graph 2, best(mean) cut: 2323.0(2284.28).  (50 attempts in 17.87s)			
+Preparing batch of 50 environments for graph 3....done.
+Finished agent testing batch 1.
+Graph 3, best(mean) cut: 2317.0(2285.5).  (50 attempts in 17.91s)			
+Preparing batch of 50 environments for graph 4....done.
+Finished agent testing batch 1.
+Graph 4, best(mean) cut: 2317.0(2281.32).  (50 attempts in 17.73s)			
+Preparing batch of 50 environments for graph 5....done.
+Finished agent testing batch 1.
+Graph 5, best(mean) cut: 2309.0(2225.56).  (50 attempts in 18.11s)			
+Preparing batch of 50 environments for graph 6....done.
+Finished agent testing batch 1.
+Graph 6, best(mean) cut: 2335.0(2270.98).  (50 attempts in 18.03s)			
+Preparing batch of 50 environments for graph 7....done.
+Finished agent testing batch 1.
+Graph 7, best(mean) cut: 2330.0(2286.08).  (50 attempts in 17.83s)			
+Preparing batch of 50 environments for graph 8....done.
+Finished agent testing batch 1.
+Graph 8, best(mean) cut: 2311.0(2277.16).  (50 attempts in 17.95s)			
+Preparing batch of 50 environments for graph 9....done.
+Finished agent testing batch 1.
+Graph 9, best(mean) cut: 2329.0(2288.64).  (50 attempts in 20.65s)			
+Preparing batch of 50 environments for graph 10....done.
+Finished agent testing batch 1.
+Graph 10, best(mean) cut: 2309.0(2281.08).  (50 attempts in 17.81s)			
+Preparing batch of 50 environments for graph 11....done.
+Finished agent testing batch 1.
+Graph 11, best(mean) cut: 2318.0(2284.9).  (50 attempts in 17.86s)			
+Preparing batch of 50 environments for graph 12....done.
+Finished agent testing batch 1.
+Graph 12, best(mean) cut: 2307.0(2212.16).  (50 attempts in 18.23s)			
+Preparing batch of 50 environments for graph 13....done.
+Finished agent testing batch 1.
+Graph 13, best(mean) cut: 2324.0(2285.56).  (50 attempts in 17.8s)			
+Preparing batch of 50 environments for graph 14....done.
+Finished agent testing batch 1.
+Graph 14, best(mean) cut: 2321.0(2278.08).  (50 attempts in 18.2s)			
+Preparing batch of 50 environments for graph 15....done.
+Finished agent testing batch 1.
+Graph 15, best(mean) cut: 2315.0(2281.32).  (50 attempts in 17.83s)			
+Preparing batch of 50 environments for graph 16....done.
+Finished agent testing batch 1.
+Graph 16, best(mean) cut: 2313.0(2134.62).  (50 attempts in 21.6s)			
+Preparing batch of 50 environments for graph 17....done.
+Finished agent testing batch 1.
+Graph 17, best(mean) cut: 2316.0(2241.4).  (50 attempts in 18.27s)			
+Preparing batch of 50 environments for graph 18....done.
+Finished agent testing batch 1.
+Graph 18, best(mean) cut: 2309.0(2198.44).  (50 attempts in 18.36s)			
+Preparing batch of 50 environments for graph 19....done.
+Finished agent testing batch 1.
+Graph 19, best(mean) cut: 2310.0(2281.74).  (50 attempts in 17.94s)			
+Preparing batch of 50 environments for graph 20....done.
+Finished agent testing batch 1.
+Graph 20, best(mean) cut: 2320.0(2281.24).  (50 attempts in 17.92s)			
+Preparing batch of 50 environments for graph 21....done.
+Finished agent testing batch 1.
+Graph 21, best(mean) cut: 2320.0(2275.78).  (50 attempts in 17.98s)			
+Preparing batch of 50 environments for graph 22....done.
+Finished agent testing batch 1.
+Graph 22, best(mean) cut: 2334.0(2278.1).  (50 attempts in 18.16s)			
+Preparing batch of 50 environments for graph 23....done.
+Finished agent testing batch 1.
+Graph 23, best(mean) cut: 2326.0(2286.6).  (50 attempts in 20.87s)			
+Preparing batch of 50 environments for graph 24....done.
+Finished agent testing batch 1.
+Graph 24, best(mean) cut: 2325.0(2292.24).  (50 attempts in 18.05s)			
+Preparing batch of 50 environments for graph 25....done.
+Finished agent testing batch 1.
+Graph 25, best(mean) cut: 2312.0(2284.18).  (50 attempts in 18.19s)			
+Preparing batch of 50 environments for graph 26....done.
+Finished agent testing batch 1.
+Graph 26, best(mean) cut: 2310.0(2276.74).  (50 attempts in 18.3s)			
+Preparing batch of 50 environments for graph 27....done.
+Finished agent testing batch 1.
+Graph 27, best(mean) cut: 2326.0(2287.46).  (50 attempts in 18.31s)			
+Preparing batch of 50 environments for graph 28....done.
+Finished agent testing batch 1.
+Graph 28, best(mean) cut: 2323.0(2284.48).  (50 attempts in 18.04s)			
+Preparing batch of 50 environments for graph 29....done.
+Finished agent testing batch 1.
+Graph 29, best(mean) cut: 2340.0(2289.08).  (50 attempts in 17.95s)			
+Preparing batch of 50 environments for graph 30....done.
+Finished agent testing batch 1.
+Graph 30, best(mean) cut: 2318.0(2261.82).  (50 attempts in 20.37s)			
+Preparing batch of 50 environments for graph 31....done.
+Finished agent testing batch 1.
+Graph 31, best(mean) cut: 2312.0(2196.44).  (50 attempts in 18.59s)			
+Preparing batch of 50 environments for graph 32....done.
+Finished agent testing batch 1.
+Graph 32, best(mean) cut: 2335.0(2294.52).  (50 attempts in 17.91s)			
+Preparing batch of 50 environments for graph 33....done.
+Finished agent testing batch 1.
+Graph 33, best(mean) cut: 2314.0(2276.06).  (50 attempts in 17.79s)			
+Preparing batch of 50 environments for graph 34....done.
+Finished agent testing batch 1.
+Graph 34, best(mean) cut: 2323.0(2290.54).  (50 attempts in 17.87s)			
+Preparing batch of 50 environments for graph 35....done.
+Finished agent testing batch 1.
+Graph 35, best(mean) cut: 2314.0(2286.12).  (50 attempts in 17.79s)			
+Preparing batch of 50 environments for graph 36....done.
+Finished agent testing batch 1.
+Graph 36, best(mean) cut: 2317.0(2284.96).  (50 attempts in 17.89s)			
+Preparing batch of 50 environments for graph 37....done.
+Finished agent testing batch 1.
+Graph 37, best(mean) cut: 2046.0(1762.86).  (50 attempts in 25.63s)			
+Preparing batch of 50 environments for graph 38....done.
+Finished agent testing batch 1.
+Graph 38, best(mean) cut: 2320.0(2293.02).  (50 attempts in 17.8s)			
+Preparing batch of 50 environments for graph 39....done.
+Finished agent testing batch 1.
+Graph 39, best(mean) cut: 2331.0(2284.42).  (50 attempts in 18.48s)			
+Preparing batch of 50 environments for graph 40....done.
+Finished agent testing batch 1.
+Graph 40, best(mean) cut: 2319.0(2283.82).  (50 attempts in 18.21s)			
+Preparing batch of 50 environments for graph 41....done.
+Finished agent testing batch 1.
+Graph 41, best(mean) cut: 2322.0(2286.56).  (50 attempts in 18.22s)			
+Preparing batch of 50 environments for graph 42....done.
+Finished agent testing batch 1.
+Graph 42, best(mean) cut: 2309.0(2209.58).  (50 attempts in 18.59s)			
+Preparing batch of 50 environments for graph 43....done.
+Finished agent testing batch 1.
+Graph 43, best(mean) cut: 2317.0(2281.9).  (50 attempts in 18.7s)			
+Preparing batch of 50 environments for graph 44....done.
+Finished agent testing batch 1.
+Graph 44, best(mean) cut: 2268.0(1897.08).  (50 attempts in 25.59s)			
+Preparing batch of 50 environments for graph 45....done.
+Finished agent testing batch 1.
+Graph 45, best(mean) cut: 2325.0(2279.12).  (50 attempts in 18.42s)			
+Preparing batch of 50 environments for graph 46....done.
+Finished agent testing batch 1.
+Graph 46, best(mean) cut: 2311.0(2277.4).  (50 attempts in 18.22s)			
+Preparing batch of 50 environments for graph 47....done.
+Finished agent testing batch 1.
+Graph 47, best(mean) cut: 2315.0(2286.02).  (50 attempts in 18.27s)			
+Preparing batch of 50 environments for graph 48....done.
+Finished agent testing batch 1.
+Graph 48, best(mean) cut: 2313.0(2284.68).  (50 attempts in 18.65s)			
+Preparing batch of 50 environments for graph 49....done.
+Finished agent testing batch 1.
+Graph 49, best(mean) cut: 2320.0(2287.68).  (50 attempts in 18.4s)			
+Preparing batch of 50 environments for graph 50....done.
+Finished agent testing batch 1.
+Graph 50, best(mean) cut: 2327.0(2286.92).  (50 attempts in 18.18s)			
+Preparing batch of 50 environments for graph 51....done.
+Finished agent testing batch 1.
+Graph 51, best(mean) cut: 2319.0(2284.84).  (50 attempts in 20.66s)			
+Preparing batch of 50 environments for graph 52....done.
+Finished agent testing batch 1.
+Graph 52, best(mean) cut: 2313.0(2278.58).  (50 attempts in 18.18s)			
+Preparing batch of 50 environments for graph 53....done.
+Finished agent testing batch 1.
+Graph 53, best(mean) cut: 2304.0(2248.62).  (50 attempts in 18.45s)			
+Preparing batch of 50 environments for graph 54....done.
+Finished agent testing batch 1.
+Graph 54, best(mean) cut: 2315.0(2282.32).  (50 attempts in 18.29s)			
+Preparing batch of 50 environments for graph 55....done.
+Finished agent testing batch 1.
+Graph 55, best(mean) cut: 2331.0(2277.84).  (50 attempts in 18.07s)			
+Preparing batch of 50 environments for graph 56....done.
+Finished agent testing batch 1.
+Graph 56, best(mean) cut: 2326.0(2293.96).  (50 attempts in 18.13s)			
+Preparing batch of 50 environments for graph 57....done.
+Finished agent testing batch 1.
+Graph 57, best(mean) cut: 2320.0(2258.96).  (50 attempts in 18.68s)			
+Preparing batch of 50 environments for graph 58....done.
+Finished agent testing batch 1.
+Graph 58, best(mean) cut: 2317.0(2270.52).  (50 attempts in 20.74s)			
+Preparing batch of 50 environments for graph 59....done.
+Finished agent testing batch 1.
+Graph 59, best(mean) cut: 2311.0(2215.96).  (50 attempts in 18.61s)			
+Preparing batch of 50 environments for graph 60....done.
+Finished agent testing batch 1.
+Graph 60, best(mean) cut: 2311.0(2155.28).  (50 attempts in 19.1s)			
+Preparing batch of 50 environments for graph 61....done.
+Finished agent testing batch 1.
+Graph 61, best(mean) cut: 2331.0(2276.06).  (50 attempts in 18.18s)			
+Preparing batch of 50 environments for graph 62....done.
+Finished agent testing batch 1.
+Graph 62, best(mean) cut: 2313.0(2266.26).  (50 attempts in 18.13s)			
+Preparing batch of 50 environments for graph 63....done.
+Finished agent testing batch 1.
+Graph 63, best(mean) cut: 2317.0(2111.22).  (50 attempts in 19.42s)			
+Preparing batch of 50 environments for graph 64....done.
+Finished agent testing batch 1.
+Graph 64, best(mean) cut: 2317.0(2288.48).  (50 attempts in 18.26s)			
+Preparing batch of 50 environments for graph 65....done.
+Finished agent testing batch 1.
+Graph 65, best(mean) cut: 2314.0(2224.76).  (50 attempts in 20.64s)			
+Preparing batch of 50 environments for graph 66....done.
+Finished agent testing batch 1.
+Graph 66, best(mean) cut: 2312.0(2281.64).  (50 attempts in 17.79s)			
+Preparing batch of 50 environments for graph 67....done.
+Finished agent testing batch 1.
+Graph 67, best(mean) cut: 2322.0(2284.4).  (50 attempts in 18.12s)			
+Preparing batch of 50 environments for graph 68....done.
+Finished agent testing batch 1.
+Graph 68, best(mean) cut: 2312.0(2256.42).  (50 attempts in 18.03s)			
+Preparing batch of 50 environments for graph 69....done.
+Finished agent testing batch 1.
+Graph 69, best(mean) cut: 2314.0(2283.14).  (50 attempts in 17.9s)			
+Preparing batch of 50 environments for graph 70....done.
+Finished agent testing batch 1.
+Graph 70, best(mean) cut: 2323.0(2290.54).  (50 attempts in 17.92s)			
+Preparing batch of 50 environments for graph 71....done.
+Finished agent testing batch 1.
+Graph 71, best(mean) cut: 2329.0(2283.18).  (50 attempts in 17.98s)			
+Preparing batch of 50 environments for graph 72....done.
+Finished agent testing batch 1.
+Graph 72, best(mean) cut: 2326.0(2286.08).  (50 attempts in 20.2s)			
+Preparing batch of 50 environments for graph 73....done.
+Finished agent testing batch 1.
+Graph 73, best(mean) cut: 2312.0(2180.5).  (50 attempts in 18.49s)			
+Preparing batch of 50 environments for graph 74....done.
+Finished agent testing batch 1.
+Graph 74, best(mean) cut: 2320.0(2286.76).  (50 attempts in 17.9s)			
+Preparing batch of 50 environments for graph 75....done.
+Finished agent testing batch 1.
+Graph 75, best(mean) cut: 2318.0(2278.94).  (50 attempts in 17.85s)			
+Preparing batch of 50 environments for graph 76....done.
+Finished agent testing batch 1.
+Graph 76, best(mean) cut: 2310.0(2180.56).  (50 attempts in 18.71s)			
+Preparing batch of 50 environments for graph 77....done.
+Finished agent testing batch 1.
+Graph 77, best(mean) cut: 2307.0(2192.76).  (50 attempts in 18.52s)			
+Preparing batch of 50 environments for graph 78....done.
+Finished agent testing batch 1.
+Graph 78, best(mean) cut: 2324.0(2274.34).  (50 attempts in 17.83s)			
+Preparing batch of 50 environments for graph 79....done.
+Finished agent testing batch 1.
+Graph 79, best(mean) cut: 2307.0(2255.48).  (50 attempts in 20.79s)			
+Preparing batch of 50 environments for graph 80....done.
+Finished agent testing batch 1.
+Graph 80, best(mean) cut: 2313.0(2251.12).  (50 attempts in 18.27s)			
+Preparing batch of 50 environments for graph 81....done.
+Finished agent testing batch 1.
+Graph 81, best(mean) cut: 2310.0(2076.66).  (50 attempts in 19.73s)			
+Preparing batch of 50 environments for graph 82....done.
+Finished agent testing batch 1.
+Graph 82, best(mean) cut: 2316.0(2281.0).  (50 attempts in 17.92s)			
+Preparing batch of 50 environments for graph 83....done.
+Finished agent testing batch 1.
+Graph 83, best(mean) cut: 2318.0(2248.94).  (50 attempts in 18.21s)			
+Preparing batch of 50 environments for graph 84....done.
+Finished agent testing batch 1.
+Graph 84, best(mean) cut: 2331.0(2281.62).  (50 attempts in 17.84s)			
+Preparing batch of 50 environments for graph 85....done.
+Finished agent testing batch 1.
+Graph 85, best(mean) cut: 2314.0(2244.68).  (50 attempts in 18.23s)			
+Preparing batch of 50 environments for graph 86....done.
+Finished agent testing batch 1.
+Graph 86, best(mean) cut: 2326.0(2279.32).  (50 attempts in 20.37s)			
+Preparing batch of 50 environments for graph 87....done.
+Finished agent testing batch 1.
+Graph 87, best(mean) cut: 2322.0(2277.82).  (50 attempts in 17.81s)			
+Preparing batch of 50 environments for graph 88....done.
+Finished agent testing batch 1.
+Graph 88, best(mean) cut: 2314.0(2285.54).  (50 attempts in 17.89s)			
+Preparing batch of 50 environments for graph 89....done.
+Finished agent testing batch 1.
+Graph 89, best(mean) cut: 2327.0(2160.14).  (50 attempts in 18.43s)			
+Preparing batch of 50 environments for graph 90....done.
+Finished agent testing batch 1.
+Graph 90, best(mean) cut: 2316.0(2247.78).  (50 attempts in 18.14s)			
+Preparing batch of 50 environments for graph 91....done.
+Finished agent testing batch 1.
+Graph 91, best(mean) cut: 2303.0(2281.92).  (50 attempts in 17.94s)			
+Preparing batch of 50 environments for graph 92....done.
+Finished agent testing batch 1.
+Graph 92, best(mean) cut: 2311.0(2199.92).  (50 attempts in 18.61s)			
+Preparing batch of 50 environments for graph 93....done.
+Finished agent testing batch 1.
+Graph 93, best(mean) cut: 2323.0(2285.94).  (50 attempts in 20.29s)			
+Preparing batch of 50 environments for graph 94....done.
+Finished agent testing batch 1.
+Graph 94, best(mean) cut: 2316.0(2248.16).  (50 attempts in 18.2s)			
+Preparing batch of 50 environments for graph 95....done.
+Finished agent testing batch 1.
+Graph 95, best(mean) cut: 2312.0(2158.12).  (50 attempts in 18.49s)			
+Preparing batch of 50 environments for graph 96....done.
+Finished agent testing batch 1.
+Graph 96, best(mean) cut: 2310.0(2277.94).  (50 attempts in 18.0s)			
+Preparing batch of 50 environments for graph 97....done.
+Finished agent testing batch 1.
+Graph 97, best(mean) cut: 2316.0(2276.26).  (50 attempts in 18.05s)			
+Preparing batch of 50 environments for graph 98....done.
+Finished agent testing batch 1.
+Graph 98, best(mean) cut: 2312.0(2104.72).  (50 attempts in 18.93s)			
+Preparing batch of 50 environments for graph 99....done.
+Finished agent testing batch 1.
+Graph 99, best(mean) cut: 2310.0(2283.16).  (50 attempts in 17.82s)			
+dir already exists:  results/HomleKim_800vertices_unweighted
+       cut  ...                Test Distribution
+0   2306.0  ...  HomleKim_800vertices_unweighted
+1   2326.0  ...  HomleKim_800vertices_unweighted
+2   2323.0  ...  HomleKim_800vertices_unweighted
+3   2317.0  ...  HomleKim_800vertices_unweighted
+4   2317.0  ...  HomleKim_800vertices_unweighted
+..     ...  ...                              ...
+95  2312.0  ...  HomleKim_800vertices_unweighted
+96  2310.0  ...  HomleKim_800vertices_unweighted
+97  2316.0  ...  HomleKim_800vertices_unweighted
+98  2312.0  ...  HomleKim_800vertices_unweighted
+99  2310.0  ...  HomleKim_800vertices_unweighted
+
+[100 rows x 6 columns]
+The number of test graphs:20
+Set torch default device to cuda.
+Preparing batch of 50 environments for graph 0....done.
+Finished agent testing batch 1.
+Graph 0, best(mean) cut: 1438.0(1413.28).  (50 attempts in 1.74s)			
+Preparing batch of 50 environments for graph 1....done.
+Finished agent testing batch 1.
+Graph 1, best(mean) cut: 1429.0(1411.2).  (50 attempts in 1.87s)			
+Preparing batch of 50 environments for graph 2....done.
+Finished agent testing batch 1.
+Graph 2, best(mean) cut: 1433.0(1417.42).  (50 attempts in 1.88s)			
+Preparing batch of 50 environments for graph 3....done.
+Finished agent testing batch 1.
+Graph 3, best(mean) cut: 1430.0(1410.92).  (50 attempts in 1.66s)			
+Preparing batch of 50 environments for graph 4....done.
+Finished agent testing batch 1.
+Graph 4, best(mean) cut: 1428.0(1414.62).  (50 attempts in 1.88s)			
+Preparing batch of 50 environments for graph 5....done.
+Finished agent testing batch 1.
+Graph 5, best(mean) cut: 1430.0(1412.12).  (50 attempts in 1.89s)			
+Preparing batch of 50 environments for graph 6....done.
+Finished agent testing batch 1.
+Graph 6, best(mean) cut: 1424.0(1410.06).  (50 attempts in 1.89s)			
+Preparing batch of 50 environments for graph 7....done.
+Finished agent testing batch 1.
+Graph 7, best(mean) cut: 1428.0(1412.0).  (50 attempts in 1.89s)			
+Preparing batch of 50 environments for graph 8....done.
+Finished agent testing batch 1.
+Graph 8, best(mean) cut: 1424.0(1406.4).  (50 attempts in 1.9s)			
+Preparing batch of 50 environments for graph 9....done.
+Finished agent testing batch 1.
+Graph 9, best(mean) cut: 1431.0(1410.18).  (50 attempts in 1.9s)			
+Preparing batch of 50 environments for graph 10....done.
+Finished agent testing batch 1.
+Graph 10, best(mean) cut: 5490.0(5453.82).  (50 attempts in 9.94s)			
+Preparing batch of 50 environments for graph 11....done.
+Finished agent testing batch 1.
+Graph 11, best(mean) cut: 5491.0(5449.9).  (50 attempts in 8.43s)			
+Preparing batch of 50 environments for graph 12....done.
+Finished agent testing batch 1.
+Graph 12, best(mean) cut: 5489.0(5451.02).  (50 attempts in 8.48s)			
+Preparing batch of 50 environments for graph 13....done.
+Finished agent testing batch 1.
+Graph 13, best(mean) cut: 5476.0(5444.02).  (50 attempts in 8.48s)			
+Preparing batch of 50 environments for graph 14....done.
+Finished agent testing batch 1.
+Graph 14, best(mean) cut: 5475.0(5448.32).  (50 attempts in 10.42s)			
+Preparing batch of 50 environments for graph 15....done.
+Finished agent testing batch 1.
+Graph 15, best(mean) cut: 5498.0(5445.92).  (50 attempts in 9.06s)			
+Preparing batch of 50 environments for graph 16....done.
+Finished agent testing batch 1.
+Graph 16, best(mean) cut: 5508.0(5451.34).  (50 attempts in 8.47s)			
+Preparing batch of 50 environments for graph 17....done.
+Finished agent testing batch 1.
+Graph 17, best(mean) cut: 5491.0(5449.46).  (50 attempts in 10.12s)			
+Preparing batch of 50 environments for graph 18....done.
+Finished agent testing batch 1.
+Graph 18, best(mean) cut: 5500.0(5456.76).  (50 attempts in 10.43s)			
+Preparing batch of 50 environments for graph 19....done.
+Finished agent testing batch 1.
+Graph 19, best(mean) cut: 5508.0(5457.98).  (50 attempts in 9.22s)			
+dir already exists:  results/dense_MC_100_200vertices_unweighted
+       cut  ...                    Test Distribution
+0   1438.0  ...  dense_MC_100_200vertices_unweighted
+1   1429.0  ...  dense_MC_100_200vertices_unweighted
+2   1433.0  ...  dense_MC_100_200vertices_unweighted
+3   1430.0  ...  dense_MC_100_200vertices_unweighted
+4   1428.0  ...  dense_MC_100_200vertices_unweighted
+5   1430.0  ...  dense_MC_100_200vertices_unweighted
+6   1424.0  ...  dense_MC_100_200vertices_unweighted
+7   1428.0  ...  dense_MC_100_200vertices_unweighted
+8   1424.0  ...  dense_MC_100_200vertices_unweighted
+9   1431.0  ...  dense_MC_100_200vertices_unweighted
+10  5490.0  ...  dense_MC_100_200vertices_unweighted
+11  5491.0  ...  dense_MC_100_200vertices_unweighted
+12  5489.0  ...  dense_MC_100_200vertices_unweighted
+13  5476.0  ...  dense_MC_100_200vertices_unweighted
+14  5475.0  ...  dense_MC_100_200vertices_unweighted
+15  5498.0  ...  dense_MC_100_200vertices_unweighted
+16  5508.0  ...  dense_MC_100_200vertices_unweighted
+17  5491.0  ...  dense_MC_100_200vertices_unweighted
+18  5500.0  ...  dense_MC_100_200vertices_unweighted
+19  5508.0  ...  dense_MC_100_200vertices_unweighted
+
+[20 rows x 6 columns]
+The number of test graphs:5
+Set torch default device to cuda.
+Preparing batch of 50 environments for graph 0....done.
+Finished agent testing batch 1.
+Graph 0, best(mean) cut: 2064.0(1976.72).  (50 attempts in 57.06s)			
+Preparing batch of 50 environments for graph 1....done.
+Finished agent testing batch 1.
+Graph 1, best(mean) cut: 1952.0(1830.36).  (50 attempts in 67.96s)			
+Preparing batch of 50 environments for graph 2....done.
+Finished agent testing batch 1.
+Graph 2, best(mean) cut: 1940.0(1821.84).  (50 attempts in 56.74s)			
+Preparing batch of 50 environments for graph 3....done.
+Finished agent testing batch 1.
+Graph 3, best(mean) cut: 1961.0(1860.46).  (50 attempts in 56.94s)			
+Preparing batch of 50 environments for graph 4....done.
+Finished agent testing batch 1.
+Graph 4, best(mean) cut: 1909.0(1816.92).  (50 attempts in 67.98s)			
+dir already exists:  results/ER_800vertices_weighted
+      cut  mean cut  ...       Train Distribution        Test Distribution
+0  2064.0   1976.72  ...  ER_800vertices_weighted  ER_800vertices_weighted
+1  1952.0   1830.36  ...  ER_800vertices_weighted  ER_800vertices_weighted
+2  1940.0   1821.84  ...  ER_800vertices_weighted  ER_800vertices_weighted
+3  1961.0   1860.46  ...  ER_800vertices_weighted  ER_800vertices_weighted
+4  1909.0   1816.92  ...  ER_800vertices_weighted  ER_800vertices_weighted
+
+[5 rows x 6 columns]
+The number of test graphs:4
+Set torch default device to cuda.
+Preparing batch of 50 environments for graph 0....done.
+Finished agent testing batch 1.
+Graph 0, best(mean) cut: 950.0(900.1).  (50 attempts in 21.51s)			
+Preparing batch of 50 environments for graph 1....done.
+Finished agent testing batch 1.
+Graph 1, best(mean) cut: 836.0(807.26).  (50 attempts in 21.37s)			
+Preparing batch of 50 environments for graph 2....done.
+Finished agent testing batch 1.
+Graph 2, best(mean) cut: 887.0(842.4).  (50 attempts in 21.24s)			
+Preparing batch of 50 environments for graph 3....done.
+Finished agent testing batch 1.
+Graph 3, best(mean) cut: 874.0(836.36).  (50 attempts in 25.55s)			
+dir already exists:  results/planar_800vertices_weighted
+     cut  mean cut  ...           Train Distribution            Test Distribution
+0  950.0    900.10  ...  planar_800vertices_weighted  planar_800vertices_weighted
+1  836.0    807.26  ...  planar_800vertices_weighted  planar_800vertices_weighted
+2  887.0    842.40  ...  planar_800vertices_weighted  planar_800vertices_weighted
+3  874.0    836.36  ...  planar_800vertices_weighted  planar_800vertices_weighted
+
+[4 rows x 6 columns]
+The number of test graphs:100
+Set torch default device to cuda.
+Preparing batch of 50 environments for graph 0....done.
+Finished agent testing batch 1.
+Graph 0, best(mean) cut: 783.0(728.78).  (50 attempts in 17.96s)			
+Preparing batch of 50 environments for graph 1....done.
+Finished agent testing batch 1.
+Graph 1, best(mean) cut: 749.0(715.6).  (50 attempts in 17.53s)			
+Preparing batch of 50 environments for graph 2....done.
+Finished agent testing batch 1.
+Graph 2, best(mean) cut: 746.0(697.92).  (50 attempts in 17.53s)			
+Preparing batch of 50 environments for graph 3....done.
+Finished agent testing batch 1.
+Graph 3, best(mean) cut: 768.0(719.64).  (50 attempts in 17.62s)			
+Preparing batch of 50 environments for graph 4....done.
+Finished agent testing batch 1.
+Graph 4, best(mean) cut: 705.0(682.64).  (50 attempts in 17.44s)			
+Preparing batch of 50 environments for graph 5....done.
+Finished agent testing batch 1.
+Graph 5, best(mean) cut: 789.0(755.78).  (50 attempts in 17.65s)			
+Preparing batch of 50 environments for graph 6....done.
+Finished agent testing batch 1.
+Graph 6, best(mean) cut: 761.0(711.2).  (50 attempts in 20.44s)			
+Preparing batch of 50 environments for graph 7....done.
+Finished agent testing batch 1.
+Graph 7, best(mean) cut: 785.0(757.56).  (50 attempts in 17.63s)			
+Preparing batch of 50 environments for graph 8....done.
+Finished agent testing batch 1.
+Graph 8, best(mean) cut: 789.0(670.38).  (50 attempts in 19.39s)			
+Preparing batch of 50 environments for graph 9....done.
+Finished agent testing batch 1.
+Graph 9, best(mean) cut: 759.0(735.56).  (50 attempts in 17.49s)			
+Preparing batch of 50 environments for graph 10....done.
+Finished agent testing batch 1.
+Graph 10, best(mean) cut: 754.0(720.86).  (50 attempts in 17.46s)			
+Preparing batch of 50 environments for graph 11....done.
+Finished agent testing batch 1.
+Graph 11, best(mean) cut: 788.0(744.46).  (50 attempts in 17.83s)			
+Preparing batch of 50 environments for graph 12....done.
+Finished agent testing batch 1.
+Graph 12, best(mean) cut: 773.0(739.36).  (50 attempts in 17.5s)			
+Preparing batch of 50 environments for graph 13....done.
+Finished agent testing batch 1.
+Graph 13, best(mean) cut: 803.0(757.5).  (50 attempts in 20.48s)			
+Preparing batch of 50 environments for graph 14....done.
+Finished agent testing batch 1.
+Graph 14, best(mean) cut: 796.0(763.02).  (50 attempts in 17.76s)			
+Preparing batch of 50 environments for graph 15....done.
+Finished agent testing batch 1.
+Graph 15, best(mean) cut: 771.0(729.68).  (50 attempts in 17.43s)			
+Preparing batch of 50 environments for graph 16....done.
+Finished agent testing batch 1.
+Graph 16, best(mean) cut: 745.0(704.3).  (50 attempts in 17.46s)			
+Preparing batch of 50 environments for graph 17....done.
+Finished agent testing batch 1.
+Graph 17, best(mean) cut: 750.0(694.18).  (50 attempts in 18.48s)			
+Preparing batch of 50 environments for graph 18....done.
+Finished agent testing batch 1.
+Graph 18, best(mean) cut: 730.0(707.38).  (50 attempts in 18.27s)			
+Preparing batch of 50 environments for graph 19....done.
+Finished agent testing batch 1.
+Graph 19, best(mean) cut: 785.0(755.22).  (50 attempts in 17.92s)			
+Preparing batch of 50 environments for graph 20....done.
+Finished agent testing batch 1.
+Graph 20, best(mean) cut: 721.0(576.04).  (50 attempts in 21.97s)			
+Preparing batch of 50 environments for graph 21....done.
+Finished agent testing batch 1.
+Graph 21, best(mean) cut: 760.0(722.18).  (50 attempts in 17.68s)			
+Preparing batch of 50 environments for graph 22....done.
+Finished agent testing batch 1.
+Graph 22, best(mean) cut: 790.0(745.74).  (50 attempts in 17.46s)			
+Preparing batch of 50 environments for graph 23....done.
+Finished agent testing batch 1.
+Graph 23, best(mean) cut: 735.0(680.96).  (50 attempts in 17.87s)			
+Preparing batch of 50 environments for graph 24....done.
+Finished agent testing batch 1.
+Graph 24, best(mean) cut: 741.0(709.7).  (50 attempts in 17.39s)			
+Preparing batch of 50 environments for graph 25....done.
+Finished agent testing batch 1.
+Graph 25, best(mean) cut: 762.0(729.12).  (50 attempts in 17.61s)			
+Preparing batch of 50 environments for graph 26....done.
+Finished agent testing batch 1.
+Graph 26, best(mean) cut: 764.0(723.26).  (50 attempts in 17.82s)			
+Preparing batch of 50 environments for graph 27....done.
+Finished agent testing batch 1.
+Graph 27, best(mean) cut: 703.0(649.26).  (50 attempts in 20.93s)			
+Preparing batch of 50 environments for graph 28....done.
+Finished agent testing batch 1.
+Graph 28, best(mean) cut: 777.0(745.34).  (50 attempts in 17.83s)			
+Preparing batch of 50 environments for graph 29....done.
+Finished agent testing batch 1.
+Graph 29, best(mean) cut: 755.0(673.02).  (50 attempts in 18.83s)			
+Preparing batch of 50 environments for graph 30....done.
+Finished agent testing batch 1.
+Graph 30, best(mean) cut: 797.0(748.44).  (50 attempts in 17.9s)			
+Preparing batch of 50 environments for graph 31....done.
+Finished agent testing batch 1.
+Graph 31, best(mean) cut: 790.0(758.66).  (50 attempts in 17.75s)			
+Preparing batch of 50 environments for graph 32....done.
+Finished agent testing batch 1.
+Graph 32, best(mean) cut: 736.0(698.62).  (50 attempts in 17.82s)			
+Preparing batch of 50 environments for graph 33....done.
+Finished agent testing batch 1.
+Graph 33, best(mean) cut: 736.0(703.88).  (50 attempts in 17.41s)			
+Preparing batch of 50 environments for graph 34....done.
+Finished agent testing batch 1.
+Graph 34, best(mean) cut: 725.0(700.6).  (50 attempts in 20.29s)			
+Preparing batch of 50 environments for graph 35....done.
+Finished agent testing batch 1.
+Graph 35, best(mean) cut: 713.0(682.82).  (50 attempts in 17.62s)			
+Preparing batch of 50 environments for graph 36....done.
+Finished agent testing batch 1.
+Graph 36, best(mean) cut: 724.0(688.22).  (50 attempts in 17.67s)			
+Preparing batch of 50 environments for graph 37....done.
+Finished agent testing batch 1.
+Graph 37, best(mean) cut: 714.0(667.8).  (50 attempts in 17.86s)			
+Preparing batch of 50 environments for graph 38....done.
+Finished agent testing batch 1.
+Graph 38, best(mean) cut: 732.0(550.02).  (50 attempts in 19.16s)			
+Preparing batch of 50 environments for graph 39....done.
+Finished agent testing batch 1.
+Graph 39, best(mean) cut: 775.0(738.72).  (50 attempts in 17.87s)			
+Preparing batch of 50 environments for graph 40....done.
+Finished agent testing batch 1.
+Graph 40, best(mean) cut: 735.0(703.64).  (50 attempts in 17.88s)			
+Preparing batch of 50 environments for graph 41....done.
+Finished agent testing batch 1.
+Graph 41, best(mean) cut: 754.0(720.68).  (50 attempts in 20.04s)			
+Preparing batch of 50 environments for graph 42....done.
+Finished agent testing batch 1.
+Graph 42, best(mean) cut: 747.0(627.06).  (50 attempts in 18.99s)			
+Preparing batch of 50 environments for graph 43....done.
+Finished agent testing batch 1.
+Graph 43, best(mean) cut: 721.0(632.68).  (50 attempts in 18.89s)			
+Preparing batch of 50 environments for graph 44....done.
+Finished agent testing batch 1.
+Graph 44, best(mean) cut: 754.0(727.78).  (50 attempts in 17.61s)			
+Preparing batch of 50 environments for graph 45....done.
+Finished agent testing batch 1.
+Graph 45, best(mean) cut: 749.0(723.1).  (50 attempts in 17.67s)			
+Preparing batch of 50 environments for graph 46....done.
+Finished agent testing batch 1.
+Graph 46, best(mean) cut: 773.0(744.58).  (50 attempts in 17.47s)			
+Preparing batch of 50 environments for graph 47....done.
+Finished agent testing batch 1.
+Graph 47, best(mean) cut: 756.0(729.36).  (50 attempts in 17.55s)			
+Preparing batch of 50 environments for graph 48....done.
+Finished agent testing batch 1.
+Graph 48, best(mean) cut: 808.0(780.34).  (50 attempts in 17.51s)			
+Preparing batch of 50 environments for graph 49....done.
+Finished agent testing batch 1.
+Graph 49, best(mean) cut: 723.0(680.32).  (50 attempts in 17.76s)			
+Preparing batch of 50 environments for graph 50....done.
+Finished agent testing batch 1.
+Graph 50, best(mean) cut: 797.0(604.72).  (50 attempts in 21.23s)			
+Preparing batch of 50 environments for graph 51....done.
+Finished agent testing batch 1.
+Graph 51, best(mean) cut: 776.0(720.16).  (50 attempts in 17.95s)			
+Preparing batch of 50 environments for graph 52....done.
+Finished agent testing batch 1.
+Graph 52, best(mean) cut: 806.0(764.32).  (50 attempts in 17.72s)			
+Preparing batch of 50 environments for graph 53....done.
+Finished agent testing batch 1.
+Graph 53, best(mean) cut: 697.0(665.18).  (50 attempts in 17.5s)			
+Preparing batch of 50 environments for graph 54....done.
+Finished agent testing batch 1.
+Graph 54, best(mean) cut: 788.0(759.2).  (50 attempts in 17.91s)			
+Preparing batch of 50 environments for graph 55....done.
+Finished agent testing batch 1.
+Graph 55, best(mean) cut: 741.0(701.78).  (50 attempts in 17.98s)			
+Preparing batch of 50 environments for graph 56....done.
+Finished agent testing batch 1.
+Graph 56, best(mean) cut: 713.0(688.12).  (50 attempts in 17.82s)			
+Preparing batch of 50 environments for graph 57....done.
+Finished agent testing batch 1.
+Graph 57, best(mean) cut: 768.0(728.22).  (50 attempts in 20.9s)			
+Preparing batch of 50 environments for graph 58....done.
+Finished agent testing batch 1.
+Graph 58, best(mean) cut: 730.0(689.76).  (50 attempts in 18.11s)			
+Preparing batch of 50 environments for graph 59....done.
+Finished agent testing batch 1.
+Graph 59, best(mean) cut: 748.0(711.72).  (50 attempts in 18.13s)			
+Preparing batch of 50 environments for graph 60....done.
+Finished agent testing batch 1.
+Graph 60, best(mean) cut: 764.0(733.26).  (50 attempts in 18.07s)			
+Preparing batch of 50 environments for graph 61....done.
+Finished agent testing batch 1.
+Graph 61, best(mean) cut: 800.0(545.52).  (50 attempts in 19.82s)			
+Preparing batch of 50 environments for graph 62....done.
+Finished agent testing batch 1.
+Graph 62, best(mean) cut: 807.0(761.5).  (50 attempts in 17.88s)			
+Preparing batch of 50 environments for graph 63....done.
+Finished agent testing batch 1.
+Graph 63, best(mean) cut: 767.0(737.5).  (50 attempts in 18.07s)			
+Preparing batch of 50 environments for graph 64....done.
+Finished agent testing batch 1.
+Graph 64, best(mean) cut: 758.0(723.78).  (50 attempts in 20.56s)			
+Preparing batch of 50 environments for graph 65....done.
+Finished agent testing batch 1.
+Graph 65, best(mean) cut: 774.0(746.16).  (50 attempts in 17.94s)			
+Preparing batch of 50 environments for graph 66....done.
+Finished agent testing batch 1.
+Graph 66, best(mean) cut: 707.0(677.84).  (50 attempts in 17.79s)			
+Preparing batch of 50 environments for graph 67....done.
+Finished agent testing batch 1.
+Graph 67, best(mean) cut: 717.0(680.56).  (50 attempts in 18.35s)			
+Preparing batch of 50 environments for graph 68....done.
+Finished agent testing batch 1.
+Graph 68, best(mean) cut: 691.0(619.94).  (50 attempts in 19.36s)			
+Preparing batch of 50 environments for graph 69....done.
+Finished agent testing batch 1.
+Graph 69, best(mean) cut: 712.0(682.28).  (50 attempts in 18.06s)			
+Preparing batch of 50 environments for graph 70....done.
+Finished agent testing batch 1.
+Graph 70, best(mean) cut: 765.0(730.76).  (50 attempts in 17.94s)			
+Preparing batch of 50 environments for graph 71....done.
+Finished agent testing batch 1.
+Graph 71, best(mean) cut: 745.0(702.2).  (50 attempts in 20.88s)			
+Preparing batch of 50 environments for graph 72....done.
+Finished agent testing batch 1.
+Graph 72, best(mean) cut: 793.0(757.3).  (50 attempts in 17.99s)			
+Preparing batch of 50 environments for graph 73....done.
+Finished agent testing batch 1.
+Graph 73, best(mean) cut: 709.0(671.96).  (50 attempts in 18.22s)			
+Preparing batch of 50 environments for graph 74....done.
+Finished agent testing batch 1.
+Graph 74, best(mean) cut: 808.0(757.0).  (50 attempts in 18.24s)			
+Preparing batch of 50 environments for graph 75....done.
+Finished agent testing batch 1.
+Graph 75, best(mean) cut: 746.0(708.32).  (50 attempts in 17.81s)			
+Preparing batch of 50 environments for graph 76....done.
+Finished agent testing batch 1.
+Graph 76, best(mean) cut: 777.0(742.32).  (50 attempts in 18.2s)			
+Preparing batch of 50 environments for graph 77....done.
+Finished agent testing batch 1.
+Graph 77, best(mean) cut: 749.0(703.4).  (50 attempts in 18.19s)			
+Preparing batch of 50 environments for graph 78....done.
+Finished agent testing batch 1.
+Graph 78, best(mean) cut: 714.0(685.78).  (50 attempts in 20.19s)			
+Preparing batch of 50 environments for graph 79....done.
+Finished agent testing batch 1.
+Graph 79, best(mean) cut: 790.0(750.42).  (50 attempts in 17.84s)			
+Preparing batch of 50 environments for graph 80....done.
+Finished agent testing batch 1.
+Graph 80, best(mean) cut: 713.0(675.56).  (50 attempts in 17.78s)			
+Preparing batch of 50 environments for graph 81....done.
+Finished agent testing batch 1.
+Graph 81, best(mean) cut: 717.0(685.36).  (50 attempts in 17.64s)			
+Preparing batch of 50 environments for graph 82....done.
+Finished agent testing batch 1.
+Graph 82, best(mean) cut: 741.0(709.08).  (50 attempts in 17.69s)			
+Preparing batch of 50 environments for graph 83....done.
+Finished agent testing batch 1.
+Graph 83, best(mean) cut: 718.0(675.4).  (50 attempts in 17.88s)			
+Preparing batch of 50 environments for graph 84....done.
+Finished agent testing batch 1.
+Graph 84, best(mean) cut: 761.0(722.14).  (50 attempts in 18.1s)			
+Preparing batch of 50 environments for graph 85....done.
+Finished agent testing batch 1.
+Graph 85, best(mean) cut: 774.0(715.92).  (50 attempts in 20.44s)			
+Preparing batch of 50 environments for graph 86....done.
+Finished agent testing batch 1.
+Graph 86, best(mean) cut: 763.0(731.68).  (50 attempts in 17.56s)			
+Preparing batch of 50 environments for graph 87....done.
+Finished agent testing batch 1.
+Graph 87, best(mean) cut: 725.0(695.9).  (50 attempts in 17.53s)			
+Preparing batch of 50 environments for graph 88....done.
+Finished agent testing batch 1.
+Graph 88, best(mean) cut: 714.0(684.56).  (50 attempts in 17.64s)			
+Preparing batch of 50 environments for graph 89....done.
+Finished agent testing batch 1.
+Graph 89, best(mean) cut: 724.0(692.34).  (50 attempts in 17.65s)			
+Preparing batch of 50 environments for graph 90....done.
+Finished agent testing batch 1.
+Graph 90, best(mean) cut: 746.0(718.78).  (50 attempts in 17.49s)			
+Preparing batch of 50 environments for graph 91....done.
+Finished agent testing batch 1.
+Graph 91, best(mean) cut: 751.0(721.1).  (50 attempts in 17.42s)			
+Preparing batch of 50 environments for graph 92....done.
+Finished agent testing batch 1.
+Graph 92, best(mean) cut: 770.0(731.44).  (50 attempts in 20.03s)			
+Preparing batch of 50 environments for graph 93....done.
+Finished agent testing batch 1.
+Graph 93, best(mean) cut: 731.0(695.96).  (50 attempts in 17.5s)			
+Preparing batch of 50 environments for graph 94....done.
+Finished agent testing batch 1.
+Graph 94, best(mean) cut: 736.0(649.8).  (50 attempts in 18.9s)			
+Preparing batch of 50 environments for graph 95....done.
+Finished agent testing batch 1.
+Graph 95, best(mean) cut: 777.0(723.88).  (50 attempts in 17.85s)			
+Preparing batch of 50 environments for graph 96....done.
+Finished agent testing batch 1.
+Graph 96, best(mean) cut: 725.0(698.02).  (50 attempts in 17.51s)			
+Preparing batch of 50 environments for graph 97....done.
+Finished agent testing batch 1.
+Graph 97, best(mean) cut: 738.0(709.34).  (50 attempts in 17.44s)			
+Preparing batch of 50 environments for graph 98....done.
+Finished agent testing batch 1.
+Graph 98, best(mean) cut: 759.0(716.74).  (50 attempts in 17.51s)			
+Preparing batch of 50 environments for graph 99....done.
+Finished agent testing batch 1.
+Graph 99, best(mean) cut: 789.0(757.46).  (50 attempts in 20.06s)			
+dir already exists:  results/BA_800vertices_weighted
+      cut  mean cut  ...       Train Distribution        Test Distribution
+0   783.0    728.78  ...  BA_800vertices_weighted  BA_800vertices_weighted
+1   749.0    715.60  ...  BA_800vertices_weighted  BA_800vertices_weighted
+2   746.0    697.92  ...  BA_800vertices_weighted  BA_800vertices_weighted
+3   768.0    719.64  ...  BA_800vertices_weighted  BA_800vertices_weighted
+4   705.0    682.64  ...  BA_800vertices_weighted  BA_800vertices_weighted
+..    ...       ...  ...                      ...                      ...
+95  777.0    723.88  ...  BA_800vertices_weighted  BA_800vertices_weighted
+96  725.0    698.02  ...  BA_800vertices_weighted  BA_800vertices_weighted
+97  738.0    709.34  ...  BA_800vertices_weighted  BA_800vertices_weighted
+98  759.0    716.74  ...  BA_800vertices_weighted  BA_800vertices_weighted
+99  789.0    757.46  ...  BA_800vertices_weighted  BA_800vertices_weighted
+
+[100 rows x 6 columns]
+The number of test graphs:100
+Set torch default device to cuda.
+Preparing batch of 50 environments for graph 0....done.
+Finished agent testing batch 1.
+Graph 0, best(mean) cut: 489.0(475.64).  (50 attempts in 13.72s)			
+Preparing batch of 50 environments for graph 1....done.
+Finished agent testing batch 1.
+Graph 1, best(mean) cut: 504.0(488.46).  (50 attempts in 13.74s)			
+Preparing batch of 50 environments for graph 2....done.
+Finished agent testing batch 1.
+Graph 2, best(mean) cut: 549.0(520.72).  (50 attempts in 13.7s)			
+Preparing batch of 50 environments for graph 3....done.
+Finished agent testing batch 1.
+Graph 3, best(mean) cut: 507.0(493.4).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 4....done.
+Finished agent testing batch 1.
+Graph 4, best(mean) cut: 545.0(528.96).  (50 attempts in 13.73s)			
+Preparing batch of 50 environments for graph 5....done.
+Finished agent testing batch 1.
+Graph 5, best(mean) cut: 546.0(535.24).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 6....done.
+Finished agent testing batch 1.
+Graph 6, best(mean) cut: 534.0(518.06).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 7....done.
+Finished agent testing batch 1.
+Graph 7, best(mean) cut: 477.0(461.08).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 8....done.
+Finished agent testing batch 1.
+Graph 8, best(mean) cut: 509.0(495.3).  (50 attempts in 13.64s)			
+Preparing batch of 50 environments for graph 9....done.
+Finished agent testing batch 1.
+Graph 9, best(mean) cut: 514.0(496.48).  (50 attempts in 13.64s)			
+Preparing batch of 50 environments for graph 10....done.
+Finished agent testing batch 1.
+Graph 10, best(mean) cut: 519.0(504.94).  (50 attempts in 13.64s)			
+Preparing batch of 50 environments for graph 11....done.
+Finished agent testing batch 1.
+Graph 11, best(mean) cut: 515.0(500.02).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 12....done.
+Finished agent testing batch 1.
+Graph 12, best(mean) cut: 557.0(541.58).  (50 attempts in 13.63s)			
+Preparing batch of 50 environments for graph 13....done.
+Finished agent testing batch 1.
+Graph 13, best(mean) cut: 507.0(492.56).  (50 attempts in 13.65s)			
+Preparing batch of 50 environments for graph 14....done.
+Finished agent testing batch 1.
+Graph 14, best(mean) cut: 531.0(515.86).  (50 attempts in 13.64s)			
+Preparing batch of 50 environments for graph 15....done.
+Finished agent testing batch 1.
+Graph 15, best(mean) cut: 529.0(517.16).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 16....done.
+Finished agent testing batch 1.
+Graph 16, best(mean) cut: 494.0(476.36).  (50 attempts in 13.64s)			
+Preparing batch of 50 environments for graph 17....done.
+Finished agent testing batch 1.
+Graph 17, best(mean) cut: 520.0(507.2).  (50 attempts in 13.77s)			
+Preparing batch of 50 environments for graph 18....done.
+Finished agent testing batch 1.
+Graph 18, best(mean) cut: 460.0(446.88).  (50 attempts in 13.63s)			
+Preparing batch of 50 environments for graph 19....done.
+Finished agent testing batch 1.
+Graph 19, best(mean) cut: 493.0(480.88).  (50 attempts in 13.65s)			
+Preparing batch of 50 environments for graph 20....done.
+Finished agent testing batch 1.
+Graph 20, best(mean) cut: 517.0(497.44).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 21....done.
+Finished agent testing batch 1.
+Graph 21, best(mean) cut: 491.0(466.56).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 22....done.
+Finished agent testing batch 1.
+Graph 22, best(mean) cut: 525.0(505.64).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 23....done.
+Finished agent testing batch 1.
+Graph 23, best(mean) cut: 511.0(498.64).  (50 attempts in 13.65s)			
+Preparing batch of 50 environments for graph 24....done.
+Finished agent testing batch 1.
+Graph 24, best(mean) cut: 498.0(483.16).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 25....done.
+Finished agent testing batch 1.
+Graph 25, best(mean) cut: 535.0(517.6).  (50 attempts in 13.87s)			
+Preparing batch of 50 environments for graph 26....done.
+Finished agent testing batch 1.
+Graph 26, best(mean) cut: 532.0(518.56).  (50 attempts in 14.02s)			
+Preparing batch of 50 environments for graph 27....done.
+Finished agent testing batch 1.
+Graph 27, best(mean) cut: 502.0(485.94).  (50 attempts in 13.87s)			
+Preparing batch of 50 environments for graph 28....done.
+Finished agent testing batch 1.
+Graph 28, best(mean) cut: 532.0(513.42).  (50 attempts in 13.85s)			
+Preparing batch of 50 environments for graph 29....done.
+Finished agent testing batch 1.
+Graph 29, best(mean) cut: 517.0(501.26).  (50 attempts in 13.88s)			
+Preparing batch of 50 environments for graph 30....done.
+Finished agent testing batch 1.
+Graph 30, best(mean) cut: 507.0(495.66).  (50 attempts in 14.09s)			
+Preparing batch of 50 environments for graph 31....done.
+Finished agent testing batch 1.
+Graph 31, best(mean) cut: 533.0(518.94).  (50 attempts in 14.25s)			
+Preparing batch of 50 environments for graph 32....done.
+Finished agent testing batch 1.
+Graph 32, best(mean) cut: 574.0(560.0).  (50 attempts in 13.79s)			
+Preparing batch of 50 environments for graph 33....done.
+Finished agent testing batch 1.
+Graph 33, best(mean) cut: 524.0(510.12).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 34....done.
+Finished agent testing batch 1.
+Graph 34, best(mean) cut: 491.0(480.12).  (50 attempts in 13.88s)			
+Preparing batch of 50 environments for graph 35....done.
+Finished agent testing batch 1.
+Graph 35, best(mean) cut: 507.0(495.1).  (50 attempts in 13.85s)			
+Preparing batch of 50 environments for graph 36....done.
+Finished agent testing batch 1.
+Graph 36, best(mean) cut: 549.0(523.96).  (50 attempts in 13.87s)			
+Preparing batch of 50 environments for graph 37....done.
+Finished agent testing batch 1.
+Graph 37, best(mean) cut: 535.0(519.62).  (50 attempts in 13.86s)			
+Preparing batch of 50 environments for graph 38....done.
+Finished agent testing batch 1.
+Graph 38, best(mean) cut: 515.0(499.44).  (50 attempts in 13.85s)			
+Preparing batch of 50 environments for graph 39....done.
+Finished agent testing batch 1.
+Graph 39, best(mean) cut: 474.0(458.6).  (50 attempts in 14.07s)			
+Preparing batch of 50 environments for graph 40....done.
+Finished agent testing batch 1.
+Graph 40, best(mean) cut: 538.0(525.86).  (50 attempts in 13.83s)			
+Preparing batch of 50 environments for graph 41....done.
+Finished agent testing batch 1.
+Graph 41, best(mean) cut: 527.0(507.68).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 42....done.
+Finished agent testing batch 1.
+Graph 42, best(mean) cut: 517.0(496.78).  (50 attempts in 13.63s)			
+Preparing batch of 50 environments for graph 43....done.
+Finished agent testing batch 1.
+Graph 43, best(mean) cut: 506.0(492.76).  (50 attempts in 13.65s)			
+Preparing batch of 50 environments for graph 44....done.
+Finished agent testing batch 1.
+Graph 44, best(mean) cut: 520.0(506.86).  (50 attempts in 13.7s)			
+Preparing batch of 50 environments for graph 45....done.
+Finished agent testing batch 1.
+Graph 45, best(mean) cut: 525.0(515.16).  (50 attempts in 13.71s)			
+Preparing batch of 50 environments for graph 46....done.
+Finished agent testing batch 1.
+Graph 46, best(mean) cut: 490.0(471.62).  (50 attempts in 13.65s)			
+Preparing batch of 50 environments for graph 47....done.
+Finished agent testing batch 1.
+Graph 47, best(mean) cut: 526.0(511.2).  (50 attempts in 13.65s)			
+Preparing batch of 50 environments for graph 48....done.
+Finished agent testing batch 1.
+Graph 48, best(mean) cut: 520.0(502.68).  (50 attempts in 13.65s)			
+Preparing batch of 50 environments for graph 49....done.
+Finished agent testing batch 1.
+Graph 49, best(mean) cut: 509.0(490.8).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 50....done.
+Finished agent testing batch 1.
+Graph 50, best(mean) cut: 530.0(512.08).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 51....done.
+Finished agent testing batch 1.
+Graph 51, best(mean) cut: 502.0(484.94).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 52....done.
+Finished agent testing batch 1.
+Graph 52, best(mean) cut: 524.0(510.84).  (50 attempts in 13.65s)			
+Preparing batch of 50 environments for graph 53....done.
+Finished agent testing batch 1.
+Graph 53, best(mean) cut: 547.0(526.04).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 54....done.
+Finished agent testing batch 1.
+Graph 54, best(mean) cut: 497.0(473.92).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 55....done.
+Finished agent testing batch 1.
+Graph 55, best(mean) cut: 510.0(496.58).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 56....done.
+Finished agent testing batch 1.
+Graph 56, best(mean) cut: 515.0(501.38).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 57....done.
+Finished agent testing batch 1.
+Graph 57, best(mean) cut: 494.0(478.06).  (50 attempts in 14.02s)			
+Preparing batch of 50 environments for graph 58....done.
+Finished agent testing batch 1.
+Graph 58, best(mean) cut: 499.0(485.9).  (50 attempts in 13.7s)			
+Preparing batch of 50 environments for graph 59....done.
+Finished agent testing batch 1.
+Graph 59, best(mean) cut: 522.0(503.68).  (50 attempts in 13.64s)			
+Preparing batch of 50 environments for graph 60....done.
+Finished agent testing batch 1.
+Graph 60, best(mean) cut: 505.0(489.0).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 61....done.
+Finished agent testing batch 1.
+Graph 61, best(mean) cut: 507.0(489.84).  (50 attempts in 13.65s)			
+Preparing batch of 50 environments for graph 62....done.
+Finished agent testing batch 1.
+Graph 62, best(mean) cut: 529.0(513.96).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 63....done.
+Finished agent testing batch 1.
+Graph 63, best(mean) cut: 514.0(497.96).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 64....done.
+Finished agent testing batch 1.
+Graph 64, best(mean) cut: 554.0(532.46).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 65....done.
+Finished agent testing batch 1.
+Graph 65, best(mean) cut: 550.0(534.96).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 66....done.
+Finished agent testing batch 1.
+Graph 66, best(mean) cut: 521.0(502.0).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 67....done.
+Finished agent testing batch 1.
+Graph 67, best(mean) cut: 500.0(485.22).  (50 attempts in 13.97s)			
+Preparing batch of 50 environments for graph 68....done.
+Finished agent testing batch 1.
+Graph 68, best(mean) cut: 526.0(506.88).  (50 attempts in 13.65s)			
+Preparing batch of 50 environments for graph 69....done.
+Finished agent testing batch 1.
+Graph 69, best(mean) cut: 505.0(491.22).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 70....done.
+Finished agent testing batch 1.
+Graph 70, best(mean) cut: 508.0(495.84).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 71....done.
+Finished agent testing batch 1.
+Graph 71, best(mean) cut: 568.0(549.04).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 72....done.
+Finished agent testing batch 1.
+Graph 72, best(mean) cut: 524.0(509.12).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 73....done.
+Finished agent testing batch 1.
+Graph 73, best(mean) cut: 531.0(512.26).  (50 attempts in 13.64s)			
+Preparing batch of 50 environments for graph 74....done.
+Finished agent testing batch 1.
+Graph 74, best(mean) cut: 489.0(476.98).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 75....done.
+Finished agent testing batch 1.
+Graph 75, best(mean) cut: 501.0(484.4).  (50 attempts in 13.69s)			
+Preparing batch of 50 environments for graph 76....done.
+Finished agent testing batch 1.
+Graph 76, best(mean) cut: 530.0(514.4).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 77....done.
+Finished agent testing batch 1.
+Graph 77, best(mean) cut: 519.0(502.96).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 78....done.
+Finished agent testing batch 1.
+Graph 78, best(mean) cut: 490.0(476.6).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 79....done.
+Finished agent testing batch 1.
+Graph 79, best(mean) cut: 506.0(488.68).  (50 attempts in 13.69s)			
+Preparing batch of 50 environments for graph 80....done.
+Finished agent testing batch 1.
+Graph 80, best(mean) cut: 556.0(538.96).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 81....done.
+Finished agent testing batch 1.
+Graph 81, best(mean) cut: 553.0(539.04).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 82....done.
+Finished agent testing batch 1.
+Graph 82, best(mean) cut: 559.0(536.84).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 83....done.
+Finished agent testing batch 1.
+Graph 83, best(mean) cut: 490.0(475.7).  (50 attempts in 13.69s)			
+Preparing batch of 50 environments for graph 84....done.
+Finished agent testing batch 1.
+Graph 84, best(mean) cut: 498.0(479.38).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 85....done.
+Finished agent testing batch 1.
+Graph 85, best(mean) cut: 538.0(520.78).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 86....done.
+Finished agent testing batch 1.
+Graph 86, best(mean) cut: 523.0(504.44).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 87....done.
+Finished agent testing batch 1.
+Graph 87, best(mean) cut: 516.0(497.38).  (50 attempts in 13.68s)			
+Preparing batch of 50 environments for graph 88....done.
+Finished agent testing batch 1.
+Graph 88, best(mean) cut: 530.0(516.8).  (50 attempts in 13.69s)			
+Preparing batch of 50 environments for graph 89....done.
+Finished agent testing batch 1.
+Graph 89, best(mean) cut: 528.0(512.06).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 90....done.
+Finished agent testing batch 1.
+Graph 90, best(mean) cut: 497.0(479.94).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 91....done.
+Finished agent testing batch 1.
+Graph 91, best(mean) cut: 548.0(531.98).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 92....done.
+Finished agent testing batch 1.
+Graph 92, best(mean) cut: 486.0(472.0).  (50 attempts in 13.7s)			
+Preparing batch of 50 environments for graph 93....done.
+Finished agent testing batch 1.
+Graph 93, best(mean) cut: 544.0(525.92).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 94....done.
+Finished agent testing batch 1.
+Graph 94, best(mean) cut: 555.0(537.7).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 95....done.
+Finished agent testing batch 1.
+Graph 95, best(mean) cut: 504.0(490.2).  (50 attempts in 13.66s)			
+Preparing batch of 50 environments for graph 96....done.
+Finished agent testing batch 1.
+Graph 96, best(mean) cut: 518.0(506.36).  (50 attempts in 13.67s)			
+Preparing batch of 50 environments for graph 97....done.
+Finished agent testing batch 1.
+Graph 97, best(mean) cut: 451.0(436.86).  (50 attempts in 13.71s)			
+Preparing batch of 50 environments for graph 98....done.
+Finished agent testing batch 1.
+Graph 98, best(mean) cut: 513.0(496.9).  (50 attempts in 13.7s)			
+Preparing batch of 50 environments for graph 99....done.
+Finished agent testing batch 1.
+Graph 99, best(mean) cut: 519.0(506.96).  (50 attempts in 13.67s)			
+dir already exists:  results/WattsStrogatz_800vertices_weighted
+      cut  ...                   Test Distribution
+0   489.0  ...  WattsStrogatz_800vertices_weighted
+1   504.0  ...  WattsStrogatz_800vertices_weighted
+2   549.0  ...  WattsStrogatz_800vertices_weighted
+3   507.0  ...  WattsStrogatz_800vertices_weighted
+4   545.0  ...  WattsStrogatz_800vertices_weighted
+..    ...  ...                                 ...
+95  504.0  ...  WattsStrogatz_800vertices_weighted
+96  518.0  ...  WattsStrogatz_800vertices_weighted
+97  451.0  ...  WattsStrogatz_800vertices_weighted
+98  513.0  ...  WattsStrogatz_800vertices_weighted
+99  519.0  ...  WattsStrogatz_800vertices_weighted
+
+[100 rows x 6 columns]
+The number of test graphs:100
+Set torch default device to cuda.
+Preparing batch of 50 environments for graph 0....done.
+Finished agent testing batch 1.
+Graph 0, best(mean) cut: 725.0(697.14).  (50 attempts in 17.95s)			
+Preparing batch of 50 environments for graph 1....done.
+Finished agent testing batch 1.
+Graph 1, best(mean) cut: 780.0(741.08).  (50 attempts in 18.03s)			
+Preparing batch of 50 environments for graph 2....done.
+Finished agent testing batch 1.
+Graph 2, best(mean) cut: 745.0(708.8).  (50 attempts in 17.85s)			
+Preparing batch of 50 environments for graph 3....done.
+Finished agent testing batch 1.
+Graph 3, best(mean) cut: 717.0(683.54).  (50 attempts in 17.69s)			
+Preparing batch of 50 environments for graph 4....done.
+Finished agent testing batch 1.
+Graph 4, best(mean) cut: 771.0(734.22).  (50 attempts in 17.8s)			
+Preparing batch of 50 environments for graph 5....done.
+Finished agent testing batch 1.
+Graph 5, best(mean) cut: 764.0(732.84).  (50 attempts in 17.73s)			
+Preparing batch of 50 environments for graph 6....done.
+Finished agent testing batch 1.
+Graph 6, best(mean) cut: 764.0(735.5).  (50 attempts in 19.25s)			
+Preparing batch of 50 environments for graph 7....done.
+Finished agent testing batch 1.
+Graph 7, best(mean) cut: 747.0(713.1).  (50 attempts in 17.75s)			
+Preparing batch of 50 environments for graph 8....done.
+Finished agent testing batch 1.
+Graph 8, best(mean) cut: 786.0(751.78).  (50 attempts in 17.69s)			
+Preparing batch of 50 environments for graph 9....done.
+Finished agent testing batch 1.
+Graph 9, best(mean) cut: 754.0(717.86).  (50 attempts in 18.14s)			
+Preparing batch of 50 environments for graph 10....done.
+Finished agent testing batch 1.
+Graph 10, best(mean) cut: 775.0(737.98).  (50 attempts in 18.27s)			
+Preparing batch of 50 environments for graph 11....done.
+Finished agent testing batch 1.
+Graph 11, best(mean) cut: 741.0(707.28).  (50 attempts in 18.18s)			
+Preparing batch of 50 environments for graph 12....done.
+Finished agent testing batch 1.
+Graph 12, best(mean) cut: 788.0(750.64).  (50 attempts in 18.29s)			
+Preparing batch of 50 environments for graph 13....done.
+Finished agent testing batch 1.
+Graph 13, best(mean) cut: 702.0(671.12).  (50 attempts in 18.15s)			
+Preparing batch of 50 environments for graph 14....done.
+Finished agent testing batch 1.
+Graph 14, best(mean) cut: 777.0(739.18).  (50 attempts in 17.95s)			
+Preparing batch of 50 environments for graph 15....done.
+Finished agent testing batch 1.
+Graph 15, best(mean) cut: 791.0(731.82).  (50 attempts in 19.05s)			
+Preparing batch of 50 environments for graph 16....done.
+Finished agent testing batch 1.
+Graph 16, best(mean) cut: 750.0(722.54).  (50 attempts in 18.07s)			
+Preparing batch of 50 environments for graph 17....done.
+Finished agent testing batch 1.
+Graph 17, best(mean) cut: 763.0(712.76).  (50 attempts in 18.89s)			
+Preparing batch of 50 environments for graph 18....done.
+Finished agent testing batch 1.
+Graph 18, best(mean) cut: 788.0(752.44).  (50 attempts in 18.01s)			
+Preparing batch of 50 environments for graph 19....done.
+Finished agent testing batch 1.
+Graph 19, best(mean) cut: 784.0(737.34).  (50 attempts in 18.71s)			
+Preparing batch of 50 environments for graph 20....done.
+Finished agent testing batch 1.
+Graph 20, best(mean) cut: 791.0(737.62).  (50 attempts in 18.07s)			
+Preparing batch of 50 environments for graph 21....done.
+Finished agent testing batch 1.
+Graph 21, best(mean) cut: 702.0(682.92).  (50 attempts in 18.12s)			
+Preparing batch of 50 environments for graph 22....done.
+Finished agent testing batch 1.
+Graph 22, best(mean) cut: 740.0(702.94).  (50 attempts in 18.24s)			
+Preparing batch of 50 environments for graph 23....done.
+Finished agent testing batch 1.
+Graph 23, best(mean) cut: 745.0(714.68).  (50 attempts in 18.22s)			
+Preparing batch of 50 environments for graph 24....done.
+Finished agent testing batch 1.
+Graph 24, best(mean) cut: 741.0(710.08).  (50 attempts in 18.22s)			
+Preparing batch of 50 environments for graph 25....done.
+Finished agent testing batch 1.
+Graph 25, best(mean) cut: 731.0(693.38).  (50 attempts in 18.18s)			
+Preparing batch of 50 environments for graph 26....done.
+Finished agent testing batch 1.
+Graph 26, best(mean) cut: 698.0(654.54).  (50 attempts in 18.65s)			
+Preparing batch of 50 environments for graph 27....done.
+Finished agent testing batch 1.
+Graph 27, best(mean) cut: 724.0(679.32).  (50 attempts in 18.22s)			
+Preparing batch of 50 environments for graph 28....done.
+Finished agent testing batch 1.
+Graph 28, best(mean) cut: 757.0(712.28).  (50 attempts in 18.6s)			
+Preparing batch of 50 environments for graph 29....done.
+Finished agent testing batch 1.
+Graph 29, best(mean) cut: 750.0(701.24).  (50 attempts in 18.91s)			
+Preparing batch of 50 environments for graph 30....done.
+Finished agent testing batch 1.
+Graph 30, best(mean) cut: 719.0(687.72).  (50 attempts in 18.16s)			
+Preparing batch of 50 environments for graph 31....done.
+Finished agent testing batch 1.
+Graph 31, best(mean) cut: 786.0(754.58).  (50 attempts in 18.69s)			
+Preparing batch of 50 environments for graph 32....done.
+Finished agent testing batch 1.
+Graph 32, best(mean) cut: 766.0(735.68).  (50 attempts in 18.17s)			
+Preparing batch of 50 environments for graph 33....done.
+Finished agent testing batch 1.
+Graph 33, best(mean) cut: 715.0(693.36).  (50 attempts in 18.07s)			
+Preparing batch of 50 environments for graph 34....done.
+Finished agent testing batch 1.
+Graph 34, best(mean) cut: 700.0(673.14).  (50 attempts in 18.22s)			
+Preparing batch of 50 environments for graph 35....done.
+Finished agent testing batch 1.
+Graph 35, best(mean) cut: 818.0(788.88).  (50 attempts in 20.74s)			
+Preparing batch of 50 environments for graph 36....done.
+Finished agent testing batch 1.
+Graph 36, best(mean) cut: 767.0(734.98).  (50 attempts in 18.1s)			
+Preparing batch of 50 environments for graph 37....done.
+Finished agent testing batch 1.
+Graph 37, best(mean) cut: 725.0(690.74).  (50 attempts in 18.34s)			
+Preparing batch of 50 environments for graph 38....done.
+Finished agent testing batch 1.
+Graph 38, best(mean) cut: 745.0(716.1).  (50 attempts in 18.25s)			
+Preparing batch of 50 environments for graph 39....done.
+Finished agent testing batch 1.
+Graph 39, best(mean) cut: 781.0(733.9).  (50 attempts in 19.8s)			
+Preparing batch of 50 environments for graph 40....done.
+Finished agent testing batch 1.
+Graph 40, best(mean) cut: 758.0(731.2).  (50 attempts in 18.3s)			
+Preparing batch of 50 environments for graph 41....done.
+Finished agent testing batch 1.
+Graph 41, best(mean) cut: 680.0(640.38).  (50 attempts in 18.78s)			
+Preparing batch of 50 environments for graph 42....done.
+Finished agent testing batch 1.
+Graph 42, best(mean) cut: 760.0(733.62).  (50 attempts in 20.61s)			
+Preparing batch of 50 environments for graph 43....done.
+Finished agent testing batch 1.
+Graph 43, best(mean) cut: 753.0(692.06).  (50 attempts in 19.11s)			
+Preparing batch of 50 environments for graph 44....done.
+Finished agent testing batch 1.
+Graph 44, best(mean) cut: 769.0(740.1).  (50 attempts in 17.96s)			
+Preparing batch of 50 environments for graph 45....done.
+Finished agent testing batch 1.
+Graph 45, best(mean) cut: 735.0(705.12).  (50 attempts in 18.06s)			
+Preparing batch of 50 environments for graph 46....done.
+Finished agent testing batch 1.
+Graph 46, best(mean) cut: 751.0(718.08).  (50 attempts in 18.36s)			
+Preparing batch of 50 environments for graph 47....done.
+Finished agent testing batch 1.
+Graph 47, best(mean) cut: 749.0(719.52).  (50 attempts in 18.07s)			
+Preparing batch of 50 environments for graph 48....done.
+Finished agent testing batch 1.
+Graph 48, best(mean) cut: 783.0(740.06).  (50 attempts in 18.09s)			
+Preparing batch of 50 environments for graph 49....done.
+Finished agent testing batch 1.
+Graph 49, best(mean) cut: 776.0(749.68).  (50 attempts in 20.42s)			
+Preparing batch of 50 environments for graph 50....done.
+Finished agent testing batch 1.
+Graph 50, best(mean) cut: 732.0(704.0).  (50 attempts in 17.77s)			
+Preparing batch of 50 environments for graph 51....done.
+Finished agent testing batch 1.
+Graph 51, best(mean) cut: 713.0(674.9).  (50 attempts in 18.62s)			
+Preparing batch of 50 environments for graph 52....done.
+Finished agent testing batch 1.
+Graph 52, best(mean) cut: 727.0(690.42).  (50 attempts in 17.94s)			
+Preparing batch of 50 environments for graph 53....done.
+Finished agent testing batch 1.
+Graph 53, best(mean) cut: 775.0(733.88).  (50 attempts in 18.22s)			
+Preparing batch of 50 environments for graph 54....done.
+Finished agent testing batch 1.
+Graph 54, best(mean) cut: 786.0(754.56).  (50 attempts in 17.92s)			
+Preparing batch of 50 environments for graph 55....done.
+Finished agent testing batch 1.
+Graph 55, best(mean) cut: 697.0(655.76).  (50 attempts in 18.2s)			
+Preparing batch of 50 environments for graph 56....done.
+Finished agent testing batch 1.
+Graph 56, best(mean) cut: 737.0(707.36).  (50 attempts in 20.25s)			
+Preparing batch of 50 environments for graph 57....done.
+Finished agent testing batch 1.
+Graph 57, best(mean) cut: 786.0(748.04).  (50 attempts in 18.06s)			
+Preparing batch of 50 environments for graph 58....done.
+Finished agent testing batch 1.
+Graph 58, best(mean) cut: 787.0(747.52).  (50 attempts in 18.48s)			
+Preparing batch of 50 environments for graph 59....done.
+Finished agent testing batch 1.
+Graph 59, best(mean) cut: 749.0(711.82).  (50 attempts in 17.89s)			
+Preparing batch of 50 environments for graph 60....done.
+Finished agent testing batch 1.
+Graph 60, best(mean) cut: 732.0(686.22).  (50 attempts in 18.12s)			
+Preparing batch of 50 environments for graph 61....done.
+Finished agent testing batch 1.
+Graph 61, best(mean) cut: 729.0(691.58).  (50 attempts in 17.77s)			
+Preparing batch of 50 environments for graph 62....done.
+Finished agent testing batch 1.
+Graph 62, best(mean) cut: 786.0(758.72).  (50 attempts in 17.76s)			
+Preparing batch of 50 environments for graph 63....done.
+Finished agent testing batch 1.
+Graph 63, best(mean) cut: 790.0(760.2).  (50 attempts in 20.2s)			
+Preparing batch of 50 environments for graph 64....done.
+Finished agent testing batch 1.
+Graph 64, best(mean) cut: 755.0(721.94).  (50 attempts in 17.97s)			
+Preparing batch of 50 environments for graph 65....done.
+Finished agent testing batch 1.
+Graph 65, best(mean) cut: 745.0(717.42).  (50 attempts in 17.89s)			
+Preparing batch of 50 environments for graph 66....done.
+Finished agent testing batch 1.
+Graph 66, best(mean) cut: 786.0(758.38).  (50 attempts in 17.74s)			
+Preparing batch of 50 environments for graph 67....done.
+Finished agent testing batch 1.
+Graph 67, best(mean) cut: 764.0(725.44).  (50 attempts in 18.28s)			
+Preparing batch of 50 environments for graph 68....done.
+Finished agent testing batch 1.
+Graph 68, best(mean) cut: 690.0(660.1).  (50 attempts in 18.01s)			
+Preparing batch of 50 environments for graph 69....done.
+Finished agent testing batch 1.
+Graph 69, best(mean) cut: 776.0(737.38).  (50 attempts in 18.02s)			
+Preparing batch of 50 environments for graph 70....done.
+Finished agent testing batch 1.
+Graph 70, best(mean) cut: 785.0(753.34).  (50 attempts in 20.66s)			
+Preparing batch of 50 environments for graph 71....done.
+Finished agent testing batch 1.
+Graph 71, best(mean) cut: 737.0(706.46).  (50 attempts in 18.26s)			
+Preparing batch of 50 environments for graph 72....done.
+Finished agent testing batch 1.
+Graph 72, best(mean) cut: 726.0(697.72).  (50 attempts in 18.03s)			
+Preparing batch of 50 environments for graph 73....done.
+Finished agent testing batch 1.
+Graph 73, best(mean) cut: 691.0(662.4).  (50 attempts in 18.12s)			
+Preparing batch of 50 environments for graph 74....done.
+Finished agent testing batch 1.
+Graph 74, best(mean) cut: 750.0(710.28).  (50 attempts in 18.07s)			
+Preparing batch of 50 environments for graph 75....done.
+Finished agent testing batch 1.
+Graph 75, best(mean) cut: 680.0(641.88).  (50 attempts in 18.1s)			
+Preparing batch of 50 environments for graph 76....done.
+Finished agent testing batch 1.
+Graph 76, best(mean) cut: 736.0(694.48).  (50 attempts in 18.16s)			
+Preparing batch of 50 environments for graph 77....done.
+Finished agent testing batch 1.
+Graph 77, best(mean) cut: 845.0(812.88).  (50 attempts in 20.64s)			
+Preparing batch of 50 environments for graph 78....done.
+Finished agent testing batch 1.
+Graph 78, best(mean) cut: 763.0(726.32).  (50 attempts in 17.96s)			
+Preparing batch of 50 environments for graph 79....done.
+Finished agent testing batch 1.
+Graph 79, best(mean) cut: 775.0(747.76).  (50 attempts in 18.03s)			
+Preparing batch of 50 environments for graph 80....done.
+Finished agent testing batch 1.
+Graph 80, best(mean) cut: 741.0(709.54).  (50 attempts in 18.08s)			
+Preparing batch of 50 environments for graph 81....done.
+Finished agent testing batch 1.
+Graph 81, best(mean) cut: 761.0(733.26).  (50 attempts in 18.25s)			
+Preparing batch of 50 environments for graph 82....done.
+Finished agent testing batch 1.
+Graph 82, best(mean) cut: 803.0(762.58).  (50 attempts in 18.08s)			
+Preparing batch of 50 environments for graph 83....done.
+Finished agent testing batch 1.
+Graph 83, best(mean) cut: 703.0(660.16).  (50 attempts in 18.51s)			
+Preparing batch of 50 environments for graph 84....done.
+Finished agent testing batch 1.
+Graph 84, best(mean) cut: 814.0(774.66).  (50 attempts in 20.92s)			
+Preparing batch of 50 environments for graph 85....done.
+Finished agent testing batch 1.
+Graph 85, best(mean) cut: 747.0(693.4).  (50 attempts in 18.33s)			
+Preparing batch of 50 environments for graph 86....done.
+Finished agent testing batch 1.
+Graph 86, best(mean) cut: 733.0(687.94).  (50 attempts in 18.56s)			
+Preparing batch of 50 environments for graph 87....done.
+Finished agent testing batch 1.
+Graph 87, best(mean) cut: 755.0(722.48).  (50 attempts in 18.17s)			
+Preparing batch of 50 environments for graph 88....done.
+Finished agent testing batch 1.
+Graph 88, best(mean) cut: 777.0(736.72).  (50 attempts in 18.21s)			
+Preparing batch of 50 environments for graph 89....done.
+Finished agent testing batch 1.
+Graph 89, best(mean) cut: 688.0(662.66).  (50 attempts in 18.09s)			
+Preparing batch of 50 environments for graph 90....done.
+Finished agent testing batch 1.
+Graph 90, best(mean) cut: 761.0(735.26).  (50 attempts in 18.32s)			
+Preparing batch of 50 environments for graph 91....done.
+Finished agent testing batch 1.
+Graph 91, best(mean) cut: 763.0(737.68).  (50 attempts in 20.53s)			
+Preparing batch of 50 environments for graph 92....done.
+Finished agent testing batch 1.
+Graph 92, best(mean) cut: 752.0(716.62).  (50 attempts in 18.18s)			
+Preparing batch of 50 environments for graph 93....done.
+Finished agent testing batch 1.
+Graph 93, best(mean) cut: 759.0(731.04).  (50 attempts in 18.2s)			
+Preparing batch of 50 environments for graph 94....done.
+Finished agent testing batch 1.
+Graph 94, best(mean) cut: 778.0(724.26).  (50 attempts in 18.96s)			
+Preparing batch of 50 environments for graph 95....done.
+Finished agent testing batch 1.
+Graph 95, best(mean) cut: 776.0(742.68).  (50 attempts in 18.34s)			
+Preparing batch of 50 environments for graph 96....done.
+Finished agent testing batch 1.
+Graph 96, best(mean) cut: 800.0(761.72).  (50 attempts in 18.81s)			
+Preparing batch of 50 environments for graph 97....done.
+Finished agent testing batch 1.
+Graph 97, best(mean) cut: 748.0(705.1).  (50 attempts in 18.18s)			
+Preparing batch of 50 environments for graph 98....done.
+Finished agent testing batch 1.
+Graph 98, best(mean) cut: 747.0(720.0).  (50 attempts in 20.35s)			
+Preparing batch of 50 environments for graph 99....done.
+Finished agent testing batch 1.
+Graph 99, best(mean) cut: 773.0(728.36).  (50 attempts in 18.17s)			
+dir already exists:  results/HomleKim_800vertices_weighted
+      cut  ...              Test Distribution
+0   725.0  ...  HomleKim_800vertices_weighted
+1   780.0  ...  HomleKim_800vertices_weighted
+2   745.0  ...  HomleKim_800vertices_weighted
+3   717.0  ...  HomleKim_800vertices_weighted
+4   771.0  ...  HomleKim_800vertices_weighted
+..    ...  ...                            ...
+95  776.0  ...  HomleKim_800vertices_weighted
+96  800.0  ...  HomleKim_800vertices_weighted
+97  748.0  ...  HomleKim_800vertices_weighted
+98  747.0  ...  HomleKim_800vertices_weighted
+99  773.0  ...  HomleKim_800vertices_weighted
+
+[100 rows x 6 columns]
+The number of test graphs:100
+Set torch default device to cuda.
+Preparing batch of 50 environments for graph 0....done.
+Finished agent testing batch 1.
+Graph 0, best(mean) cut: 727.0(694.48).  (50 attempts in 17.95s)			
+Preparing batch of 50 environments for graph 1....done.
+Finished agent testing batch 1.
+Graph 1, best(mean) cut: 786.0(743.72).  (50 attempts in 17.9s)			
+Preparing batch of 50 environments for graph 2....done.
+Finished agent testing batch 1.
+Graph 2, best(mean) cut: 737.0(712.8).  (50 attempts in 17.72s)			
+Preparing batch of 50 environments for graph 3....done.
+Finished agent testing batch 1.
+Graph 3, best(mean) cut: 720.0(684.96).  (50 attempts in 17.7s)			
+Preparing batch of 50 environments for graph 4....done.
+Finished agent testing batch 1.
+Graph 4, best(mean) cut: 766.0(731.96).  (50 attempts in 17.71s)			
+Preparing batch of 50 environments for graph 5....done.
+Finished agent testing batch 1.
+Graph 5, best(mean) cut: 772.0(728.52).  (50 attempts in 17.75s)			
+Preparing batch of 50 environments for graph 6....done.
+Finished agent testing batch 1.
+Graph 6, best(mean) cut: 776.0(742.84).  (50 attempts in 17.75s)			
+Preparing batch of 50 environments for graph 7....done.
+Finished agent testing batch 1.
+Graph 7, best(mean) cut: 741.0(713.38).  (50 attempts in 17.67s)			
+Preparing batch of 50 environments for graph 8....done.
+Finished agent testing batch 1.
+Graph 8, best(mean) cut: 793.0(753.3).  (50 attempts in 20.26s)			
+Preparing batch of 50 environments for graph 9....done.
+Finished agent testing batch 1.
+Graph 9, best(mean) cut: 755.0(719.38).  (50 attempts in 17.61s)			
+Preparing batch of 50 environments for graph 10....done.
+Finished agent testing batch 1.
+Graph 10, best(mean) cut: 781.0(739.62).  (50 attempts in 17.95s)			
+Preparing batch of 50 environments for graph 11....done.
+Finished agent testing batch 1.
+Graph 11, best(mean) cut: 741.0(705.12).  (50 attempts in 18.01s)			
+Preparing batch of 50 environments for graph 12....done.
+Finished agent testing batch 1.
+Graph 12, best(mean) cut: 776.0(753.16).  (50 attempts in 17.74s)			
+Preparing batch of 50 environments for graph 13....done.
+Finished agent testing batch 1.
+Graph 13, best(mean) cut: 698.0(668.4).  (50 attempts in 17.82s)			
+Preparing batch of 50 environments for graph 14....done.
+Finished agent testing batch 1.
+Graph 14, best(mean) cut: 780.0(741.7).  (50 attempts in 17.8s)			
+Preparing batch of 50 environments for graph 15....done.
+Finished agent testing batch 1.
+Graph 15, best(mean) cut: 795.0(734.56).  (50 attempts in 19.98s)			
+Preparing batch of 50 environments for graph 16....done.
+Finished agent testing batch 1.
+Graph 16, best(mean) cut: 744.0(722.08).  (50 attempts in 20.34s)			
+Preparing batch of 50 environments for graph 17....done.
+Finished agent testing batch 1.
+Graph 17, best(mean) cut: 762.0(722.88).  (50 attempts in 21.0s)			
+Preparing batch of 50 environments for graph 18....done.
+Finished agent testing batch 1.
+Graph 18, best(mean) cut: 781.0(756.28).  (50 attempts in 17.7s)			
+Preparing batch of 50 environments for graph 19....done.
+Finished agent testing batch 1.
+Graph 19, best(mean) cut: 783.0(746.92).  (50 attempts in 18.0s)			
+Preparing batch of 50 environments for graph 20....done.
+Finished agent testing batch 1.
+Graph 20, best(mean) cut: 773.0(740.7).  (50 attempts in 17.8s)			
+Preparing batch of 50 environments for graph 21....done.
+Finished agent testing batch 1.
+Graph 21, best(mean) cut: 720.0(684.0).  (50 attempts in 17.78s)			
+Preparing batch of 50 environments for graph 22....done.
+Finished agent testing batch 1.
+Graph 22, best(mean) cut: 727.0(707.48).  (50 attempts in 17.78s)			
+Preparing batch of 50 environments for graph 23....done.
+Finished agent testing batch 1.
+Graph 23, best(mean) cut: 745.0(719.68).  (50 attempts in 17.84s)			
+Preparing batch of 50 environments for graph 24....done.
+Finished agent testing batch 1.
+Graph 24, best(mean) cut: 763.0(715.18).  (50 attempts in 17.8s)			
+Preparing batch of 50 environments for graph 25....done.
+Finished agent testing batch 1.
+Graph 25, best(mean) cut: 735.0(687.64).  (50 attempts in 18.17s)			
+Preparing batch of 50 environments for graph 26....done.
+Finished agent testing batch 1.
+Graph 26, best(mean) cut: 691.0(645.72).  (50 attempts in 18.7s)			
+Preparing batch of 50 environments for graph 27....done.
+Finished agent testing batch 1.
+Graph 27, best(mean) cut: 710.0(678.66).  (50 attempts in 17.73s)			
+Preparing batch of 50 environments for graph 28....done.
+Finished agent testing batch 1.
+Graph 28, best(mean) cut: 763.0(713.72).  (50 attempts in 18.16s)			
+Preparing batch of 50 environments for graph 29....done.
+Finished agent testing batch 1.
+Graph 29, best(mean) cut: 747.0(700.0).  (50 attempts in 18.89s)			
+Preparing batch of 50 environments for graph 30....done.
+Finished agent testing batch 1.
+Graph 30, best(mean) cut: 721.0(688.26).  (50 attempts in 19.71s)			
+Preparing batch of 50 environments for graph 31....done.
+Finished agent testing batch 1.
+Graph 31, best(mean) cut: 785.0(754.46).  (50 attempts in 17.97s)			
+Preparing batch of 50 environments for graph 32....done.
+Finished agent testing batch 1.
+Graph 32, best(mean) cut: 764.0(740.42).  (50 attempts in 17.76s)			
+Preparing batch of 50 environments for graph 33....done.
+Finished agent testing batch 1.
+Graph 33, best(mean) cut: 718.0(691.54).  (50 attempts in 17.76s)			
+Preparing batch of 50 environments for graph 34....done.
+Finished agent testing batch 1.
+Graph 34, best(mean) cut: 707.0(675.14).  (50 attempts in 17.75s)			
+Preparing batch of 50 environments for graph 35....done.
+Finished agent testing batch 1.
+Graph 35, best(mean) cut: 813.0(787.36).  (50 attempts in 17.74s)			
+Preparing batch of 50 environments for graph 36....done.
+Finished agent testing batch 1.
+Graph 36, best(mean) cut: 770.0(734.32).  (50 attempts in 17.74s)			
+Preparing batch of 50 environments for graph 37....done.
+Finished agent testing batch 1.
+Graph 37, best(mean) cut: 724.0(691.4).  (50 attempts in 17.82s)			
+Preparing batch of 50 environments for graph 38....done.
+Finished agent testing batch 1.
+Graph 38, best(mean) cut: 744.0(710.52).  (50 attempts in 17.87s)			
+Preparing batch of 50 environments for graph 39....done.
+Finished agent testing batch 1.
+Graph 39, best(mean) cut: 788.0(748.2).  (50 attempts in 18.23s)			
+Preparing batch of 50 environments for graph 40....done.
+Finished agent testing batch 1.
+Graph 40, best(mean) cut: 758.0(727.9).  (50 attempts in 17.82s)			
+Preparing batch of 50 environments for graph 41....done.
+Finished agent testing batch 1.
+Graph 41, best(mean) cut: 675.0(646.06).  (50 attempts in 17.98s)			
+Preparing batch of 50 environments for graph 42....done.
+Finished agent testing batch 1.
+Graph 42, best(mean) cut: 771.0(738.6).  (50 attempts in 17.77s)			
+Preparing batch of 50 environments for graph 43....done.
+Finished agent testing batch 1.
+Graph 43, best(mean) cut: 754.0(693.4).  (50 attempts in 21.64s)			
+Preparing batch of 50 environments for graph 44....done.
+Finished agent testing batch 1.
+Graph 44, best(mean) cut: 772.0(740.9).  (50 attempts in 20.16s)			
+Preparing batch of 50 environments for graph 45....done.
+Finished agent testing batch 1.
+Graph 45, best(mean) cut: 745.0(704.46).  (50 attempts in 17.79s)			
+Preparing batch of 50 environments for graph 46....done.
+Finished agent testing batch 1.
+Graph 46, best(mean) cut: 754.0(718.58).  (50 attempts in 18.1s)			
+Preparing batch of 50 environments for graph 47....done.
+Finished agent testing batch 1.
+Graph 47, best(mean) cut: 749.0(718.3).  (50 attempts in 17.63s)			
+Preparing batch of 50 environments for graph 48....done.
+Finished agent testing batch 1.
+Graph 48, best(mean) cut: 776.0(740.26).  (50 attempts in 17.86s)			
+Preparing batch of 50 environments for graph 49....done.
+Finished agent testing batch 1.
+Graph 49, best(mean) cut: 782.0(753.84).  (50 attempts in 17.85s)			
+Preparing batch of 50 environments for graph 50....done.
+Finished agent testing batch 1.
+Graph 50, best(mean) cut: 722.0(698.26).  (50 attempts in 18.02s)			
+Preparing batch of 50 environments for graph 51....done.
+Finished agent testing batch 1.
+Graph 51, best(mean) cut: 707.0(674.08).  (50 attempts in 20.56s)			
+Preparing batch of 50 environments for graph 52....done.
+Finished agent testing batch 1.
+Graph 52, best(mean) cut: 728.0(696.2).  (50 attempts in 17.74s)			
+Preparing batch of 50 environments for graph 53....done.
+Finished agent testing batch 1.
+Graph 53, best(mean) cut: 778.0(733.28).  (50 attempts in 18.23s)			
+Preparing batch of 50 environments for graph 54....done.
+Finished agent testing batch 1.
+Graph 54, best(mean) cut: 775.0(751.1).  (50 attempts in 17.68s)			
+Preparing batch of 50 environments for graph 55....done.
+Finished agent testing batch 1.
+Graph 55, best(mean) cut: 697.0(660.38).  (50 attempts in 18.29s)			
+Preparing batch of 50 environments for graph 56....done.
+Finished agent testing batch 1.
+Graph 56, best(mean) cut: 741.0(705.62).  (50 attempts in 18.51s)			
+Preparing batch of 50 environments for graph 57....done.
+Finished agent testing batch 1.
+Graph 57, best(mean) cut: 785.0(748.0).  (50 attempts in 18.01s)			
+Preparing batch of 50 environments for graph 58....done.
+Finished agent testing batch 1.
+Graph 58, best(mean) cut: 797.0(754.88).  (50 attempts in 20.87s)			
+Preparing batch of 50 environments for graph 59....done.
+Finished agent testing batch 1.
+Graph 59, best(mean) cut: 746.0(714.74).  (50 attempts in 17.7s)			
+Preparing batch of 50 environments for graph 60....done.
+Finished agent testing batch 1.
+Graph 60, best(mean) cut: 734.0(687.94).  (50 attempts in 17.99s)			
+Preparing batch of 50 environments for graph 61....done.
+Finished agent testing batch 1.
+Graph 61, best(mean) cut: 728.0(685.82).  (50 attempts in 18.57s)			
+Preparing batch of 50 environments for graph 62....done.
+Finished agent testing batch 1.
+Graph 62, best(mean) cut: 790.0(750.46).  (50 attempts in 18.06s)			
+Preparing batch of 50 environments for graph 63....done.
+Finished agent testing batch 1.
+Graph 63, best(mean) cut: 800.0(761.4).  (50 attempts in 17.71s)			
+Preparing batch of 50 environments for graph 64....done.
+Finished agent testing batch 1.
+Graph 64, best(mean) cut: 756.0(724.68).  (50 attempts in 17.89s)			
+Preparing batch of 50 environments for graph 65....done.
+Finished agent testing batch 1.
+Graph 65, best(mean) cut: 754.0(723.66).  (50 attempts in 20.14s)			
+Preparing batch of 50 environments for graph 66....done.
+Finished agent testing batch 1.
+Graph 66, best(mean) cut: 794.0(758.5).  (50 attempts in 17.66s)			
+Preparing batch of 50 environments for graph 67....done.
+Finished agent testing batch 1.
+Graph 67, best(mean) cut: 762.0(726.7).  (50 attempts in 18.03s)			
+Preparing batch of 50 environments for graph 68....done.
+Finished agent testing batch 1.
+Graph 68, best(mean) cut: 696.0(662.0).  (50 attempts in 17.85s)			
+Preparing batch of 50 environments for graph 69....done.
+Finished agent testing batch 1.
+Graph 69, best(mean) cut: 780.0(738.2).  (50 attempts in 17.82s)			
+Preparing batch of 50 environments for graph 70....done.
+Finished agent testing batch 1.
+Graph 70, best(mean) cut: 777.0(744.68).  (50 attempts in 18.09s)			
+Preparing batch of 50 environments for graph 71....done.
+Finished agent testing batch 1.
+Graph 71, best(mean) cut: 741.0(706.12).  (50 attempts in 17.79s)			
+Preparing batch of 50 environments for graph 72....done.
+Finished agent testing batch 1.
+Graph 72, best(mean) cut: 734.0(698.22).  (50 attempts in 20.12s)			
+Preparing batch of 50 environments for graph 73....done.
+Finished agent testing batch 1.
+Graph 73, best(mean) cut: 702.0(666.62).  (50 attempts in 17.6s)			
+Preparing batch of 50 environments for graph 74....done.
+Finished agent testing batch 1.
+Graph 74, best(mean) cut: 734.0(712.64).  (50 attempts in 17.71s)			
+Preparing batch of 50 environments for graph 75....done.
+Finished agent testing batch 1.
+Graph 75, best(mean) cut: 672.0(646.34).  (50 attempts in 17.79s)			
+Preparing batch of 50 environments for graph 76....done.
+Finished agent testing batch 1.
+Graph 76, best(mean) cut: 742.0(698.32).  (50 attempts in 17.68s)			
+Preparing batch of 50 environments for graph 77....done.
+Finished agent testing batch 1.
+Graph 77, best(mean) cut: 843.0(812.86).  (50 attempts in 17.7s)			
+Preparing batch of 50 environments for graph 78....done.
+Finished agent testing batch 1.
+Graph 78, best(mean) cut: 760.0(726.2).  (50 attempts in 17.73s)			
+Preparing batch of 50 environments for graph 79....done.
+Finished agent testing batch 1.
+Graph 79, best(mean) cut: 771.0(749.46).  (50 attempts in 20.1s)			
+Preparing batch of 50 environments for graph 80....done.
+Finished agent testing batch 1.
+Graph 80, best(mean) cut: 739.0(714.48).  (50 attempts in 17.68s)			
+Preparing batch of 50 environments for graph 81....done.
+Finished agent testing batch 1.
+Graph 81, best(mean) cut: 769.0(734.08).  (50 attempts in 17.75s)			
+Preparing batch of 50 environments for graph 82....done.
+Finished agent testing batch 1.
+Graph 82, best(mean) cut: 790.0(761.12).  (50 attempts in 17.72s)			
+Preparing batch of 50 environments for graph 83....done.
+Finished agent testing batch 1.
+Graph 83, best(mean) cut: 697.0(662.22).  (50 attempts in 18.11s)			
+Preparing batch of 50 environments for graph 84....done.
+Finished agent testing batch 1.
+Graph 84, best(mean) cut: 821.0(768.08).  (50 attempts in 18.0s)			
+Preparing batch of 50 environments for graph 85....done.
+Finished agent testing batch 1.
+Graph 85, best(mean) cut: 726.0(694.18).  (50 attempts in 17.89s)			
+Preparing batch of 50 environments for graph 86....done.
+Finished agent testing batch 1.
+Graph 86, best(mean) cut: 738.0(674.34).  (50 attempts in 21.35s)			
+Preparing batch of 50 environments for graph 87....done.
+Finished agent testing batch 1.
+Graph 87, best(mean) cut: 750.0(718.12).  (50 attempts in 17.95s)			
+Preparing batch of 50 environments for graph 88....done.
+Finished agent testing batch 1.
+Graph 88, best(mean) cut: 762.0(735.86).  (50 attempts in 17.73s)			
+Preparing batch of 50 environments for graph 89....done.
+Finished agent testing batch 1.
+Graph 89, best(mean) cut: 690.0(663.96).  (50 attempts in 17.77s)			
+Preparing batch of 50 environments for graph 90....done.
+Finished agent testing batch 1.
+Graph 90, best(mean) cut: 769.0(735.2).  (50 attempts in 17.97s)			
+Preparing batch of 50 environments for graph 91....done.
+Finished agent testing batch 1.
+Graph 91, best(mean) cut: 769.0(735.86).  (50 attempts in 17.46s)			
+Preparing batch of 50 environments for graph 92....done.
+Finished agent testing batch 1.
+Graph 92, best(mean) cut: 747.0(716.14).  (50 attempts in 17.75s)			
+Preparing batch of 50 environments for graph 93....done.
+Finished agent testing batch 1.
+Graph 93, best(mean) cut: 773.0(726.92).  (50 attempts in 20.25s)			
+Preparing batch of 50 environments for graph 94....done.
+Finished agent testing batch 1.
+Graph 94, best(mean) cut: 770.0(733.76).  (50 attempts in 18.3s)			
+Preparing batch of 50 environments for graph 95....done.
+Finished agent testing batch 1.
+Graph 95, best(mean) cut: 769.0(735.8).  (50 attempts in 17.96s)			
+Preparing batch of 50 environments for graph 96....done.
+Finished agent testing batch 1.
+Graph 96, best(mean) cut: 802.0(762.06).  (50 attempts in 18.33s)			
+Preparing batch of 50 environments for graph 97....done.
+Finished agent testing batch 1.
+Graph 97, best(mean) cut: 750.0(702.7).  (50 attempts in 18.44s)			
+Preparing batch of 50 environments for graph 98....done.
+Finished agent testing batch 1.
+Graph 98, best(mean) cut: 755.0(718.82).  (50 attempts in 17.68s)			
+Preparing batch of 50 environments for graph 99....done.
+Finished agent testing batch 1.
+Graph 99, best(mean) cut: 764.0(729.42).  (50 attempts in 17.89s)			
+dir already exists:  results/HomleKim_800vertices_weighted
+      cut  ...              Test Distribution
+0   727.0  ...  HomleKim_800vertices_weighted
+1   786.0  ...  HomleKim_800vertices_weighted
+2   737.0  ...  HomleKim_800vertices_weighted
+3   720.0  ...  HomleKim_800vertices_weighted
+4   766.0  ...  HomleKim_800vertices_weighted
+..    ...  ...                            ...
+95  769.0  ...  HomleKim_800vertices_weighted
+96  802.0  ...  HomleKim_800vertices_weighted
+97  750.0  ...  HomleKim_800vertices_weighted
+98  755.0  ...  HomleKim_800vertices_weighted
+99  764.0  ...  HomleKim_800vertices_weighted
+
+[100 rows x 6 columns]
+The number of test graphs:100
+Set torch default device to cuda.
+Preparing batch of 50 environments for graph 0....done.
+Finished agent testing batch 1.
+Graph 0, best(mean) cut: 432.0(409.84).  (50 attempts in 3.74s)			
+Preparing batch of 50 environments for graph 1....done.
+Finished agent testing batch 1.
+Graph 1, best(mean) cut: 417.0(394.1).  (50 attempts in 3.55s)			
+Preparing batch of 50 environments for graph 2....done.
+Finished agent testing batch 1.
+Graph 2, best(mean) cut: 416.0(396.68).  (50 attempts in 3.54s)			
+Preparing batch of 50 environments for graph 3....done.
+Finished agent testing batch 1.
+Graph 3, best(mean) cut: 370.0(347.86).  (50 attempts in 3.56s)			
+Preparing batch of 50 environments for graph 4....done.
+Finished agent testing batch 1.
+Graph 4, best(mean) cut: 313.0(295.26).  (50 attempts in 4.16s)			
+Preparing batch of 50 environments for graph 5....done.
+Finished agent testing batch 1.
+Graph 5, best(mean) cut: 370.0(353.72).  (50 attempts in 4.2s)			
+Preparing batch of 50 environments for graph 6....done.
+Finished agent testing batch 1.
+Graph 6, best(mean) cut: 403.0(373.14).  (50 attempts in 3.62s)			
+Preparing batch of 50 environments for graph 7....done.
+Finished agent testing batch 1.
+Graph 7, best(mean) cut: 385.0(365.9).  (50 attempts in 4.32s)			
+Preparing batch of 50 environments for graph 8....done.
+Finished agent testing batch 1.
+Graph 8, best(mean) cut: 415.0(383.48).  (50 attempts in 4.28s)			
+Preparing batch of 50 environments for graph 9....done.
+Finished agent testing batch 1.
+Graph 9, best(mean) cut: 365.0(347.46).  (50 attempts in 3.57s)			
+Preparing batch of 50 environments for graph 10....done.
+Finished agent testing batch 1.
+Graph 10, best(mean) cut: 387.0(362.72).  (50 attempts in 3.66s)			
+Preparing batch of 50 environments for graph 11....done.
+Finished agent testing batch 1.
+Graph 11, best(mean) cut: 411.0(381.88).  (50 attempts in 3.55s)			
+Preparing batch of 50 environments for graph 12....done.
+Finished agent testing batch 1.
+Graph 12, best(mean) cut: 410.0(381.9).  (50 attempts in 3.61s)			
+Preparing batch of 50 environments for graph 13....done.
+Finished agent testing batch 1.
+Graph 13, best(mean) cut: 419.0(400.9).  (50 attempts in 3.64s)			
+Preparing batch of 50 environments for graph 14....done.
+Finished agent testing batch 1.
+Graph 14, best(mean) cut: 370.0(346.26).  (50 attempts in 3.65s)			
+Preparing batch of 50 environments for graph 15....done.
+Finished agent testing batch 1.
+Graph 15, best(mean) cut: 424.0(391.7).  (50 attempts in 3.63s)			
+Preparing batch of 50 environments for graph 16....done.
+Finished agent testing batch 1.
+Graph 16, best(mean) cut: 395.0(373.7).  (50 attempts in 3.6s)			
+Preparing batch of 50 environments for graph 17....done.
+Finished agent testing batch 1.
+Graph 17, best(mean) cut: 333.0(310.46).  (50 attempts in 3.57s)			
+Preparing batch of 50 environments for graph 18....done.
+Finished agent testing batch 1.
+Graph 18, best(mean) cut: 425.0(407.9).  (50 attempts in 3.6s)			
+Preparing batch of 50 environments for graph 19....done.
+Finished agent testing batch 1.
+Graph 19, best(mean) cut: 393.0(375.0).  (50 attempts in 3.66s)			
+Preparing batch of 50 environments for graph 20....done.
+Finished agent testing batch 1.
+Graph 20, best(mean) cut: 390.0(370.1).  (50 attempts in 3.62s)			
+Preparing batch of 50 environments for graph 21....done.
+Finished agent testing batch 1.
+Graph 21, best(mean) cut: 397.0(372.32).  (50 attempts in 3.61s)			
+Preparing batch of 50 environments for graph 22....done.
+Finished agent testing batch 1.
+Graph 22, best(mean) cut: 387.0(363.1).  (50 attempts in 3.71s)			
+Preparing batch of 50 environments for graph 23....done.
+Finished agent testing batch 1.
+Graph 23, best(mean) cut: 422.0(401.84).  (50 attempts in 3.6s)			
+Preparing batch of 50 environments for graph 24....done.
+Finished agent testing batch 1.
+Graph 24, best(mean) cut: 456.0(429.6).  (50 attempts in 3.6s)			
+Preparing batch of 50 environments for graph 25....done.
+Finished agent testing batch 1.
+Graph 25, best(mean) cut: 388.0(370.9).  (50 attempts in 3.55s)			
+Preparing batch of 50 environments for graph 26....done.
+Finished agent testing batch 1.
+Graph 26, best(mean) cut: 425.0(393.58).  (50 attempts in 3.61s)			
+Preparing batch of 50 environments for graph 27....done.
+Finished agent testing batch 1.
+Graph 27, best(mean) cut: 382.0(350.86).  (50 attempts in 3.68s)			
+Preparing batch of 50 environments for graph 28....done.
+Finished agent testing batch 1.
+Graph 28, best(mean) cut: 395.0(365.0).  (50 attempts in 3.63s)			
+Preparing batch of 50 environments for graph 29....done.
+Finished agent testing batch 1.
+Graph 29, best(mean) cut: 408.0(389.38).  (50 attempts in 3.6s)			
+Preparing batch of 50 environments for graph 30....done.
+Finished agent testing batch 1.
+Graph 30, best(mean) cut: 388.0(366.68).  (50 attempts in 3.66s)			
+Preparing batch of 50 environments for graph 31....done.
+Finished agent testing batch 1.
+Graph 31, best(mean) cut: 317.0(298.6).  (50 attempts in 3.59s)			
+Preparing batch of 50 environments for graph 32....done.
+Finished agent testing batch 1.
+Graph 32, best(mean) cut: 442.0(425.04).  (50 attempts in 3.6s)			
+Preparing batch of 50 environments for graph 33....done.
+Finished agent testing batch 1.
+Graph 33, best(mean) cut: 422.0(392.98).  (50 attempts in 4.27s)			
+Preparing batch of 50 environments for graph 34....done.
+Finished agent testing batch 1.
+Graph 34, best(mean) cut: 372.0(350.56).  (50 attempts in 3.61s)			
+Preparing batch of 50 environments for graph 35....done.
+Finished agent testing batch 1.
+Graph 35, best(mean) cut: 419.0(385.38).  (50 attempts in 3.63s)			
+Preparing batch of 50 environments for graph 36....done.
+Finished agent testing batch 1.
+Graph 36, best(mean) cut: 427.0(400.48).  (50 attempts in 3.66s)			
+Preparing batch of 50 environments for graph 37....done.
+Finished agent testing batch 1.
+Graph 37, best(mean) cut: 342.0(317.14).  (50 attempts in 3.69s)			
+Preparing batch of 50 environments for graph 38....done.
+Finished agent testing batch 1.
+Graph 38, best(mean) cut: 406.0(374.68).  (50 attempts in 3.58s)			
+Preparing batch of 50 environments for graph 39....done.
+Finished agent testing batch 1.
+Graph 39, best(mean) cut: 415.0(391.54).  (50 attempts in 3.64s)			
+Preparing batch of 50 environments for graph 40....done.
+Finished agent testing batch 1.
+Graph 40, best(mean) cut: 397.0(371.94).  (50 attempts in 3.59s)			
+Preparing batch of 50 environments for graph 41....done.
+Finished agent testing batch 1.
+Graph 41, best(mean) cut: 396.0(378.46).  (50 attempts in 3.58s)			
+Preparing batch of 50 environments for graph 42....done.
+Finished agent testing batch 1.
+Graph 42, best(mean) cut: 407.0(386.84).  (50 attempts in 3.6s)			
+Preparing batch of 50 environments for graph 43....done.
+Finished agent testing batch 1.
+Graph 43, best(mean) cut: 416.0(382.3).  (50 attempts in 3.63s)			
+Preparing batch of 50 environments for graph 44....done.
+Finished agent testing batch 1.
+Graph 44, best(mean) cut: 412.0(382.32).  (50 attempts in 3.63s)			
+Preparing batch of 50 environments for graph 45....done.
+Finished agent testing batch 1.
+Graph 45, best(mean) cut: 415.0(388.5).  (50 attempts in 3.62s)			
+Preparing batch of 50 environments for graph 46....done.
+Finished agent testing batch 1.
+Graph 46, best(mean) cut: 418.0(394.5).  (50 attempts in 3.75s)			
+Preparing batch of 50 environments for graph 47....done.
+Finished agent testing batch 1.
+Graph 47, best(mean) cut: 421.0(397.14).  (50 attempts in 3.64s)			
+Preparing batch of 50 environments for graph 48....done.
+Finished agent testing batch 1.
+Graph 48, best(mean) cut: 414.0(382.52).  (50 attempts in 3.64s)			
+Preparing batch of 50 environments for graph 49....done.
+Finished agent testing batch 1.
+Graph 49, best(mean) cut: 432.0(409.58).  (50 attempts in 3.67s)			
+Preparing batch of 50 environments for graph 50....done.
+Finished agent testing batch 1.
+Graph 50, best(mean) cut: 377.0(344.02).  (50 attempts in 3.6s)			
+Preparing batch of 50 environments for graph 51....done.
+Finished agent testing batch 1.
+Graph 51, best(mean) cut: 427.0(400.06).  (50 attempts in 3.61s)			
+Preparing batch of 50 environments for graph 52....done.
+Finished agent testing batch 1.
+Graph 52, best(mean) cut: 455.0(431.32).  (50 attempts in 3.66s)			
+Preparing batch of 50 environments for graph 53....done.
+Finished agent testing batch 1.
+Graph 53, best(mean) cut: 392.0(364.22).  (50 attempts in 3.63s)			
+Preparing batch of 50 environments for graph 54....done.
+Finished agent testing batch 1.
+Graph 54, best(mean) cut: 387.0(364.14).  (50 attempts in 3.69s)			
+Preparing batch of 50 environments for graph 55....done.
+Finished agent testing batch 1.
+Graph 55, best(mean) cut: 377.0(348.48).  (50 attempts in 3.66s)			
+Preparing batch of 50 environments for graph 56....done.
+Finished agent testing batch 1.
+Graph 56, best(mean) cut: 373.0(347.46).  (50 attempts in 3.64s)			
+Preparing batch of 50 environments for graph 57....done.
+Finished agent testing batch 1.
+Graph 57, best(mean) cut: 360.0(338.02).  (50 attempts in 3.56s)			
+Preparing batch of 50 environments for graph 58....done.
+Finished agent testing batch 1.
+Graph 58, best(mean) cut: 401.0(378.18).  (50 attempts in 3.62s)			
+Preparing batch of 50 environments for graph 59....done.
+Finished agent testing batch 1.
+Graph 59, best(mean) cut: 383.0(363.8).  (50 attempts in 3.66s)			
+Preparing batch of 50 environments for graph 60....done.
+Finished agent testing batch 1.
+Graph 60, best(mean) cut: 415.0(389.42).  (50 attempts in 3.65s)			
+Preparing batch of 50 environments for graph 61....done.
+Finished agent testing batch 1.
+Graph 61, best(mean) cut: 418.0(386.12).  (50 attempts in 4.29s)			
+Preparing batch of 50 environments for graph 62....done.
+Finished agent testing batch 1.
+Graph 62, best(mean) cut: 428.0(403.54).  (50 attempts in 3.62s)			
+Preparing batch of 50 environments for graph 63....done.
+Finished agent testing batch 1.
+Graph 63, best(mean) cut: 424.0(393.88).  (50 attempts in 4.31s)			
+Preparing batch of 50 environments for graph 64....done.
+Finished agent testing batch 1.
+Graph 64, best(mean) cut: 421.0(400.1).  (50 attempts in 3.71s)			
+Preparing batch of 50 environments for graph 65....done.
+Finished agent testing batch 1.
+Graph 65, best(mean) cut: 320.0(301.82).  (50 attempts in 3.63s)			
+Preparing batch of 50 environments for graph 66....done.
+Finished agent testing batch 1.
+Graph 66, best(mean) cut: 420.0(388.68).  (50 attempts in 3.63s)			
+Preparing batch of 50 environments for graph 67....done.
+Finished agent testing batch 1.
+Graph 67, best(mean) cut: 368.0(346.38).  (50 attempts in 3.66s)			
+Preparing batch of 50 environments for graph 68....done.
+Finished agent testing batch 1.
+Graph 68, best(mean) cut: 415.0(389.02).  (50 attempts in 3.66s)			
+Preparing batch of 50 environments for graph 69....done.
+Finished agent testing batch 1.
+Graph 69, best(mean) cut: 383.0(363.54).  (50 attempts in 3.66s)			
+Preparing batch of 50 environments for graph 70....done.
+Finished agent testing batch 1.
+Graph 70, best(mean) cut: 407.0(381.34).  (50 attempts in 3.65s)			
+Preparing batch of 50 environments for graph 71....done.
+Finished agent testing batch 1.
+Graph 71, best(mean) cut: 405.0(380.44).  (50 attempts in 3.64s)			
+Preparing batch of 50 environments for graph 72....done.
+Finished agent testing batch 1.
+Graph 72, best(mean) cut: 411.0(389.54).  (50 attempts in 3.61s)			
+Preparing batch of 50 environments for graph 73....done.
+Finished agent testing batch 1.
+Graph 73, best(mean) cut: 426.0(405.02).  (50 attempts in 3.63s)			
+Preparing batch of 50 environments for graph 74....done.
+Finished agent testing batch 1.
+Graph 74, best(mean) cut: 320.0(301.68).  (50 attempts in 3.67s)			
+Preparing batch of 50 environments for graph 75....done.
+Finished agent testing batch 1.
+Graph 75, best(mean) cut: 431.0(405.46).  (50 attempts in 3.61s)			
+Preparing batch of 50 environments for graph 76....done.
+Finished agent testing batch 1.
+Graph 76, best(mean) cut: 423.0(393.46).  (50 attempts in 3.63s)			
+Preparing batch of 50 environments for graph 77....done.
+Finished agent testing batch 1.
+Graph 77, best(mean) cut: 428.0(407.84).  (50 attempts in 3.65s)			
+Preparing batch of 50 environments for graph 78....done.
+Finished agent testing batch 1.
+Graph 78, best(mean) cut: 427.0(404.72).  (50 attempts in 4.31s)			
+Preparing batch of 50 environments for graph 79....done.
+Finished agent testing batch 1.
+Graph 79, best(mean) cut: 415.0(395.98).  (50 attempts in 3.59s)			
+Preparing batch of 50 environments for graph 80....done.
+Finished agent testing batch 1.
+Graph 80, best(mean) cut: 458.0(432.22).  (50 attempts in 3.64s)			
+Preparing batch of 50 environments for graph 81....done.
+Finished agent testing batch 1.
+Graph 81, best(mean) cut: 434.0(410.08).  (50 attempts in 3.61s)			
+Preparing batch of 50 environments for graph 82....done.
+Finished agent testing batch 1.
+Graph 82, best(mean) cut: 376.0(347.7).  (50 attempts in 3.79s)			
+Preparing batch of 50 environments for graph 83....done.
+Finished agent testing batch 1.
+Graph 83, best(mean) cut: 384.0(359.62).  (50 attempts in 3.66s)			
+Preparing batch of 50 environments for graph 84....done.
+Finished agent testing batch 1.
+Graph 84, best(mean) cut: 453.0(421.92).  (50 attempts in 3.66s)			
+Preparing batch of 50 environments for graph 85....done.
+Finished agent testing batch 1.
+Graph 85, best(mean) cut: 360.0(336.9).  (50 attempts in 3.67s)			
+Preparing batch of 50 environments for graph 86....done.
+Finished agent testing batch 1.
+Graph 86, best(mean) cut: 394.0(372.64).  (50 attempts in 3.64s)			
+Preparing batch of 50 environments for graph 87....done.
+Finished agent testing batch 1.
+Graph 87, best(mean) cut: 417.0(386.12).  (50 attempts in 3.66s)			
+Preparing batch of 50 environments for graph 88....done.
+Finished agent testing batch 1.
+Graph 88, best(mean) cut: 434.0(410.76).  (50 attempts in 4.31s)			
+Preparing batch of 50 environments for graph 89....done.
+Finished agent testing batch 1.
+Graph 89, best(mean) cut: 399.0(376.16).  (50 attempts in 3.61s)			
+Preparing batch of 50 environments for graph 90....done.
+Finished agent testing batch 1.
+Graph 90, best(mean) cut: 394.0(375.02).  (50 attempts in 3.6s)			
+Preparing batch of 50 environments for graph 91....done.
+Finished agent testing batch 1.
+Graph 91, best(mean) cut: 386.0(366.44).  (50 attempts in 3.58s)			
+Preparing batch of 50 environments for graph 92....done.
+Finished agent testing batch 1.
+Graph 92, best(mean) cut: 382.0(352.98).  (50 attempts in 3.68s)			
+Preparing batch of 50 environments for graph 93....done.
+Finished agent testing batch 1.
+Graph 93, best(mean) cut: 382.0(360.58).  (50 attempts in 3.61s)			
+Preparing batch of 50 environments for graph 94....done.
+Finished agent testing batch 1.
+Graph 94, best(mean) cut: 472.0(449.28).  (50 attempts in 3.66s)			
+Preparing batch of 50 environments for graph 95....done.
+Finished agent testing batch 1.
+Graph 95, best(mean) cut: 379.0(360.08).  (50 attempts in 3.62s)			
+Preparing batch of 50 environments for graph 96....done.
+Finished agent testing batch 1.
+Graph 96, best(mean) cut: 413.0(392.44).  (50 attempts in 3.63s)			
+Preparing batch of 50 environments for graph 97....done.
+Finished agent testing batch 1.
+Graph 97, best(mean) cut: 404.0(378.62).  (50 attempts in 3.64s)			
+Preparing batch of 50 environments for graph 98....done.
+Finished agent testing batch 1.
+Graph 98, best(mean) cut: 407.0(384.44).  (50 attempts in 3.64s)			
+Preparing batch of 50 environments for graph 99....done.
+Finished agent testing batch 1.
+Graph 99, best(mean) cut: 428.0(408.52).  (50 attempts in 3.63s)			
+dir already exists:  results/ER_200vertices_weighted
+      cut  mean cut  ...       Train Distribution        Test Distribution
+0   432.0    409.84  ...  ER_200vertices_weighted  ER_200vertices_weighted
+1   417.0    394.10  ...  ER_200vertices_weighted  ER_200vertices_weighted
+2   416.0    396.68  ...  ER_200vertices_weighted  ER_200vertices_weighted
+3   370.0    347.86  ...  ER_200vertices_weighted  ER_200vertices_weighted
+4   313.0    295.26  ...  ER_200vertices_weighted  ER_200vertices_weighted
+..    ...       ...  ...                      ...                      ...
+95  379.0    360.08  ...  ER_200vertices_weighted  ER_200vertices_weighted
+96  413.0    392.44  ...  ER_200vertices_weighted  ER_200vertices_weighted
+97  404.0    378.62  ...  ER_200vertices_weighted  ER_200vertices_weighted
+98  407.0    384.44  ...  ER_200vertices_weighted  ER_200vertices_weighted
+99  428.0    408.52  ...  ER_200vertices_weighted  ER_200vertices_weighted
+
+[100 rows x 6 columns]
+The number of test graphs:100
+Set torch default device to cuda.
+Preparing batch of 50 environments for graph 0....done.
+Finished agent testing batch 1.
+Graph 0, best(mean) cut: 183.0(173.18).  (50 attempts in 2.31s)			
+Preparing batch of 50 environments for graph 1....done.
+Finished agent testing batch 1.
+Graph 1, best(mean) cut: 191.0(178.26).  (50 attempts in 2.09s)			
+Preparing batch of 50 environments for graph 2....done.
+Finished agent testing batch 1.
+Graph 2, best(mean) cut: 177.0(164.38).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 3....done.
+Finished agent testing batch 1.
+Graph 3, best(mean) cut: 194.0(184.52).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 4....done.
+Finished agent testing batch 1.
+Graph 4, best(mean) cut: 194.0(181.84).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 5....done.
+Finished agent testing batch 1.
+Graph 5, best(mean) cut: 199.0(184.98).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 6....done.
+Finished agent testing batch 1.
+Graph 6, best(mean) cut: 190.0(180.28).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 7....done.
+Finished agent testing batch 1.
+Graph 7, best(mean) cut: 199.0(190.06).  (50 attempts in 2.18s)			
+Preparing batch of 50 environments for graph 8....done.
+Finished agent testing batch 1.
+Graph 8, best(mean) cut: 185.0(176.94).  (50 attempts in 2.13s)			
+Preparing batch of 50 environments for graph 9....done.
+Finished agent testing batch 1.
+Graph 9, best(mean) cut: 161.0(152.46).  (50 attempts in 2.09s)			
+Preparing batch of 50 environments for graph 10....done.
+Finished agent testing batch 1.
+Graph 10, best(mean) cut: 193.0(183.5).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 11....done.
+Finished agent testing batch 1.
+Graph 11, best(mean) cut: 210.0(194.82).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 12....done.
+Finished agent testing batch 1.
+Graph 12, best(mean) cut: 174.0(161.22).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 13....done.
+Finished agent testing batch 1.
+Graph 13, best(mean) cut: 190.0(180.36).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 14....done.
+Finished agent testing batch 1.
+Graph 14, best(mean) cut: 170.0(156.22).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 15....done.
+Finished agent testing batch 1.
+Graph 15, best(mean) cut: 196.0(182.78).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 16....done.
+Finished agent testing batch 1.
+Graph 16, best(mean) cut: 210.0(196.66).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 17....done.
+Finished agent testing batch 1.
+Graph 17, best(mean) cut: 199.0(184.76).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 18....done.
+Finished agent testing batch 1.
+Graph 18, best(mean) cut: 181.0(170.34).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 19....done.
+Finished agent testing batch 1.
+Graph 19, best(mean) cut: 196.0(183.76).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 20....done.
+Finished agent testing batch 1.
+Graph 20, best(mean) cut: 164.0(152.64).  (50 attempts in 2.09s)			
+Preparing batch of 50 environments for graph 21....done.
+Finished agent testing batch 1.
+Graph 21, best(mean) cut: 190.0(182.14).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 22....done.
+Finished agent testing batch 1.
+Graph 22, best(mean) cut: 207.0(199.54).  (50 attempts in 2.2s)			
+Preparing batch of 50 environments for graph 23....done.
+Finished agent testing batch 1.
+Graph 23, best(mean) cut: 176.0(165.1).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 24....done.
+Finished agent testing batch 1.
+Graph 24, best(mean) cut: 191.0(181.44).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 25....done.
+Finished agent testing batch 1.
+Graph 25, best(mean) cut: 207.0(198.12).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 26....done.
+Finished agent testing batch 1.
+Graph 26, best(mean) cut: 206.0(196.88).  (50 attempts in 2.13s)			
+Preparing batch of 50 environments for graph 27....done.
+Finished agent testing batch 1.
+Graph 27, best(mean) cut: 171.0(159.2).  (50 attempts in 2.14s)			
+Preparing batch of 50 environments for graph 28....done.
+Finished agent testing batch 1.
+Graph 28, best(mean) cut: 198.0(186.2).  (50 attempts in 2.09s)			
+Preparing batch of 50 environments for graph 29....done.
+Finished agent testing batch 1.
+Graph 29, best(mean) cut: 196.0(184.06).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 30....done.
+Finished agent testing batch 1.
+Graph 30, best(mean) cut: 182.0(171.42).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 31....done.
+Finished agent testing batch 1.
+Graph 31, best(mean) cut: 190.0(182.12).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 32....done.
+Finished agent testing batch 1.
+Graph 32, best(mean) cut: 178.0(167.78).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 33....done.
+Finished agent testing batch 1.
+Graph 33, best(mean) cut: 191.0(180.5).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 34....done.
+Finished agent testing batch 1.
+Graph 34, best(mean) cut: 209.0(195.26).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 35....done.
+Finished agent testing batch 1.
+Graph 35, best(mean) cut: 186.0(176.7).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 36....done.
+Finished agent testing batch 1.
+Graph 36, best(mean) cut: 203.0(191.22).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 37....done.
+Finished agent testing batch 1.
+Graph 37, best(mean) cut: 206.0(197.32).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 38....done.
+Finished agent testing batch 1.
+Graph 38, best(mean) cut: 199.0(189.56).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 39....done.
+Finished agent testing batch 1.
+Graph 39, best(mean) cut: 218.0(205.02).  (50 attempts in 2.13s)			
+Preparing batch of 50 environments for graph 40....done.
+Finished agent testing batch 1.
+Graph 40, best(mean) cut: 190.0(179.42).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 41....done.
+Finished agent testing batch 1.
+Graph 41, best(mean) cut: 196.0(184.36).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 42....done.
+Finished agent testing batch 1.
+Graph 42, best(mean) cut: 166.0(155.24).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 43....done.
+Finished agent testing batch 1.
+Graph 43, best(mean) cut: 203.0(195.06).  (50 attempts in 2.09s)			
+Preparing batch of 50 environments for graph 44....done.
+Finished agent testing batch 1.
+Graph 44, best(mean) cut: 193.0(183.12).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 45....done.
+Finished agent testing batch 1.
+Graph 45, best(mean) cut: 183.0(172.18).  (50 attempts in 2.09s)			
+Preparing batch of 50 environments for graph 46....done.
+Finished agent testing batch 1.
+Graph 46, best(mean) cut: 203.0(191.78).  (50 attempts in 2.2s)			
+Preparing batch of 50 environments for graph 47....done.
+Finished agent testing batch 1.
+Graph 47, best(mean) cut: 168.0(155.86).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 48....done.
+Finished agent testing batch 1.
+Graph 48, best(mean) cut: 197.0(187.8).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 49....done.
+Finished agent testing batch 1.
+Graph 49, best(mean) cut: 200.0(188.1).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 50....done.
+Finished agent testing batch 1.
+Graph 50, best(mean) cut: 161.0(147.74).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 51....done.
+Finished agent testing batch 1.
+Graph 51, best(mean) cut: 204.0(187.3).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 52....done.
+Finished agent testing batch 1.
+Graph 52, best(mean) cut: 176.0(165.4).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 53....done.
+Finished agent testing batch 1.
+Graph 53, best(mean) cut: 210.0(198.62).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 54....done.
+Finished agent testing batch 1.
+Graph 54, best(mean) cut: 203.0(190.6).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 55....done.
+Finished agent testing batch 1.
+Graph 55, best(mean) cut: 198.0(188.14).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 56....done.
+Finished agent testing batch 1.
+Graph 56, best(mean) cut: 226.0(215.82).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 57....done.
+Finished agent testing batch 1.
+Graph 57, best(mean) cut: 207.0(196.76).  (50 attempts in 2.09s)			
+Preparing batch of 50 environments for graph 58....done.
+Finished agent testing batch 1.
+Graph 58, best(mean) cut: 199.0(189.66).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 59....done.
+Finished agent testing batch 1.
+Graph 59, best(mean) cut: 222.0(208.42).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 60....done.
+Finished agent testing batch 1.
+Graph 60, best(mean) cut: 181.0(172.72).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 61....done.
+Finished agent testing batch 1.
+Graph 61, best(mean) cut: 200.0(189.44).  (50 attempts in 2.09s)			
+Preparing batch of 50 environments for graph 62....done.
+Finished agent testing batch 1.
+Graph 62, best(mean) cut: 173.0(161.98).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 63....done.
+Finished agent testing batch 1.
+Graph 63, best(mean) cut: 191.0(178.4).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 64....done.
+Finished agent testing batch 1.
+Graph 64, best(mean) cut: 194.0(183.84).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 65....done.
+Finished agent testing batch 1.
+Graph 65, best(mean) cut: 191.0(176.94).  (50 attempts in 2.13s)			
+Preparing batch of 50 environments for graph 66....done.
+Finished agent testing batch 1.
+Graph 66, best(mean) cut: 214.0(203.12).  (50 attempts in 2.14s)			
+Preparing batch of 50 environments for graph 67....done.
+Finished agent testing batch 1.
+Graph 67, best(mean) cut: 172.0(164.64).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 68....done.
+Finished agent testing batch 1.
+Graph 68, best(mean) cut: 210.0(200.02).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 69....done.
+Finished agent testing batch 1.
+Graph 69, best(mean) cut: 190.0(179.06).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 70....done.
+Finished agent testing batch 1.
+Graph 70, best(mean) cut: 203.0(195.62).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 71....done.
+Finished agent testing batch 1.
+Graph 71, best(mean) cut: 160.0(152.9).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 72....done.
+Finished agent testing batch 1.
+Graph 72, best(mean) cut: 195.0(186.46).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 73....done.
+Finished agent testing batch 1.
+Graph 73, best(mean) cut: 156.0(145.02).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 74....done.
+Finished agent testing batch 1.
+Graph 74, best(mean) cut: 186.0(175.04).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 75....done.
+Finished agent testing batch 1.
+Graph 75, best(mean) cut: 205.0(191.36).  (50 attempts in 2.13s)			
+Preparing batch of 50 environments for graph 76....done.
+Finished agent testing batch 1.
+Graph 76, best(mean) cut: 211.0(201.76).  (50 attempts in 2.13s)			
+Preparing batch of 50 environments for graph 77....done.
+Finished agent testing batch 1.
+Graph 77, best(mean) cut: 198.0(186.4).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 78....done.
+Finished agent testing batch 1.
+Graph 78, best(mean) cut: 193.0(181.54).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 79....done.
+Finished agent testing batch 1.
+Graph 79, best(mean) cut: 190.0(180.46).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 80....done.
+Finished agent testing batch 1.
+Graph 80, best(mean) cut: 194.0(182.72).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 81....done.
+Finished agent testing batch 1.
+Graph 81, best(mean) cut: 194.0(187.08).  (50 attempts in 2.13s)			
+Preparing batch of 50 environments for graph 82....done.
+Finished agent testing batch 1.
+Graph 82, best(mean) cut: 204.0(194.38).  (50 attempts in 2.26s)			
+Preparing batch of 50 environments for graph 83....done.
+Finished agent testing batch 1.
+Graph 83, best(mean) cut: 193.0(178.44).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 84....done.
+Finished agent testing batch 1.
+Graph 84, best(mean) cut: 205.0(197.46).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 85....done.
+Finished agent testing batch 1.
+Graph 85, best(mean) cut: 185.0(176.38).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 86....done.
+Finished agent testing batch 1.
+Graph 86, best(mean) cut: 194.0(186.52).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 87....done.
+Finished agent testing batch 1.
+Graph 87, best(mean) cut: 212.0(200.18).  (50 attempts in 2.13s)			
+Preparing batch of 50 environments for graph 88....done.
+Finished agent testing batch 1.
+Graph 88, best(mean) cut: 198.0(188.28).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 89....done.
+Finished agent testing batch 1.
+Graph 89, best(mean) cut: 191.0(179.52).  (50 attempts in 2.13s)			
+Preparing batch of 50 environments for graph 90....done.
+Finished agent testing batch 1.
+Graph 90, best(mean) cut: 195.0(183.66).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 91....done.
+Finished agent testing batch 1.
+Graph 91, best(mean) cut: 176.0(163.08).  (50 attempts in 2.13s)			
+Preparing batch of 50 environments for graph 92....done.
+Finished agent testing batch 1.
+Graph 92, best(mean) cut: 174.0(162.9).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 93....done.
+Finished agent testing batch 1.
+Graph 93, best(mean) cut: 210.0(200.34).  (50 attempts in 2.13s)			
+Preparing batch of 50 environments for graph 94....done.
+Finished agent testing batch 1.
+Graph 94, best(mean) cut: 183.0(175.1).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 95....done.
+Finished agent testing batch 1.
+Graph 95, best(mean) cut: 187.0(172.96).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 96....done.
+Finished agent testing batch 1.
+Graph 96, best(mean) cut: 200.0(191.0).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 97....done.
+Finished agent testing batch 1.
+Graph 97, best(mean) cut: 169.0(158.66).  (50 attempts in 2.12s)			
+Preparing batch of 50 environments for graph 98....done.
+Finished agent testing batch 1.
+Graph 98, best(mean) cut: 191.0(179.0).  (50 attempts in 2.11s)			
+Preparing batch of 50 environments for graph 99....done.
+Finished agent testing batch 1.
+Graph 99, best(mean) cut: 181.0(170.34).  (50 attempts in 2.12s)			
+dir already exists:  results/BA_200vertices_weighted
+      cut  mean cut  ...       Train Distribution        Test Distribution
+0   183.0    173.18  ...  BA_200vertices_weighted  BA_200vertices_weighted
+1   191.0    178.26  ...  BA_200vertices_weighted  BA_200vertices_weighted
+2   177.0    164.38  ...  BA_200vertices_weighted  BA_200vertices_weighted
+3   194.0    184.52  ...  BA_200vertices_weighted  BA_200vertices_weighted
+4   194.0    181.84  ...  BA_200vertices_weighted  BA_200vertices_weighted
+..    ...       ...  ...                      ...                      ...
+95  187.0    172.96  ...  BA_200vertices_weighted  BA_200vertices_weighted
+96  200.0    191.00  ...  BA_200vertices_weighted  BA_200vertices_weighted
+97  169.0    158.66  ...  BA_200vertices_weighted  BA_200vertices_weighted
+98  191.0    179.00  ...  BA_200vertices_weighted  BA_200vertices_weighted
+99  181.0    170.34  ...  BA_200vertices_weighted  BA_200vertices_weighted
+
+[100 rows x 6 columns]
+The number of test graphs:40
+Set torch default device to cuda.
+Preparing batch of 50 environments for graph 0....done.
+Finished agent testing batch 1.
+Graph 0, best(mean) cut: 267.0(258.66).  (50 attempts in 1.31s)			
+Preparing batch of 50 environments for graph 1....done.
+Finished agent testing batch 1.
+Graph 1, best(mean) cut: 190.0(177.3).  (50 attempts in 1.22s)			
+Preparing batch of 50 environments for graph 2....done.
+Finished agent testing batch 1.
+Graph 2, best(mean) cut: 200.0(191.68).  (50 attempts in 1.35s)			
+Preparing batch of 50 environments for graph 3....done.
+Finished agent testing batch 1.
+Graph 3, best(mean) cut: 225.0(215.34).  (50 attempts in 1.4s)			
+Preparing batch of 50 environments for graph 4....done.
+Finished agent testing batch 1.
+Graph 4, best(mean) cut: 203.0(196.54).  (50 attempts in 1.41s)			
+Preparing batch of 50 environments for graph 5....done.
+Finished agent testing batch 1.
+Graph 5, best(mean) cut: 208.0(198.18).  (50 attempts in 1.23s)			
+Preparing batch of 50 environments for graph 6....done.
+Finished agent testing batch 1.
+Graph 6, best(mean) cut: 214.0(205.36).  (50 attempts in 1.36s)			
+Preparing batch of 50 environments for graph 7....done.
+Finished agent testing batch 1.
+Graph 7, best(mean) cut: 187.0(174.04).  (50 attempts in 1.41s)			
+Preparing batch of 50 environments for graph 8....done.
+Finished agent testing batch 1.
+Graph 8, best(mean) cut: 206.0(190.78).  (50 attempts in 1.4s)			
+Preparing batch of 50 environments for graph 9....done.
+Finished agent testing batch 1.
+Graph 9, best(mean) cut: 193.0(186.04).  (50 attempts in 1.41s)			
+Preparing batch of 50 environments for graph 10....done.
+Finished agent testing batch 1.
+Graph 10, best(mean) cut: 290.0(280.94).  (50 attempts in 1.88s)			
+Preparing batch of 50 environments for graph 11....done.
+Finished agent testing batch 1.
+Graph 11, best(mean) cut: 266.0(254.1).  (50 attempts in 1.84s)			
+Preparing batch of 50 environments for graph 12....done.
+Finished agent testing batch 1.
+Graph 12, best(mean) cut: 272.0(256.4).  (50 attempts in 1.83s)			
+Preparing batch of 50 environments for graph 13....done.
+Finished agent testing batch 1.
+Graph 13, best(mean) cut: 258.0(248.24).  (50 attempts in 1.83s)			
+Preparing batch of 50 environments for graph 14....done.
+Finished agent testing batch 1.
+Graph 14, best(mean) cut: 212.0(201.82).  (50 attempts in 1.58s)			
+Preparing batch of 50 environments for graph 15....done.
+Finished agent testing batch 1.
+Graph 15, best(mean) cut: 272.0(260.38).  (50 attempts in 1.58s)			
+Preparing batch of 50 environments for graph 16....done.
+Finished agent testing batch 1.
+Graph 16, best(mean) cut: 269.0(248.62).  (50 attempts in 1.58s)			
+Preparing batch of 50 environments for graph 17....done.
+Finished agent testing batch 1.
+Graph 17, best(mean) cut: 234.0(223.94).  (50 attempts in 1.84s)			
+Preparing batch of 50 environments for graph 18....done.
+Finished agent testing batch 1.
+Graph 18, best(mean) cut: 242.0(224.78).  (50 attempts in 1.86s)			
+Preparing batch of 50 environments for graph 19....done.
+Finished agent testing batch 1.
+Graph 19, best(mean) cut: 255.0(239.56).  (50 attempts in 1.83s)			
+Preparing batch of 50 environments for graph 20....done.
+Finished agent testing batch 1.
+Graph 20, best(mean) cut: 330.0(306.46).  (50 attempts in 2.09s)			
+Preparing batch of 50 environments for graph 21....done.
+Finished agent testing batch 1.
+Graph 21, best(mean) cut: 291.0(277.02).  (50 attempts in 2.47s)			
+Preparing batch of 50 environments for graph 22....done.
+Finished agent testing batch 1.
+Graph 22, best(mean) cut: 293.0(279.52).  (50 attempts in 2.5s)			
+Preparing batch of 50 environments for graph 23....done.
+Finished agent testing batch 1.
+Graph 23, best(mean) cut: 312.0(293.4).  (50 attempts in 2.46s)			
+Preparing batch of 50 environments for graph 24....done.
+Finished agent testing batch 1.
+Graph 24, best(mean) cut: 343.0(321.32).  (50 attempts in 2.46s)			
+Preparing batch of 50 environments for graph 25....done.
+Finished agent testing batch 1.
+Graph 25, best(mean) cut: 348.0(330.96).  (50 attempts in 2.47s)			
+Preparing batch of 50 environments for graph 26....done.
+Finished agent testing batch 1.
+Graph 26, best(mean) cut: 317.0(299.94).  (50 attempts in 2.48s)			
+Preparing batch of 50 environments for graph 27....done.
+Finished agent testing batch 1.
+Graph 27, best(mean) cut: 282.0(262.54).  (50 attempts in 2.46s)			
+Preparing batch of 50 environments for graph 28....done.
+Finished agent testing batch 1.
+Graph 28, best(mean) cut: 383.0(362.74).  (50 attempts in 2.1s)			
+Preparing batch of 50 environments for graph 29....done.
+Finished agent testing batch 1.
+Graph 29, best(mean) cut: 312.0(293.52).  (50 attempts in 2.48s)			
+Preparing batch of 50 environments for graph 30....done.
+Finished agent testing batch 1.
+Graph 30, best(mean) cut: 382.0(351.1).  (50 attempts in 3.32s)			
+Preparing batch of 50 environments for graph 31....done.
+Finished agent testing batch 1.
+Graph 31, best(mean) cut: 353.0(335.94).  (50 attempts in 3.25s)			
+Preparing batch of 50 environments for graph 32....done.
+Finished agent testing batch 1.
+Graph 32, best(mean) cut: 372.0(346.82).  (50 attempts in 3.24s)			
+Preparing batch of 50 environments for graph 33....done.
+Finished agent testing batch 1.
+Graph 33, best(mean) cut: 405.0(381.88).  (50 attempts in 2.67s)			
+Preparing batch of 50 environments for graph 34....done.
+Finished agent testing batch 1.
+Graph 34, best(mean) cut: 437.0(414.72).  (50 attempts in 3.26s)			
+Preparing batch of 50 environments for graph 35....done.
+Finished agent testing batch 1.
+Graph 35, best(mean) cut: 330.0(309.22).  (50 attempts in 3.24s)			
+Preparing batch of 50 environments for graph 36....done.
+Finished agent testing batch 1.
+Graph 36, best(mean) cut: 373.0(349.5).  (50 attempts in 3.26s)			
+Preparing batch of 50 environments for graph 37....done.
+Finished agent testing batch 1.
+Graph 37, best(mean) cut: 356.0(331.5).  (50 attempts in 2.69s)			
+Preparing batch of 50 environments for graph 38....done.
+Finished agent testing batch 1.
+Graph 38, best(mean) cut: 403.0(380.04).  (50 attempts in 3.25s)			
+Preparing batch of 50 environments for graph 39....done.
+Finished agent testing batch 1.
+Graph 39, best(mean) cut: 374.0(352.5).  (50 attempts in 3.25s)			
+dir already exists:  results/SK_spin_70_100vertices_weighted
+      cut  ...                Test Distribution
+0   267.0  ...  SK_spin_70_100vertices_weighted
+1   190.0  ...  SK_spin_70_100vertices_weighted
+2   200.0  ...  SK_spin_70_100vertices_weighted
+3   225.0  ...  SK_spin_70_100vertices_weighted
+4   203.0  ...  SK_spin_70_100vertices_weighted
+5   208.0  ...  SK_spin_70_100vertices_weighted
+6   214.0  ...  SK_spin_70_100vertices_weighted
+7   187.0  ...  SK_spin_70_100vertices_weighted
+8   206.0  ...  SK_spin_70_100vertices_weighted
+9   193.0  ...  SK_spin_70_100vertices_weighted
+10  290.0  ...  SK_spin_70_100vertices_weighted
+11  266.0  ...  SK_spin_70_100vertices_weighted
+12  272.0  ...  SK_spin_70_100vertices_weighted
+13  258.0  ...  SK_spin_70_100vertices_weighted
+14  212.0  ...  SK_spin_70_100vertices_weighted
+15  272.0  ...  SK_spin_70_100vertices_weighted
+16  269.0  ...  SK_spin_70_100vertices_weighted
+17  234.0  ...  SK_spin_70_100vertices_weighted
+18  242.0  ...  SK_spin_70_100vertices_weighted
+19  255.0  ...  SK_spin_70_100vertices_weighted
+20  330.0  ...  SK_spin_70_100vertices_weighted
+21  291.0  ...  SK_spin_70_100vertices_weighted
+22  293.0  ...  SK_spin_70_100vertices_weighted
+23  312.0  ...  SK_spin_70_100vertices_weighted
+24  343.0  ...  SK_spin_70_100vertices_weighted
+25  348.0  ...  SK_spin_70_100vertices_weighted
+26  317.0  ...  SK_spin_70_100vertices_weighted
+27  282.0  ...  SK_spin_70_100vertices_weighted
+28  383.0  ...  SK_spin_70_100vertices_weighted
+29  312.0  ...  SK_spin_70_100vertices_weighted
+30  382.0  ...  SK_spin_70_100vertices_weighted
+31  353.0  ...  SK_spin_70_100vertices_weighted
+32  372.0  ...  SK_spin_70_100vertices_weighted
+33  405.0  ...  SK_spin_70_100vertices_weighted
+34  437.0  ...  SK_spin_70_100vertices_weighted
+35  330.0  ...  SK_spin_70_100vertices_weighted
+36  373.0  ...  SK_spin_70_100vertices_weighted
+37  356.0  ...  SK_spin_70_100vertices_weighted
+38  403.0  ...  SK_spin_70_100vertices_weighted
+39  374.0  ...  SK_spin_70_100vertices_weighted
+
+[40 rows x 6 columns]
+The number of test graphs:10
+Set torch default device to cuda.
+Preparing batch of 50 environments for graph 0....done.
+Finished agent testing batch 1.
+Graph 0, best(mean) cut: 110.0(103.32).  (50 attempts in 1.23s)			
+Preparing batch of 50 environments for graph 1....done.
+Finished agent testing batch 1.
+Graph 1, best(mean) cut: 110.0(104.4).  (50 attempts in 1.15s)			
+Preparing batch of 50 environments for graph 2....done.
+Finished agent testing batch 1.
+Graph 2, best(mean) cut: 106.0(100.44).  (50 attempts in 1.15s)			
+Preparing batch of 50 environments for graph 3....done.
+Finished agent testing batch 1.
+Graph 3, best(mean) cut: 112.0(104.04).  (50 attempts in 1.15s)			
+Preparing batch of 50 environments for graph 4....done.
+Finished agent testing batch 1.
+Graph 4, best(mean) cut: 112.0(104.64).  (50 attempts in 1.15s)			
+Preparing batch of 50 environments for graph 5....done.
+Finished agent testing batch 1.
+Graph 5, best(mean) cut: 108.0(103.12).  (50 attempts in 1.15s)			
+Preparing batch of 50 environments for graph 6....done.
+Finished agent testing batch 1.
+Graph 6, best(mean) cut: 112.0(102.2).  (50 attempts in 1.15s)			
+Preparing batch of 50 environments for graph 7....done.
+Finished agent testing batch 1.
+Graph 7, best(mean) cut: 108.0(101.48).  (50 attempts in 1.16s)			
+Preparing batch of 50 environments for graph 8....done.
+Finished agent testing batch 1.
+Graph 8, best(mean) cut: 110.0(101.96).  (50 attempts in 1.15s)			
+Preparing batch of 50 environments for graph 9....done.
+Finished agent testing batch 1.
+Graph 9, best(mean) cut: 108.0(102.08).  (50 attempts in 1.15s)			
+dir already exists:  results/Physics
+     cut  mean cut  ...  Train Distribution  Test Distribution
+0  110.0    103.32  ...             Physics            Physics
+1  110.0    104.40  ...             Physics            Physics
+2  106.0    100.44  ...             Physics            Physics
+3  112.0    104.04  ...             Physics            Physics
+4  112.0    104.64  ...             Physics            Physics
+5  108.0    103.12  ...             Physics            Physics
+6  112.0    102.20  ...             Physics            Physics
+7  108.0    101.48  ...             Physics            Physics
+8  110.0    101.96  ...             Physics            Physics
+9  108.0    102.08  ...             Physics            Physics
+
+[10 rows x 6 columns]
