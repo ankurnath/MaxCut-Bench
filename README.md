@@ -41,8 +41,6 @@ The included [``environment.yml``](environment.yml) file will produce a working 
 
 Please run the demo bash file to generate all results.
 
-
-
 ## Details on how to use the Solvers
 
 ### Gurobi

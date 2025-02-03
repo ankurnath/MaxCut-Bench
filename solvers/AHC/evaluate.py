@@ -122,7 +122,7 @@ if __name__ == '__main__':
     df={'cut':cuts}
     df=pd.DataFrame(df)
 
-    test_distribution = args.distribution
+    test_distribution = args.test_distribution
     save_folder = os.path.join('results',test_distribution)
     os.makedirs(save_folder,exist_ok=True)
     file_path = os.path.join(save_folder,'AHC')

@@ -70,7 +70,7 @@ if __name__ == '__main__':
         df['threads'].append(threads)
         
 
-    folder_name = f'data/results/{distribution}'
+    folder_name = f'results/{distribution}'
 
     os.makedirs(folder_name,exist_ok=True)
 
