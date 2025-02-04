@@ -39,7 +39,7 @@ The included [``environment.yml``](environment.yml) file will produce a working 
 
 ## Demonstration
 
-Please run the demo bash file to generate all results.
+Please run the demo bash file to generate all the results in Tables 1 and 2 of the main paper.
 
 ## Details on how to use the Solvers
 
