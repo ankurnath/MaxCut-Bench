@@ -104,7 +104,7 @@ if __name__ == '__main__':
     df['Instance'] = [os.path.basename(file) for file in dataset.file_paths]
     df['Train Distribution'] = [train_distribution]*best_cuts.shape[0]
     df['Test Distribution'] = [args.test_distribution]*best_cuts.shape[0]
-    df['Time'] = elapsed_times
+    df['time'] = elapsed_times
     df['Threads'] = [args.num_threads] * best_cuts.shape[0]
     df=pd.DataFrame(df)
 

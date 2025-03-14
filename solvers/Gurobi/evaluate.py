@@ -40,7 +40,7 @@ if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument( "--test_distribution", type=str, default='BA_200vertices_weighted', help="Name of the dataset to be used (default: 'Facebook')" )
     parser.add_argument( "--time_limit", type=float, default= 10, help="Maximum Time Limit" )
-    parser.add_argument( "--threads", type=int, default= 10, help="Maximum number of threads" )
+    parser.add_argument( "--threads", type=int, default= 20, help="Maximum number of threads" )
   
     args = parser.parse_args()
 
@@ -59,8 +59,8 @@ if __name__ == '__main__':
     
     df = defaultdict(list)
 
-    for _ in tqdm(range(len(test_dataset))):
-    # for _ in tqdm(range(1)):
+    # for _ in tqdm(range(len(test_dataset))):
+    for _ in tqdm(range(2)):
 
         graph = test_dataset.get()
         graph = nx.from_numpy_array(graph)

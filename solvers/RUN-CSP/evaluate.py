@@ -22,25 +22,67 @@ import pandas as pd
 import time 
 
 
-def evaluate(model, loader, device, args):
+def evaluate(model, loader, device, args,graphs ):
 
     assignments=[]
     opt_steps=[]
     times = []
 
     with torch.inference_mode():
-        for data in tqdm(loader):
+        # for data in tqdm(loader):
+
+        df= defaultdict(list)
+
+        for idx,data in enumerate(loader):
+
+            
             start = time.time()
+
+            numpy_graph=nx.to_numpy_array(graphs[idx])
             # path = data.path
             
             data = CSP_Data.collate([data for _ in range(args.num_repeat)])
             data.to(device)
-            assignment = model(data, args.num_steps)
-            assignments.append(data.hard_assign(assignment.squeeze()).cpu().numpy())
+            assignments,time_per_step = model(data, args.num_steps,return_time=True)
+            best_cut=0
 
-            end = time.time()
-            times.append(end-start)
-    return assignments,np.array(times)
+            best_cut_each_step = []
+            for idx in range(args.num_steps):
+                assignment = assignments[idx]
+                processed_assignment = data.hard_assign(assignment.squeeze()).cpu().numpy()
+                processed_assignment = processed_assignment.reshape(args.num_repeat,-1)
+
+                processed_assignment=processed_assignment.reshape(args.num_repeat,-1)
+        
+                
+                for i in range(args.num_repeat):
+                    spins=2*processed_assignment[i]-1
+                    cut= (1/4) * np.sum( np.multiply( numpy_graph, 1 - np.outer(spins, spins) ) )
+                    # print(cut)
+                    best_cut=max(best_cut,cut)
+
+                best_cut_each_step.append(best_cut)
+        
+
+            # print(best_cut_each_step)
+
+            df['cut'].append(best_cut)
+            df['time'].append(max(time_per_step))
+            df['time_per_step'].append(time_per_step)
+            df['best_score_each_step'].append(best_cut_each_step)
+            # print(time_per_step)
+
+            # # print(time_per_step)
+            # # print(assignment.shape)
+            # assignments.append(data.hard_assign(assignment.squeeze()).cpu().numpy())
+
+            # end = time.time()
+            # times.append(end-start)
+        df = pd.DataFrame(df)
+        # print(df)
+
+    return df
+    # return assignments,np.array(times)
 
 
 if __name__ == "__main__":
@@ -89,25 +131,28 @@ if __name__ == "__main__":
         collate_fn=CSP_Data.collate
     )
 
-    assignments,times=evaluate(model, loader, device, args)
+    df = evaluate(model, loader, device, args,graphs=graphs)
+
+    # assignments,times=evaluate(model, loader, device, args)
    
 
-    df= defaultdict(list)
-    for assignment,graph in zip(assignments,graphs):
-        assignment=assignment.reshape(args.num_repeat,-1)
-        numpy_graph=nx.to_numpy_array(graph)
-        best_cut=0
-        for i in range(args.num_repeat):
-            spins=2*assignment[i]-1
-            cut= (1/4) * np.sum( np.multiply( numpy_graph, 1 - np.outer(spins, spins) ) )
-            best_cut=max(best_cut,cut)
-        df['cut'].append(best_cut)
+    # df= defaultdict(list)
+    # for assignment,graph in zip(assignments,graphs):
+    #     assignment=assignment.reshape(args.num_repeat,-1)
+    #     numpy_graph=nx.to_numpy_array(graph)
+    #     best_cut=0
+    #     for i in range(args.num_repeat):
+    #         spins=2*assignment[i]-1
+    #         cut= (1/4) * np.sum( np.multiply( numpy_graph, 1 - np.outer(spins, spins) ) )
+    #         # print(cut)
+    #         best_cut=max(best_cut,cut)
+    #     df['cut'].append(best_cut)
         
-    df['time'] = times
+    # df['time'] = times
     df['Train Distribution'] = [train_distribution]* n_tests
     df['Test Distribution'] = [test_distribution] * n_tests
     
-    df = pd.DataFrame(df)
+    # df = pd.DataFrame(df)
 
     save_folder = os.path.join('results',test_distribution)
     mk_dir(save_folder)

@@ -24,6 +24,11 @@ for dataset in os.listdir(root_folder):
         mean_approximation_ratio = (data['cut'].values / OPT).mean()
         dataset_results[dataset][algorithm] = f"{mean_approximation_ratio:.4f}"
 
+        # print(f"Dataset: {dataset}, Algorithm: {algorithm}")
+        # print(data.columns)
+
+    # break
+
 # Dynamically determine all algorithm names for consistent columns
 all_algorithms = sorted({algo for results in dataset_results.values() for algo in results})
 

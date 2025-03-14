@@ -2,6 +2,7 @@ import torch
 from torch.nn import Module, ModuleDict, LSTMCell, Linear, Softmax, Sigmoid, BatchNorm1d, Sequential
 from torch_scatter import scatter_sum, scatter_mean
 
+import time
 import os
 
 
@@ -84,12 +85,22 @@ class RUNCSP(Module):
     def load(model_dir):
         return torch.load(os.path.join(model_dir, 'best.pkl'))
 
-    def forward(self, csp_data, steps):
+    def forward(self, csp_data, steps,
+                return_time = False):
         # init recurrent states
         h = torch.normal(0.0, 1.0, (csp_data.num_vars, self.hidden_dim), device=csp_data.device)
         c = torch.zeros((csp_data.num_vars, self.hidden_dim), dtype=torch.float32, device=csp_data.device)
 
-        assignments = []
+        _assignments = []
+        
+
+        
+        
+        time_per_step = [0]
+        # unsat_per_step = []
+
+        start = time.time()
+        
         for _ in range(steps):
 
             # aggregate msg passed for each relation
@@ -107,18 +118,32 @@ class RUNCSP(Module):
             # predict soft assignment
             y = self.soft_assign(h)
             assignments = y.unsqueeze(1)
-            #assignments.append(y)
+            
 
             num_unsat = csp_data.count_unsat(assignments)
+
+            # print(num_unsat)
             min_unsat = num_unsat.cpu().numpy().min()
+            # unsat_per_step.append(min_unsat)
             if min_unsat == 0:
                 break
+
+            
 
         # combine all assignments
         #assignments = torch.stack(assignments, dim=1)
 
         # turn 1-d output into 2-d (needed for loss and evaluation)
-        if self.out_dim == 1:
-            assignments = torch.cat([1.0-assignments, assignments], dim=2)
+            if self.out_dim == 1:
+                assignments = torch.cat([1.0-assignments, assignments], dim=2)
 
-        return assignments
+            _assignments.append(assignments)
+            time_per_step.append(time.time()-start)
+
+        # print(len(unsat_per_step))
+        # return assignments
+
+        if return_time:
+            return _assignments, time_per_step
+        else:   
+            return _assignments

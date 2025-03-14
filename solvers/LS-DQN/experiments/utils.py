@@ -108,6 +108,10 @@ def __test_network_batched(network, env_args, graphs_test, device=None, step_fac
 
     for j, test_graph in enumerate(graphs_test):
 
+        best_score_per_step=[]
+        time_per_step = []
+        
+
         i_comp = 0
         i_batch = 0
         t_total = 0
@@ -140,6 +144,7 @@ def __test_network_batched(network, env_args, graphs_test, device=None, step_fac
                 actions_history_batch = [[None]*batch_size]
                 rewards_history_batch = [[None] * batch_size]
                 scores_history_batch = []
+                times_history_batch = []
 
             test_envs = [None] * batch_size
             best_cuts_batch = [-1e3] * batch_size
@@ -152,12 +157,18 @@ def __test_network_batched(network, env_args, graphs_test, device=None, step_fac
 
             print("Preparing batch of {} environments for graph {}.".format(batch_size,j), end="...")
 
-            
+            best_score = - float('inf')
             for i in range(batch_size):
                 env = deepcopy(test_env)
+
+                
                 obs_batch[i] = env.reset(test=True)
+                best_score = max(best_score,env.score)
                 test_envs[i] = env
                 init_spins_batch[i] = env.best_spins
+
+            best_score_per_step.append(best_score)
+            time_per_step.append(0)
             if return_history:
                 # scores_history_batch.append([env.calculate_score() for env in test_envs])
                 scores_history_batch.append([env.score for env in test_envs])
@@ -200,6 +211,7 @@ def __test_network_batched(network, env_args, graphs_test, device=None, step_fac
                 if return_history:
                     scores = []
                     rewards = []
+                    
 
                 for i,offset in enumerate(start_indices):
                     actions[i]-=offset
@@ -208,12 +220,26 @@ def __test_network_batched(network, env_args, graphs_test, device=None, step_fac
                 i = 0
             
                 # for env, action in zip(test_envs,actions):
-                for env in test_envs:
-                    # action=action-start_indices[i]
+                
+                
+                start = time.time()
+                for idx,env in enumerate(test_envs):
+                    
+                    # time_per_step = []
+                    
+                    
+                    
+
+                    # best_score = env.score
                     if env is not None:
                         action=next(actions_iter)
 
                         obs, rew, done, info = env.step(action)
+
+                        best_score = max(best_score,env.score)
+                        # time_per_step.append(time.time()-start)
+                        # best_score_per_step.append(best_score)
+                        
 
                         if return_history:
                             scores.append(env.score)
@@ -230,11 +256,14 @@ def __test_network_batched(network, env_args, graphs_test, device=None, step_fac
                     i+=1
                     k+=1
 
+                time_per_step.append((time.time()-start))
+                best_score_per_step.append(best_score)
+
                 if return_history:
                     actions_history_batch.append(actions)
                     scores_history_batch.append(scores)
                     rewards_history_batch.append(rewards)
-
+                    
                 # print("\t",
                 #       "Par. steps :", k,
                 #       "Env steps : {}/{}".format(k/batch_size,n_steps),
@@ -250,6 +279,8 @@ def __test_network_batched(network, env_args, graphs_test, device=None, step_fac
                 actions_history += actions_history_batch
                 rewards_history += rewards_history_batch
                 scores_history += scores_history_batch
+                # times_history_batch += times_history_batch
+
 
             best_cuts += best_cuts_batch
             init_spins += init_spins_batch
@@ -276,7 +307,8 @@ def __test_network_batched(network, env_args, graphs_test, device=None, step_fac
         
         results.append([best_cut, sol,
                         mean_cut,t_total,
-                        t_total/(n_attempts)])
+                        t_total/(n_attempts),
+                        np.cumsum(time_per_step),best_score_per_step])
 
         
         results_raw.append([init_spins,
@@ -296,7 +328,10 @@ def __test_network_batched(network, env_args, graphs_test, device=None, step_fac
     
     results = pd.DataFrame(data=results, columns=["cut", "sol",
                                                 "mean cut",'time',
-                                                "time per attempt"])
+                                                "time per attempt",
+                                                "time_each_step",
+                                                "best_score_each_step"])
+
     results_raw = pd.DataFrame(data=results_raw, columns=["init spins",
                                                         "cuts", "sols"])
 

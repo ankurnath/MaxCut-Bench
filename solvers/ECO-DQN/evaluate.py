@@ -92,14 +92,16 @@ def test_GNN(train_distribution,test_distribution,num_repeat,num_steps,step_fact
         param.requires_grad = False
     network.eval()
 
-    results, _, _ = test_network(network, env_args, graphs_test, device, step_factor,n_attempts=num_repeat,
+    results,_, _ = test_network(network, env_args, graphs_test, device, step_factor,n_attempts=num_repeat,
                                                 return_raw=True, return_history=True,
                                                 batched=batched, max_batch_size=max_batch_size,
                                                 )
     
-
+    
     save_folder = os.path.join('results',test_distribution)
     mk_dir(save_folder)
+    
+    print(results)
 
     
 
@@ -114,16 +116,11 @@ def test_GNN(train_distribution,test_distribution,num_repeat,num_steps,step_fact
 
         print('Mean',(results['cut']/results['OPT']).mean())
     except:
-        # raise ValueError('')
         pass
     print(results)
     
     
-    # for res, label in zip([results],
-    #                                       ["results"]):
-    #     save_path = os.path.join(data_folder, label)
-    #     res.to_pickle(save_path)
-    #     print("{} saved to {}".format(label, save_path))
+
     
 
 if __name__ == '__main__':

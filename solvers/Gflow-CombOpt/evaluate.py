@@ -172,6 +172,8 @@ def main(cfg: DictConfig):
     
     @torch.no_grad()
     def evaluate(num_repeat):
+
+        start = time()
         torch.cuda.empty_cache()
         # num_repeat = 50
         mis_ls, mis_top50_ls = [], []
@@ -213,7 +215,9 @@ def main(cfg: DictConfig):
         
 
         result["cut"] = mis_top50_ls
+        end = time()
 
+        result["time"] = [(end - start)/len(result["cut"])] * len(result["cut"])
         result=pd.DataFrame(result)
         # print(result)
         data_folder=f'results/{cfg.test_distribution}'

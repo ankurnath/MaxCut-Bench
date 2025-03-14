@@ -93,7 +93,11 @@ class ANYCSP(Module):
         assignment, num_unsat = self.init_assignment(data)
         h_val = self.h_val_init.tile(data.num_val, 1)
 
+        data.best_num_each_step = []
+        data.time_each_step = [0.0]
+
         data.best_num_unsat = num_unsat.min(dim=1)[0]
+        data.best_num_each_step.append(data.best_num_unsat.cpu().min().item())
         data.num_steps = 0
 
         value_assignment = data.domain[assignment.flatten().bool()]
@@ -128,6 +132,7 @@ class ANYCSP(Module):
             # update all kinds of metrics...
             num_unsat, best_assign = num_unsat.min(dim=1)
             data.best_num_unsat = torch.minimum(data.best_num_unsat, num_unsat)
+            data.best_num_each_step.append(data.best_num_unsat.cpu().min().item())
             cur_opt = data.best_num_unsat.min()
 
             if return_log_probs:
@@ -137,6 +142,7 @@ class ANYCSP(Module):
             if keep_time:
                 cur = timer()
                 time = float(cur - start)
+                data.time_each_step.append(time)
             if cur_opt < opt:
                 opt = cur_opt
                 if verbose:

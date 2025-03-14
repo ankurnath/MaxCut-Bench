@@ -25,8 +25,8 @@ if __name__ == '__main__':
 
     parser = ArgumentParser()
     parser.add_argument( "--test_distribution", type=str, default='ER_200vertices_weighted', help="Name of the dataset to be used (default: 'Facebook')" )
-    parser.add_argument( "--time_limit", type=float, default= 600, help="Maximum Time Limit" )
-    parser.add_argument( "--threads", type=int, default= 1, help="Maximum number of threads" )
+    parser.add_argument( "--time_limit", type=float, default=10, help="Maximum Time Limit" )
+    parser.add_argument( "--threads", type=int, default= 10, help="Maximum number of threads" )
   
     args = parser.parse_args()
 
@@ -46,7 +46,8 @@ if __name__ == '__main__':
 
     df = defaultdict(list)
 
-    for _ in range(len(test_dataset)):
+    # for _ in range(len(test_dataset)):
+    for _ in range(2):
    
 
         graph = test_dataset.get()

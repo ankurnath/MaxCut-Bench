@@ -88,6 +88,12 @@ if __name__ == '__main__':
             )
 
         best_per_run = data.best_num_unsat
+        # print(best_per_run.shape)
+        # print(data.best_num_each_step)
+        # print(data.time_each_step)
+
+        # data.best_num_each_step = torch.cat(data.best_num_each_step, dim=1)
+        # print(data.best_num_each_step)
         mean_best = best_per_run.mean()
         best = best_per_run.min().cpu().numpy()
         solved = best == 0
@@ -107,7 +113,9 @@ if __name__ == '__main__':
         df['Opt Step'].append(data.opt_step)
         df['time'].append(end-start)
         df['Opt Time'].append(data.opt_time)
-
+        df['time_each_step'].append(np.array(data.time_each_step))
+        df['best_score_each_step'].append(max_val-np.array(data.best_num_each_step))
+        
         # break
     n_tests = len(dataset)
     df['Train Distribution'] = [train_distribution]* n_tests
@@ -122,9 +130,4 @@ if __name__ == '__main__':
     
     print(f'Data has been saved to {file_path}')
     print(df)
-    # df=pd.DataFrame(df)
-    # data_folder=os.path.join(os.getcwd(),f'solvers/ANYCSP/pretrained agents/{args.distribution}','data')
-    # os.makedirs(data_folder,exist_ok=True)
-    # df.to_pickle(os.path.join(data_folder,'results'))
-    # # print(f'Solved {100 * num_solved / num_total:.2f}%, Average Time: {total_time / num_total:.2f}s')
-    # print(df)
+   

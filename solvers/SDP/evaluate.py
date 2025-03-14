@@ -33,8 +33,8 @@ if __name__ == '__main__':
 
 
     df = defaultdict(list)
-    for i in tqdm(range(len(test_dataset))):
-    # for i in range(10):
+    # for i in tqdm(range(len(test_dataset))):
+    for i in range(2):
 
         
         start = time.time()
@@ -68,7 +68,7 @@ if __name__ == '__main__':
             elapesed_time = end -start
 
             df['cut'].append(cut)
-            df['Time'].append(elapesed_time)
+            df['time'].append(elapesed_time)
 
         else:
             df['cut'].append(0)
